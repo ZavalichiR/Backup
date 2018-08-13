@@ -1,0 +1,50 @@
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\LumeaFilmelor\LumeaFilmelor\bin\Debug\LumeaFilmelor.exe.config
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\LumeaFilmelor\LumeaFilmelor\bin\Debug\LumeaFilmelor.exe
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\LumeaFilmelor\LumeaFilmelor\bin\Debug\LumeaFilmelor.pdb
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Form1.resources
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Properties.Resources.resources
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.csproj.GenerateResource.Cache
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.exe
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.pdb
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Filme.resources
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.csprojResolveAssemblyReference.cache
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Contact.resources
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Detalii.resources
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Sitemapcs.resources
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.csproj.ResolveComReference.cache
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\bin\Debug\LumeaFilmelor.exe.config
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.csproj.ResolveComReference.cache
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.exe
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.pdb
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\bin\Debug\LumeaFilmelor.exe
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\bin\Debug\LumeaFilmelor.pdb
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Contact.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Detalii.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Filme.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Form1.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Sitemapcs.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\bin\Debug\Newtonsoft.Json.xml
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.DespreFilm.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Wiki.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\bin\Debug\LumeaFilmelor.exe.config
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\bin\Debug\LumeaFilmelor.exe
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\bin\Debug\LumeaFilmelor.pdb
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\bin\Debug\Newtonsoft.Json.xml
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.csproj.ResolveComReference.cache
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Contact.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.DespreFilm.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Detalii.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Filme.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Form1.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Sitemapcs.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.Wiki.resources
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.exe
+C:\Users\zzava\Desktop\Semestrul II\TI-P\Proiect Final\Aplicație Desk\LumeaFilmelor\LumeaFilmelor\obj\Debug\LumeaFilmelor.pdb
