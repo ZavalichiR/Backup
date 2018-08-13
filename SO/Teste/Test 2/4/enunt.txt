@@ -1,0 +1,2 @@
+Nr 4
+Sa se scrie un program care primeste un semnal SIGQUIT si la aplearea acestui program sa execute "ls" ( sa se creeze un proces fiu care executa comanda - se foloseste fork() si exec() ). Semnalul este trimis prin linia de comanda.

@@ -1,0 +1,899 @@
+Sisteme de Operare
+
+Laborator nr. 8
+Laborator nr. 8
+Semnale Linux/Unix
+
+Semnalele reprezinta un mecanism fundamental de comunicare intre procese
+Linux/Unix: un semnal este o intrerupere software transmisa de S.O. unui anumit proces
+(deci este intrucatva similar intreruperilor din DOS).
+Un semnal este generat de aparitia unui eveniment exceptional (eroare, eveniment
+extern sau cerere explicita). Orice semnal are asociat un tip, reprezentat printr-un numar
+intreg pozitiv, si un proces destinatar (procesul caruia ii este destinat acel semnal). Odata
+generat, semnalul este pus in coada de semnale a sistemului, de unde este extras si
+transmis de catre S.O. procesului destinatar. Transmiterea semnalului se face imediat
+dupa ce semnalul a ajuns in coada de semnale, cu o exceptie: daca primirea semnalelor
+de tipul respectiv a fost blocata de catre procesul destinatar (vom vedea mai jos cum
+anume se face acest lucru), atunci transmiterea semnalului se va face abia in momentul
+cind procesul destinatar va debloca primirea acelui tip de semnal.
+In momentul in care procesul destinatar primeste acel semnal, el isi intrerupe
+executia si va executa o anumita actiune (i.e. o functie de tratare a acelui semnal), numita
+handler de semnal si care este atasata tipului de semnal primit, dupa care isi va relua
+executia din punctul in care a ramas (cu anumite exceptii: unele semnale vor cauza
+terminarea sau intreruperea acelui proces).
+ ____________            ___________               ___________
+ |           |           |          |              |          |
+ |Eveniment  | Generare  | Coada de | Transmitere  | Proces   |
+ |exceptional|­­­­­­­­­­>| semnale  |­­­­­­­­­­­­­>|destinatar|
+ |__________ |  semnal   |__________|   semnal     |__________|
+                                                    \
+                                                     \­> Intrerupere proces
+                                                         si executie handler
+
+Important: deci fiecare tip de semnal are asociat o actiune (un handler de semnal)
+specifica acelui tip de semnal.
+1. Categorii de semnale
+In general, evenimentele ce genereaza semnale se impart in 3 categorii: erori,
+evenimente externe si cereri explicite.
+O eroare inseamna ca programul a facut o operatie invalida si nu poate sa-si
+continue executia. Nu toate erorile genereaza semnale (de exemplu: erori in operatiile I/O;
+apelul de functie respectiv va intoarce un cod de eroare, de obicei -1), ci doar acele erori
+care pot apare in orice punct al programului: impartirea la zero, accesarea unei adrese de
+memorie invalide, etc.
+Evenimentele externe sunt in general legate de operatiile I/O sau de actiunile altor
+procese, cum ar fi: sosirea datelor (pe un socket sau un pipe, de exemplu), expirarea
+intervalului de timp setat pentru un timer (o alarma), terminarea unui proces fiu, sau
+suspendarea/terminarea programului de catre utilizator (prin apasarea tastelor ^Z sau ^C).
+O cerere explicita inseamna generarea unui semnal de catre un proces, prin apelul
+functiei de sistem kill(), a carei sintaxa o vom discuta mai jos.
+Important: semnalele pot fi generate sincron sau asincron. Un semnal sincron
+este un semnal generat de o anumita actiune specifica in program si este livrat (daca nu
+este blocat) in timpul acelei actiuni. Evenimentele care genereaza semnale sincrone sunt:
+erorile si cererile explicite ale unui proces de a genera semnale pentru el insusi.
+
+Sisteme de Operare
+
+Laborator nr. 8
+
+Semnalele asincrone sunt generate de evenimente din afara zonei de control a
+procesului care le receptioneaza, adica aceste semnale sunt receptionate, in timpul
+executiei procesului destinatar, la momente de timp ce nu pot fi anticipate. Evenimentele
+care genereaza semnale asincrone sunt: evenimentele externe, precum si cererile
+explicite ale unui proces de a genera semnale destinate altor procese.
+Pentru fiecare tip de semnal exista o actiune (un handler de semnal) implicita de
+tratare a acelui semnal, specifica S.O.-ului respectiv. Atunci cind semnalul este livrat
+procesului, acesta este intrerupt si are trei posibilitati de comportare:
+• sa execute o actiune implicita,
+• sa ignore semnalul,
+• sa execute o anumita functie handler utilizator (i.e. scrisa de programatorul
+respectiv).
+Setarea unuia dintre cele trei comportamente se face cu ajutorul apelului
+primitivelor signal() sau sigaction(), despre care vom vorbi mai tirziu. Asadar, la
+fiecare primire a unui anumit tip de semnal, se va executa acea actiune (comportament)
+ce a fost setata la ultimul apel al uneia dintre cele 2 primitive de mai sus, apel efectuat
+pentru acel tip de semnal.
+Observatie: daca actiunea specificata pentru un anumit tip de semnal este de a-l
+ignora, atunci orice semnal de acest tip este inlaturat din coada de semnale imediat dupa
+primire, chiar si in cazul in care acel tip de semnal este blocat pentru procesul respectiv.
+2. Tipurile de semnale predefinite ale sistemelor Linux/Unix
+In fisierul header /usr/include/signal.h  se gaseste lista semnalelor Linux/Unix
+predefinite, mai exact numarul intreg asociat fiecarui tip de semnal, impreuna cu o
+constanta simbolica, cu observatia ca in programe se recomanda folosirea constantelor
+simbolice in locul numerelor, deoarece numerele asociate semnalelor difera de la o
+versiune de Unix la alta.
+Aceste tipuri de semnale se pot clasifica in mai multe categorii:
+a) semnale standard de eroare: SIGFPE, SIGILL, SIGSEGV, SIGBUS;
+b) semnale de terminare: SIGHUP, SIGINT, SIGQUIT, SIGTERM, SIGKILL;
+c) semnale de alarma: SIGALRM, SIGVTALRM, SIGPROF;
+d) semnale asincrone I/O: SIGIO, SIGURG;
+e) semnale pentru controlul proceselor: SIGCHLD, SIGCONT, SIGSTOP, SIGTSTP,
+SIGTTIN, SIGTTOU;
+f) alte tipuri de semnale: SIGPIPE, SIGUSR1, SIGUSR2.
+Sa trecem in revista lista semnalelor Linux/Unix:
+Observatie: semnalele notate cu * au urmatorul comportament: procesul destinatar,
+cind se intrerupe la primirea semnalului, provoaca crearea unui fisier core (ce contine
+imaginea memoriei procesului in momentul intreruperii), fisier ce poate fi inspectat pentru
+depanarea programului; fisierul core este scris pe harddisk in directorul de unde a fost
+lansat acel proces.
+a) Semnale standard de eroare:
+- SIGFPE* = signal floating point error, semnal sincron generat in caz de eroare
+aritmetica fatala, cum ar fi impartirea la zero sau overflow-ul.
+- SIGILL* = signal illegal instruction, semnal sincron generat cind se incearca
+executarea unei instructiuni ilegale, adica programul incearca sa execute zone de date (in
+loc de functii), situatie ce poate apare daca fisierul executabil este stricat, sau daca se
+
+Sisteme de Operare
+
+Laborator nr. 8
+
+paseaza un pointer la o data acolo unde se asteapta un pointer la o functie, sau daca se
+corupe stiva prin scrierea peste sfirsitul unui array de tip automatic.
+- SIGSEGV* = signal segmentation violation, semnal sincron generat in caz de
+violare a segmentului de memorie, adica procesul incearca sa acceseze o zona de
+memorie care nu ii apartine (care nu ii este alocata - apartine altor procese, etc.). Cauze
+de producere a acestui eveniment: folosirea pentru acces la memorie a unui pointer NULL
+sau neinitializat, ori folosirea unui pointer pentru parcurgerea unui array, fara a verifica
+depasirea sfirsitului array-ului.
+- SIGBUS* = signal bus error, semnal sincron generat in caz de eroare de
+magistrala, ce poate apare tot atunci cind se utilizeaza un pointer NULL sau neinitializat,
+numai ca, spre deosebire de SIGSEGV care raporteazaun acces nepermis la o zona de
+memorie valida(existenta), SIGBUS raporteaza un acces nepermis la o zona de memorie
+invalida: adresa inexistenta, sau un pointer dezaliniat, cum ar fi referirea la un intreg
+(reprezentat pe 4 octeti), la o adresa nedivizibila cu 4 (fiecare calculator si S.O. are o
+anumita politica de aliniere a datelor).
+Observatie: toate aceste semnale au drept actiune implicita terminarea procesului
+(cu afisarea unui mesaj de eroare specific) si crearea acelui fisier core.
+b) Semnale de terminare:
+Sunt folosite pentru a indica procesului sa-si termine executia, intr-un fel sau altul.
+Motivul pentru care se folosesc este de a putea "face curat" inainte de terminarea propriuzisa: se pot salva date in fisiere, sterge fisierele temporare, restaura vechiul tip de terminal
+in caz ca el a fost modificat de catre program, etc.
+- SIGHUP = signal hang-up, semnal generat in momentul deconectarii terminalului
+(probabil datorita unei erori in retea), sau la terminarea procesului de control a
+terminalului, si este trimis proceselor asociate cu acea sesiune de lucru, avind ca efect
+deconectarea efectiva a acestor procese de terminalul de control. Actiunea implicita:
+terminarea procesului.
+- SIGINT = signal program interrupt, semnal de intrerupere, generat atunci cind
+utilizatorul foloseste caracterul INTR (adica: apasa tastele CTRL+C) pentru a termina
+executia programului.
+- SIGQUIT = signal quit, semnal de intrerupere, generat cind utilizatorul foloseste
+caracterul QUIT (de obicei, tastele CTRL+\), fiind asemanator cu semnalul SIGINT:
+terminarea procesului.
+- SIGTERM = semnal generic, folosit pentru terminarea proceselor; spre deosebire
+de SIGKILL, acest semnal poate fi blocat, ignorat, sau sa i se asigneze un handler propriu.
+- SIGKILL = signal kill, semnal utilizat pentru terminarea imediata a proceselor; el nu
+poate fi blocat, ignorat, sau sa i se asigneze un handler propriu, deci are o comportare fixa
+- terminarea procesului, de aceea se spune ca este un semnal fatal. Poate fi generat doar
+de evenimentul cerere explicita, folosind apelul kill().
+c) semnale de alarma:
+Aceste semanle indica expirarea timpului pentru timere si alarme, care pot fi setate
+prin apelul primitivelor alarm() si setitimer().
+Comportamentul implicit al acestor semnale este terminarea procesului, de aceea
+este indicata asignarea de handlere proprii pentru ele.
+- SIGALRM = signal time alarm, semnal emis la expirarea timpului pentru un timer
+care masoara timpul "real" (=intervalul de timp scurs intre inceputul si sfirsitul procesului).
+- SIGVTALRM = signal virtual time alarm, semnal emis la expirarea timpului pentru
+un timer care masoara timpul "virtual" (=timpul in care procesul utilizeaza efectiv CPU-ul.
+- SIGPROF = semnal emis la expirarea timpului pentru un timer care masoara
+timpul in care procesul utilizeaza efectiv CPU-ul si timpul in care CPU-ul asteapta
+indeplinirea unor conditii (cereri de I/O) pentru acel proces. Acest tip de semnal se
+utilizeaza pentru a implementa facilitati de optimizare a codului programelor.
+
+Sisteme de Operare
+
+Laborator nr. 8
+
+d) semnale asincrone I/O:
+Sunt utilizate impreuna cu facilitatile I/O ale sistemului; trebuie apelata explicit
+functia fcntl() asupra unui descriptor de fisiere pentru a se putea ajunge in situatia de a se
+genera aceste semnale.
+- SIGIO = semnal folosit pentru a indica ca un anumit descriptor de fisiere este gata
+de a realiza operatii I/O; doar descriptorii asociati unui socket sau unui pipe pot genera
+acest tip de semnal; semnalul este generat in momentul cind, de exemplu, se
+receptioneaza niste date pe un socket, pentru a indica programului ca trebuie sa faca un
+read() pentru a le citi.
+- SIGURG = semnal transmis atunci cind date "urgente" (asa-numitele out-of-band
+data) sunt receptionate pe un socket.
+e) semnale pentru controlul proceselor:
+- SIGCHLD = signal child, semnal trimis procesului parinte atunci cind procesul fiu
+(emitatorul) isi termina executia. In general, este util ca sa se asigneze un handler pentru
+acest tip de semnal, in care sa se utilizeze apelurile wait() sau waitpid() pentru a
+accepta codul de terminare al proceselor fii. Obs: astfel kernelul va elibera intrarea
+corespunzatoare acelui fiu din tabela proceselor; in caz contrar acest lucru se petrece abia
+la terminarea procesului parinte.
+- SIGCONT = signal continue, semnal transmis pentru a cauza continuarea
+executiei unui proces, care a fost anterior suspendat prin semnalul SIGSTOP sau celelate
+semnale ce suspenda procese.
+- SIGSTOP = signal stop, semnal utilizat pentru suspendarea executiei unui proces.
+La fel ca si SIGKILL, acest semnal are o comportare fixa, neputind fi blocat, ignorat, sau
+sa i se asigneze un handler propriu.
+- SIGTSTP = semnal interactiv de suspendare a executiei unui proces, generat prin
+tastarea caracterului SUSP (de obicei, tastele CTRL+Z). Spre deosebire de SIGSTOP, el
+poate fi blocat, ignorat, sau sa i se asigneze un handler propriu.
+- SIGTTIN = semnal transmis unui proces, ce ruleaza in background, in momentul
+in care incearca sa citeasca date de la terminalul asociat. Actiunea sa implicita este de a
+suspenda executia procesului.
+- SIGTTOU = semnal transmis unui proces, ce ruleaza in background, in momentul
+in care incearca sa scrie date la terminalul asociat, sau sa schimbe tipul terminalului.
+Actiunea sa implicita este de a suspenda executia procesului.
+Observatii:
+i) Atunci cind procesele sunt suspendate, acestora nu li se mai pot transmite
+semnale, cu exceptia semnalelor SIGKILL si SIGCONT. Semnalul SIGKILL nu poate fi
+corupt, si duce la terminarea procesului; desi semnalul SIGCONT poate fi corupt (i.e.
+blocat sau ignorat), el va duce oricum la reluarea executiei procesului.
+ii) Transmiterea unui semnal SIGCONT unui proces duce la eliminarea din coada
+de semnale a tuturor semnalelor SIGSTOP destinate acelui proces (deci care inca nu au
+fost transmise procesului).
+iii) Daca un proces dintr-un grup de procese orfane (adica procesul parinte al
+grupului si-a terminat executia inaintea proceselor fii) primeste unul dintre semnalele
+SIGTSTP, SIGTTIN sau SIGTTOU, si nu are un handler propriu asignat pentru acel
+semnal, atunci il va ignora, deci nu-si suspenda executia (motivul fiind ca, acest proces
+fiind orfan, nu exista posibilitatea sa-si reia executia).
+f) alte tipuri de semnale:
+Sunt utilizate pentru a raporta alte conditii ce pot apare.
+- SIGPIPE = semnal emis in caz de tentativa de scriere intr-un pipe din care nu mai
+are cine sa citeasca. Motivul: cind se folosesc pipe-uri sau FIFO-uri, aplicatia trebuie astfel
+construita incit un proces sa deschida pipe-ul pentru citire inainte ca celalalt sa inceapa sa
+
+Sisteme de Operare
+
+Laborator nr. 8
+
+scrie. Daca procesul care trebuie sa citeasca nu este startat, sau se termina in mod
+neasteptat, atunci scrierea in pipe cauzeaza generarea acestui semnal. Daca procesul
+blocheaza sau ignora semnalele SIGPIPE, atunci scrierea in pipe esueaza cu
+errno=EPIPE. Actiunea implicita a acestui semnal este terminarea procesului.
+- SIGUSR1 si SIGUSR2 = semnale furnizate pentru ca programatorul sa le
+foloseasca dupa cum doreste. Sunt utile pentru comunicatia inter-procese.
+Actiunea implicita a acestor semnale fiind terminarea procesului, este necesara
+asignarea unor handlere proprii pentru aceste semnale. Singurul eveniment care
+genereaza aceste semnale este cererea explicita, folosind apelul kill().
+Alte semnale:
+- SIGTRAP * = signal trap, semnal emis dupa executia fiecarei instructiuni, atunci
+cind procesul este executat in modul de depanare.
+- SIGIOT * = signal I/O trap, semnal emis in caz de probleme hardware (de
+exemplu, probleme cu discul).
+- SIGSYS * = semnal emis in caz de apel sistem cu parametri eronati.s.a.
+Observatie: o parte din aceste tipuri de semnale depind si de partea de hardware a
+calculatorului respectiv, nu doar de partea sa de software. Din acest motiv, exista mici
+diferente in implementarea acestor semnale pe diferite tipuri de arhitecturi, adica unele
+semnale se poate sa nu fie implementate deloc, sau sa fie implementate (adica, actiunea
+implicita asociata lor) cu mici diferente. Exemple de semnale ce pot diferi de la un tip de
+arhitectura la altul: cele generate de erori, cum ar fi SIGBUS etc. Astfel, in primele versiuni
+de Linux nu era implementat semnalul SIGBUS, deoarece hardware-ul Intel386 pentru
+care a fost scris Linux-ul, nu permitea detectarea acelui eveniment descris mai sus,
+asociat semnalului SIGBUS.
+Lista semnalelor implementate pe Linux se poate obtine folosind comanda: man 7
+signal , comanda ce va afisa urmatoarea urmatoarele semnale:
+   Standard Signals
+Linux
+supports the standard signals listed below. Several signal numbers
+architecture dependent, as indicated in the "Value" column.
+(Where three values
+given, the first one is usually valid for alpha and sparc, the middle one for i386,
+and sh, and the last one for mips.
+A - denotes that a signal is absent on
+corresponding architecture.)
+
+are
+are
+ppc
+the
+
+First the signals described in the original POSIX.1-1990 standard.
+Signal
+Value
+Action
+Comment
+------------------------------------------------------------------------SIGHUP
+1
+Term
+Hangup detected on controlling terminal
+or death of controlling process
+SIGINT
+2
+Term
+Interrupt from keyboard
+SIGQUIT
+3
+Core
+Quit from keyboard
+SIGILL
+4
+Core
+Illegal Instruction
+SIGABRT
+6
+Core
+Abort signal from abort(3)
+SIGFPE
+8
+Core
+Floating point exception
+SIGKILL
+9
+Term
+Kill signal
+SIGSEGV
+11
+Core
+Invalid memory reference
+SIGPIPE
+13
+Term
+Broken pipe: write to pipe with no readers
+SIGALRM
+14
+Term
+Timer signal from alarm(2)
+SIGTERM
+15
+Term
+Termination signal
+SIGUSR1
+30,10,16
+Term
+User-defined signal 1
+SIGUSR2
+31,12,17
+Term
+User-defined signal 2
+SIGCHLD
+20,17,18
+Ign
+Child stopped or terminated
+SIGCONT
+19,18,25
+Cont
+Continue if stopped
+SIGSTOP
+17,19,23
+Stop
+Stop process
+SIGTSTP
+18,20,24
+Stop
+Stop typed at tty
+SIGTTIN
+21,21,26
+Stop
+tty input for background process
+SIGTTOU
+22,22,27
+Stop
+tty output for background process
+The signals SIGKILL and SIGSTOP cannot be caught, blocked, or ignored.
+Next the signals not in the POSIX.1-1990 standard but described in SUSv2
+
+Sisteme de Operare
+
+Laborator nr. 8
+
+and POSIX.1-2001.
+Signal
+Value
+Action
+Comment
+------------------------------------------------------------------------SIGBUS
+10,7,10
+Core
+Bus error (bad memory access)
+SIGPOLL
+Term
+Pollable event (Sys V). Synonym of SIGIO
+SIGPROF
+27,27,29
+Term
+Profiling timer expired
+SIGSYS
+12,-,12
+Core
+Bad argument to routine (SVr4)
+SIGTRAP
+5
+Core
+Trace/breakpoint trap
+SIGURG
+16,23,21
+Ign
+Urgent condition on socket (4.2BSD)
+SIGVTALRM
+26,26,28
+Term
+Virtual alarm clock (4.2BSD)
+SIGXCPU
+24,24,30
+Core
+CPU time limit exceeded (4.2BSD)
+SIGXFSZ
+25,25,31
+Core
+File size limit exceeded (4.2BSD)
+Up to and including Linux 2.2, the default behaviour for SIGSYS, SIGXCPU,
+SIGXFSZ, and (on architectures other than SPARC and MIPS) SIGBUS was to terminate the
+process (without a core dump). (On some other Unices the default action for SIGXCPU and
+SIGXFSZ is to terminate the process without a core dump.)
+Linux 2.4 conforms to
+the
+POSIX.1-2001 requirements for these signals, terminating the process with a core dump.
+Next various other signals.
+Signal
+Value
+Action
+Comment
+-------------------------------------------------------------------SIGIOT
+6
+Core
+IOT trap. A synonym for SIGABRT
+SIGEMT
+7,-,7
+Term
+SIGSTKFLT
+-,16,Term
+Stack fault on coprocessor (unused)
+SIGIO
+23,29,22
+Term
+I/O now possible (4.2BSD)
+SIGCLD
+-,-,18
+Ign
+A synonym for SIGCHLD
+SIGPWR
+29,30,19
+Term
+Power failure (System V)
+SIGINFO
+29,-,A synonym for SIGPWR
+SIGLOST
+-,-,Term
+File lock lost
+SIGWINCH
+28,28,20
+Ign
+Window resize signal (4.3BSD, Sun)
+SIGUNUSED
+-,31,Term
+Unused signal (will be SIGSYS)
+(Signal 29 is SIGINFO / SIGPWR on an alpha but SIGLOST on a sparc.)
+SIGEMT is not specified in POSIX.1-2001, but nevertheless appears on most
+other Unices, where its default action is typically to terminate the process with a core
+dump.
+SIGPWR (which is not specified in POSIX.1-2001) is typically ignored by
+default on those other Unices where it appears.
+SIGIO (which is not specified in POSIX.1-2001) is ignored by default on
+several other Unices.
+
+In concluzie: trebuie studiata documentatia tipului de calculator pe care il utilizati
+pentru a vedea ce semnale aveti la dispozitie.
+3. Cererea explicita de generare a unui semnal: primitiva kill()
+Evenimentul cerere explicita de generare a unui semnal se face apelind primitiva
+(functia de sistem) kill():
+ int kill(int pid, int id­signal);
+
+Argumente: pid = pid-ul procesului destinatar;
+id-signal = tipul semnalului (i.e. constanta simbolica asociata)
+Returneaza: 0, in caz de reusita;
+-1, in caz de eroare.
+Observatie: daca al doilea argument este 0, atunci nu se trimite nici un semnal, dar
+este util pentru verificarea validitatii pid-ului respectiv (daca exista un proces cu acel pid in
+momentul apelului, sau nu):
+kill(pid,0): returneaza 0 daca pid-ul este valid, -1 in caz contrar.
+Pentru cerere explicita se poate folosi si comanda kill (la prompterul shell-ului):
+$ kill ­<id­signal> <id­process>
+
+Sisteme de Operare
+
+Laborator nr. 8
+
+cu observatia ca trebuie dat numarul semnalului, nu constanta simbolica asociata
+(astfel, pentru semnalul SIGKILL, numarul este 9).
+Vezi help-ul (man kill ...) pentru detalii.
+4. Coruperea semnalelor: primitivele signal() si sigaction()
+Specificarea actiunii la receptia semnalelor se poate face cu apelul de sistem
+signal() sau sigaction(), functii a caror prototip se gaseste in fisierul header
+/usr/include/signal.h, fisier in care mai sunt definite si constantele simbolice:
+SIG_DFL (default), SIG_IGN (ignore), SIG_ERR (error).
+Actiunea asociata unui semnal poate fi una dintre urmatoarele:
+- o actiune implicita, specifica S.O.-ului;
+- ignorarea semnalului;
+- sau un handler propriu, definit de programator.
+Se utilizeaza termenul de corupere a unui semnal cu sensul de: setarea unui
+handler propriu pentru acel tip de semnal.
+Observatie: dupa cum am mai spus, semnalele SIGKILL si SIGSTOP nu pot fi
+corupte, ignorate sau blocate !
+4.1. Primitiva signal():
+- este utilizata pentru specificarea actiunii la receptia semnalelor, are urmatorul
+prototip:
+sighandler_t signal (int id­signal, sighandler_t action);
+Apelul functiei signal() stabileste ca functia (handlerul de semnal) action sa se
+execute atunci cind procesul receptioneaza semnalul id-signal.
+Argumentul action poate fi numele unei functii definite de utilizator, sau poate lua
+una dintre urmatoarele valori (constante simbolice):
+- SIG_DFL : specifica actiunea implicita (cea stabilita de catre sistemul de operare)
+la receptionarea semnalului.
+- SIG_IGN : specifica faptul ca procesul va ignora acel semnal.
+Sistemul de operare nu permite sa se ignore sau corupa semnalele SIGKILL si
+SIGSTOP, de aceea functia signal() va returna o eroare daca se face o asemenea
+incercare.
+Observatie: in general nu este bine ca programul sa ignore semnalele (mai ales pe
+acelea care reprezinta evenimente importante). Daca nu se doreste ca programul sa
+receptioneze semnale in timpul executiei unei anumite portiuni de cod, solutia cea mai
+indicata este sa se blocheze semnalele, nu ca ele sa fie ignorate.
+Functia signal() returneaza vechiul handler pentru semnalul specificat, deci
+astfel poate fi apoi restaurat daca este nevoie.
+In caz de esec (numarul id-signal nu este numar valid de semnal, sau se incearca
+coruperea semnalelor SIGKILL sau SIGSTOP), functia returneaza valoarea SIG_ERR.
+In cazul cind argumentul action este numele unei functii definite de utilizator,
+aceasta functie trebuie sa aiba prototipul sighandler_t, unde tipul sighandler_t este
+definit (in signal.h, sau sys/types.h) astfel:
+  typedef void (*sighandler_t)(int);
+adica este de tipul: functie ce intoarce tipul void, si are un argument de tip int. La
+momentul executiei unui handler de semnal, acest argument va avea ca valoare numarul
+semnalului ce a determinat executia acelui handler. In acest fel, se poate asigna o aceeasi
+functie ca handler pentru mai multe semnale, in corpul ei putind sti, pe baza argumentului
+primit, care dintre acele semnale a cauzat apelul respectiv.
+
+Sisteme de Operare
+
+Laborator nr. 8
+
+4.2. Primitiva sigaction():
+Cealalta primitiva utilizata pentru specificarea actiunii la receptia semnalelor este
+functia sigaction(), cu urmatorul prototip:
+int   sigaction   (int   id­signal,   const   struct   sigaction   *action,struct   sigaction
+*old_action);
+
+Ea are, in principiu, aceeasi utilizare ca si functia signal(), dar permite un control
+mai bun al comportamentului procesului la receptionarea semnalelor.
+Argumentul action specifica noul handler ce va fi asignat semnalelor de tipul idsignal dat de primul argument, iar argumentul old_action este folosit pentru a receptiona
+informatii despre vechiul handler pentru semnalul specificat, deci astfel poate fi apoi
+restaurat daca este nevoie.
+Daca pointerul old_action este NULL, atunci nu se mai receptioneaza informatii
+despre vechiul handler, iar daca pointerul action este NULL, atunci handlerul ramine
+nemodificat (se permite astfel doar aflarea de informatii despre handler, fara a-l modifica).
+Functia returneaza valoarea 0, in caz de succes, respectiv -1, in caz de esec si
+atunci variabila errno este setata corespunzator erorii: EINVAL (eroarea provine din:
+numarul id-signal nu este numar valid de semnal, sau se incearca coruperea semnalelor
+SIGKILL sau SIGSTOP), EFAULT sau EINTR.
+Pentru argumentele action si old_action este folosita structura de date:
+ struct sigaction {
+    int sa_flags;
+    void (*sa_handler)(int, ...);
+    sigset_t sa_mask;
+  };
+
+Semnificatia membrilor acestei structuri de date:
+Membrul sa_handler este folosit in acelasi fel ca parametru action de la functia
+signal(), adica poate avea ca valori SIG_DFL, SIG_IGN, sau numele unui handler pentru
+semnal definit de programator.
+Membrul sa_mask este o masca de biti care specifica setul de semnale ce vor fi
+blocate in timpul executiei acestui handler. Mai multe detalii vom vedea mai jos, cind vom
+vorbi despre blocarea semnalelor.
+Observatie: semnalul pentru care s-a apelat sigaction() este automat blocat,
+indiferent care ar fi valoarea sa din sa_mask. Daca se doreste ca semnalul sa nu fie
+blocat in timpul executiei handler-ului acestuia, atunci va trebui sa fie deblocat in codul
+handler-ului.
+Membrul sa_flags specifica diferite flag-uri (este tot o masca de biti) care pot
+afecta comportarea procesului la primirea semnalului. Fiecare tip de semnal are setul lui
+de flag-uri (i.e. flag-uri ce au o anumita semnificatie pentru acel tip de semnal). Trebuie
+deci alese flag-urile dorite si apoi combinate cu operatorul OR pe biti, rezultatul fiind depus
+in membrul sa_flags (daca nu se doreste setarea niciunui flag, se poate initializa
+sa_flags cu valoarea 0). Exemple de flag-uri:
+- SA_RESTART: acest flag controleaza ce se intimpla cind un proces primeste un
+semnal in timp ce el executa un apel sistem (de tipul read(), write(), etc.). Exista 2
+posibilitati de comportare: apelul de sistem fiind intrerupt, in timpul executiei handlerului
+pentru semnalul primit, el poate fi reluat sau poate intoarce valoarea -1 si seta variabila
+errno la valoarea EINTR. Daca acest flag este setat, procesul va relua de la inceput apelul
+de sistem intrerupt, altfel (cazul implicit, cind acest flag este resetat) are loc cea de-a doua
+comportare.
+- SA_NOCLDSTOP: are sens numai pentru semnalul SIGCHLD; cind este setat, S.O.ul transmite semnalul SIGCHLD procesului parinte la terminarea executiei procesului fiu,
+numai daca fiul nu este suspendat.
+
+Sisteme de Operare
+
+Laborator nr. 8
+
+- SA_ONSTACK: cind este setat, S.O.-ul foloseste stiva de semnale pentru
+transmiterea semnalului si nu stiva procesului.
+5. Definirea propriilor handler-ere de semnal
+Un handler de semnal propriu este o functie definita de programator, care se
+compileaza deci impreuna cu restul programului; in loc insa de a apela direct aceasta
+functie, sistemul de operare este instruit, prin apelul functiilor signal() sau
+sigaction(), sa o apeleze atunci cind procesul receptioneaza semnalul respectiv.
+Exista 2 strategii principale care se folosesc in handler-ele de semnal:
+a) se poate ca handler-ul sa notifice primirea semnalului prin setarea unei variabile
+globale si apoi sa returneze normal, urmind ca in bucla principala a programului, acesta sa
+verifice periodic daca acea variabila a fost setata, in care caz va efectua operatiile dorite.
+b) se poate ca handler-ul sa termine executia procesului, sau sa transfere executia
+intr-un punct in care procesul poate sa-si recupereze starea in care se afla in momentul
+receptionarii semnalului.
+Trebuie luate masuri speciale atunci cind se scrie codul pentru handler-ele de
+semnal, deoarece acestea pot fi apelate asincron, deci la momente imprevizibile de timp.
+De exemplu, in timp ce se executa handler-ul asociat unui semnal primit, acesta poate fi
+intrerupt prin receptia unui alt semnal (al doilea semnal trebuie sa fie de alt tip decit primul;
+daca este acelasi semnal, el va fi blocat pina cind se termina tratarea primului semnal).
+IMPORTANT: primirea unui semnal poate intrerupe nu doar executia programului
+respectiv, ci chiar executia handler-ului unui semnal anterior primit, sau poate intrerupe
+executia unui apel de sistem efectuat de program in acel moment.
+Primitivele (functiile de sistem) ce pot fi intrerupte de semnale sunt:
+close(), fcntl()[operatia F_SETLK], open(), read(), recv(), recvfrom(),
+select(), send(), sendto(), tcdrain(), waitpid(), wait() si write().
+
+In caz de intrerupere, aceste primitive returneaza -1 (mai putin read si write, care
+returneaza nr. de octeti cititi/scrisi cu succes), iar variabila errno este setata la valoarea
+EINTR. Programatorul va trebui sa reia executia acelui apel in acest caz. O a doua
+posibilitate, despre care am discutat mai sus, este reluarea automata a acelui apel de
+sistem intrerupt de un semnal pentru care am specificat flag-ul SA_RESTART prin apelul
+functiei sigaction().
+6. Blocarea semnalelor
+Blocarea semnalelor inseamna ca procesul spune S.O.-ului sa nu ii transmita
+anumite semnale. Nu este recomandat ca un program sa blocheze semnalele pe tot
+parcursul executiei sale, ci numai pe durata executiei unor parti critice ale codului lui.
+Astfel, daca un semnal ajunge in timpul executiei acelei parti de program, el va fi livrat
+procesului dupa terminarea acesteia si deblocarea acelui tip de semnal.
+Modalitati de blocare a semnalelor:
+1) cu ajutorul functiei sigprocmask(), utila de exemplu pentru a se bloca
+semnalele in timpul modificarii unor variabile globale in programul principal, variabile ce
+sunt accesate si de handler-ele de semnal;
+2) folosind membrul sa_mask din structura sigaction, atunci cind se doreste
+blocarea unor semnale in timpul executiei handler-ului pentru un anumit semnal (cel
+pentru care s-a apelat functia sigaction()).
+Pentru blocarea unor semnale in timpul executiei unui handler, o a doua alternativa
+este folosirea functiei sigprocmask() in codul handler-ului; in acest caz, insa, exista
+totusi o scurta perioada de timp, intre lansarea in executie a handler-ului si executia
+
+Sisteme de Operare
+
+Laborator nr. 8
+
+functiei sigprocmask(), in care handler-ul poate fi intrerupt deoarece el inca nu a
+blocat acele semnale.
+Toate functiile de blocare a semnalelor utilizeaza structura de date sigset_t
+(care este o masca de biti), cu semnificatia de set de semnale ales pentru blocare,
+manevrat cu urmatoarele functii:
+a) Functii care modifica setul de semnale ce urmeaza a fi blocate:
+int sigemptyset(sigset_t *set);
+
+Functia initializeaza variabila set ca fiind setul de semnale vid.
+int sigfillset(sigset_t *set);
+
+Functia initializeaza variabila set ca fiind setul de semnale complet (adica
+ce contine toate semnalele Unix).
+int sigaddset(sigset_t *set, int id-semnal);
+
+Functia adauga semnalul id-semnal la setul definit de variabila set.
+int sigdelset(sigset_t *set, int id-semnal);
+
+Functia elimina semnalul id-semnal din setul definit de variabila set.
+int sigismember(const sigset_t *set, int id-semnal);
+
+Functia verifica daca semnalul id-semnal face parte din setul de semnale
+definit de variabila set.
+Toate functiile de mai sus returneaza valoarea 0, in caz de succes (exceptie:
+sigismember returneaza 1 sau 0 = rezultatul testului), respectiv -1, in caz de eroare (si
+atunci errno este setata la EINVAL).
+b) Functia care blocheaza efectiv un set de semnale:
+int sigprocmask(int mod, const sigset_t *set, sigset_t *old_set);
+
+Aceasta functie este folosita pentru a examina sau modifica masca de semnale a
+procesului. Colectia(setul) de semnale care sunt la un moment dat blocate se numeste
+masca de semnale a procesului.
+Parametrul set reprezinta setul de semnale ce vor fi blocate/deblocate.
+Parametrul mod determina modul in care va fi modificata masca de semnale, si
+poate avea urmatorele valori:
+- SIG_BLOCK = blocheaza setul de semnale definit de variabile set, adaugindu-l la
+masca de semnale (blocate) deja existenta. (Adica: masca de semnale := masca de
+semnale "reuniune" set )
+- SIG_UNBLOCK = deblocheaza setul de semnale definit de variabile set, scotindu-l
+din masca de semnale (blocate) deja existenta. (Adica: masca de semnale := masca de
+semnale "diferenta" set )
+- SIG_SETMASK = inlocuieste vechea masca de semnale cu setul de semnale
+definit de variabile set.(Adica: masca de semnale := set )
+Al treilea parametru, old_set, este utilizat pentru a returna vechea masca de
+semnale (lucru util daca, ulterior in program, dorim sa o restauram).
+Daca nu se doreste pastrarea vechii masti de semnale, old_set poate fi pointerul
+NULL. Iar daca se doreste doar obtinerea mastii de semnale, fara a o modifica, atunci set
+va fi pointerul NULL.
+Functia returneaza: 0, in caz de succes, respectiv -1, in caz de esec (si errno este
+setata corespunzator: EINVAL, EFAULT sau EINTR).
+Observatie: daca functia sigprocmask() deblocheaza un anumit tip de semnale
+si exista deja in coada cel putin un semnal de acel tip ce asteapta sa fie livrat, el va fi
+transmis procesului inainte de terminarea executiei codului functiei sigprocmask().
+
+Sisteme de Operare
+
+Laborator nr. 8
+
+7. Asteptarea unui semnal: primitivele pause() si sigsuspend()
+Daca aplicatia este influentata de evenimente externe, sau foloseste semnale
+pentru sincronizare cu alte procese, atunci ea nu trebuie sa faca altceva decit sa astepte
+semnale. Functia:
+  int pause();
+are ca efect suspendarea executiei programului pina la sosirea unui semnal.
+Daca semnalul duce la executia unui handler, atunci functia pause() returneaza
+-1, deoarece comportarea normala este de a suspenda executia programului tot timpul,
+asteptind noi semnale. Daca semnalul cauzeaza terminarea executiei programului,
+pause() nu returneaza.
+Simplitatea acestei functii poate ascunde erori greu de detectat. Deoarece
+programul principal nu face altceva decit sa apeleze pause(), inseamna ca cea mai
+mare parte a activitatii utile in program o realizeaza handler-ele de semnal. Insa, cum am
+mai spus, codul acestor handler-e nu este indicat sa fie prea lung, deoarece poate fi
+intrerupt de alte semnale.
+De aceea, modalitatea cea mai indicata, atunci cind se doreste asteptarea unui
+anumit semnal (sau o multime fixata de semnale), este de a folosi functia
+sigsuspend(), ce are prototipul:
+  int sigsuspend(const sigset_t *set);
+Functia aceasta are ca efect: se inlocuieste masca de semnale curenta a procesului
+cu cea specificata de parametrul set si apoi se suspenda executia procesului pina la
+receptionarea unui semnal, de catre proces (deci un semnal care nu este blocat, adica nu
+este cuprins in masca de semnale curenta). Masca de semnale ramine la valoarea setata
+(i.e. valoarea lui set) numai pina cind functia sigsuspend() returneaza, moment in care
+este reinstalata, in mod automat, vechea masca de semnale.
+Valoarea returnata: 0, in caz de succes, respectiv -1, in caz de esec (si errno este
+setata corespunzator: EINVAL, EFAULT sau EINTR).
+8. Exemple de probleme rezolvate
+8.1. Sa se scrie un program care trateaza semnalele SIGUSR1, SIGALRM, SIGINT
+şi SIGQUIT.
+#include <signal.h> 
+#include "hdr.h" 
+static void sig_usr1( int); /* generat cu kill USR1 <pid> */ 
+static void sig_intr( int); /* generat la Ctrl­C si rearmat */ 
+static void sig_quit( int); /* generat cu Ctrl­\ si resetat */ 
+static void sig_alarm(int); /* generat dupa scurgerea timpului t din 
+alarm(t) */ 
+int main( void) 
+{ 
+if ( signal( SIGALRM, sig_alarm) == SIG_ERR) 
+err_sys("Eroare signal( SIGALRM, ...)"); 
+if ( signal( SIGUSR1, sig_usr1) == SIG_ERR) 
+err_sys("Eroare signal( SIGUSR1, ...)"); 
+if ( signal( SIGINT, sig_intr) == SIG_ERR) 
+err_sys("Eroare signal( SIGINT, ...)"); 
+if ( signal( SIGQUIT, sig_quit) == SIG_ERR) 
+err_sys("Eroare signal( SIGQUIT, ...)"); 
+for ever pause(); 
+} 
+static void sig_alarm( int sig) 
+{ 
+printf("Receptionat semnalul SIGALRM\n"); 
+return; 
+
+Sisteme de Operare
+
+Laborator nr. 8
+
+} 
+static void sig_quit( int sig) 
+{ 
+printf("Receptionat semnalul SIGQUIT\n"); 
+if ( signal( SIGQUIT, SIG_DFL) == SIG_ERR) 
+err_sys("Nu se poate reseta acest semnal ..."); 
+return; 
+} 
+static void sig_intr( int sig) 
+{ 
+printf("Receptionat semnalul SIGINT\n"); 
+if ( signal( SIGINT, sig_intr) == SIG_ERR) 
+err_sys("Nu se poate rearma acest semnal ..."); 
+return; 
+} 
+static void sig_usr1( int sig) 
+{ 
+printf("Receptionat semnalul SIGUSR1\n"); 
+alarm(1); 
+printf("Alarma se va declansa dupa 1 sec!.\n"); 
+return; 
+} 
+
+8.2. Sa se scrie un programul care citeste o linie de la intrarea standard si o
+afiseaza la iesirea standard. Programul stabileste un interval de timp pentru efectuarea
+operatiei. Daca operatia nu s-a realizat in acest interval de timp ea este abandonata.
+#include <setjmp.h> 
+#include <signal.h> 
+#include "hdr.h" 
+static void sig_alarm(); 
+int main( void) 
+{ 
+int n; 
+char line[MAXLINE]; 
+if ( signal( SIGALRM, sig_alarm) == SIG_ERR) 
+err_sys("Eroare signal( SIGALRM, ...)"); 
+alarm( 10); 
+if ( ( n=read( 0, line, MAXLINE)) < 0) 
+err_sys("Eroare read"); 
+alarm(0); 
+write( 1, line, n); 
+exit(0); 
+} 
+static void sig_alarm( int sig) 
+{ 
+return; 
+} 
+
+Observatie: Codul anterior are doua inconveniente:
+a) Daca nucleul intarzie procesul intre apelurile alarm si read pentru un interval mai
+mare decat perioada alarmei ( 10 secunde), apelul read se blocheaza pentru totdeauna.
+b) Daca functiile de sistem sunt automat relansate, apelul read nu este intrerupt cand se
+revine din rutina de tratare a semnalului SIGALRM. In acest caz alarma nu-si are rostul.
+8.3. Urmatorul program ilustreaza cum pot fi create intr-un program regiuni ce nu
+pot fi intrerupte, semnalul de intrerupere fiind amanat pana la terminarea regiunii.
+Programul preia linii de text de la intrarea standard pe care le afiseaza la iesirea standard.
+Pe timpul preluarii textului de la tastatura programul nu va putea fi intrerupt.
+#include <signal.h> 
+#include <setjmp.h> 
+#define MAXLIN 81 
+
+Sisteme de Operare
+
+Laborator nr. 8
+
+jmp_buf cs_stack; 
+int in_reg, s_inreg; 
+void beg_reg( ); /* functie ce marcheaza inceputul regiunii */ 
+void end_reg( ); /* functie ce marcheaza sfarsitul regiunii */ 
+int tratare( ); /* rutina de tratare a semnalului */ 
+int read_line( ); 
+void main( ) 
+{ 
+int nr_car; 
+char buff[MAXLIN]; 
+signal( SIGINT, tratare ); 
+if( setjmp( cs_stack ) ){ /* prelucrare intrerupere */ 
+printf("Programul este intrerupt prin semnal !\n"); 
+exit(1); 
+} else 
+while( 1 ){ 
+printf( "> " ); 
+beg_reg( ); 
+nr_car = read_line( buff ); 
+end_reg( ); 
+if( nr_car>0 ) { 
+printf( "%s\n", buff ); 
+sleep( 2 ); 
+} 
+else break; 
+} 
+printf( " Program terminat normal !\n" ); 
+} 
+int tratare( ) 
+{ 
+if( in_reg ){ 
+signal( SIGINT, SIG_IGN ); 
+s_inreg=1; 
+return 0; 
+} else { 
+signal( SIGINT, tratare ); 
+longjmp( cs_stack, 1 ); 
+} 
+return 0; 
+} 
+void beg_reg( void ) 
+{ 
+in_reg = 1; s_inreg = 0; 
+} 
+void end_reg( void ) 
+{ 
+in_reg = 0; 
+if( s_inreg ){ 
+s_inreg = 0; 
+signal( SIGINT, tratare ); 
+longjmp( cs_stack, 1 ); 
+} 
+} 
+int read_line( buff ) 
+char *buff; 
+{ 
+char c; 
+int i=0; 
+for( c = getchar( ); i<MAXLIN && c!='\n'; c = getchar( ) ) 
+buff[ i++ ] = c; 
+buff[i] = '\0'; 
+return i; 
+
+Sisteme de Operare
+
+Laborator nr. 8
+
+} 
+
+9.Bibliografie:
+• Iosif Ignat, Adrian Kacso, UNIX Gestionarea Proceselor, Ed. Albastră, 2006
+• W. Richard Stevens, Stephen A. Rago, Advanced Programming in the UNIX Environment: Second Edition, Addison Wesley, 2005
+• Kurt Wall, Mark Watson, and Mark Whitis, Linux Programming Unleashed, Sams
+Publishing, 1999
+• A. D. Marshall, Programming in C. UNIX System Calls and Subroutines using C,
+http://www.cs.cf.ac.uk/Dave/C/
+
+• Guide to Unix IPC http://beej.us/guide/bgipc/output/html/singlepage/bgipc.html
+• Mark Mitchell, Jeffrey Oldham, and Alex Samuel, Advanced Linux Programming,
+New Riders Publishing, 2001, http://www.advancedlinuxprogramming.com/
+• Compiler, assembler, linker and loader: a brief story http://tenouk.com/ModuleW.html
+• Handling SIGFPE http://technopark02.blogspot.ro/2005/10/handling-sigfpe.html
+• Catching Exceptions and Printing Stack Traces for C on Windows, Linux, & Mac
+http://spin.atomicobject.com/2013/01/13/exceptions-stack-traces-c/
+• Exceptions and Exception Handling http://docs.oracle.com/cd/E19957-01/8063568/ncg_handle.html
+• Introduction To Unix Signals Programming http://titania.ctie.monash.edu.au/signals/
+
+• LINUX SIGNALS IN C/C++ http://linuxmafia.com/faq/Devtools/signals.html
+
+

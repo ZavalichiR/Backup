@@ -1,0 +1,681 @@
+Sisteme de Operare
+
+Laborator nr. 10
+Laborator nr. 10
+
+Comunicarea inter-procese prin canale interne/externe (pipes/FIFO)
+Una din modalitatile de comunicare intre procese este cea prin intermediul canalelor
+de comunicatie (numite pipes, in lb. engleza). Practic este vorba despre o "conducta" (un
+buffer) prin care pe la un capat se scriu mesajele, iar pe la celalalt se citesc (deci un fel de
+lista fifo, de exemplu coada).
+Definitie: Pipe-urile sunt canale de comunicatie intre procese, prin care informatiile
+sunt transferate de la un proces la altul printr-un mecanism FIFO.
+Canalele de comunicatie sunt familiare utilizatorilor sistemului UNIX ca facilitate a
+interpretorului de comenzi shell. De exemplu, pentru a tipari o lista ordonata a utilizatorilor
+ce au deschis o sesiune de lucru in sistem se foloseste comanda:
+who | sort | pr
+Exista trei procese conectate prin doua conducte. Fluxul datelor este de la stanga la
+dreapta.
+Pipe-urile se pot crea si prin program, rezultand de aici mai multa flexibilitate,
+posibilitatea de a crea legaturi circulare intre procese, etc.
+Pipe-urile sunt de 2 categorii:
+- pipes interne: se gasesc in memoria interna a sistemului Linux/Unix;
+- pipes externe: sunt fisiere de un tip special, pastrate deci in sistemul de fisiere
+(se mai numesc si pipe cu nume, sau fisiere FIFO).
+1. Canale interne (pipes)
+Un pipe intern este un canal, aflat in memorie, prin care pot comunica doua sau
+mai multe procese, scrierea/citirea facindu-se ca pentru fisiere obisnuite.
+Crearea unui pipe intern se face cu apelul functiei sistem:
+int pipe(int *p);
+unde p trebuie sa fie un tablou int[2] si anume:
+- p[0] va fi descriptorul de fisier pentru capatul Read al pipe-ului (citirea din pipe se
+va face cu functiile read/fscanf folosind acest descriptor);
+- p[1] va fi descriptorul de fisier pentru capatul Write al pipe-ului (scrierea in pipe
+se va face cu functiile write/fprintf folosind acest descriptor);
+Valoarea returnata este:
+0, in caz de succes (s-a putut crea pipe-ul), respectiv
+-1, in caz de esec.
+Pentru ca doua sau mai multe procese sa poata folosi acest pipe pentru a
+comunica, ele trebuie sa aiba la dispozitie cei doi descriptori p[0] si p[1], deci procesul care
+a creat pipe-ul va trebui sa i le "transmita cumva" celuilalt.
+Observatie: in cazul cind doriti sa utilizati pipe-ul pentru comunicare intre 2 procese
+de tipul parinte-fiu, atunci este suficient sa puneti apelul de creare a pipe-ului inaintea
+apelului fork() !!! In acest fel in procesul fiu veti avea la dispozitie cei doi descriptori
+necesari pentru comunicare prin intermediul acelui pipe. La fel se procedeaza si in cazul
+apelului exec (descriptorii de fisiere deschise se mostenesc prin exec !). O raţiune
+pentru care apelurile fork şi exec nu au fost contopite într-un unic apel sistem este ca
+între ele să se poată face unele prelucrări.
+
+Sisteme de Operare
+
+Laborator nr. 10
+
+Caracteristici si restrictii ale pipe-ului intern:
+a) unitatea de informatie pentru pipe este octetul !
+b) este un canal unidirectional
+- adica la capatul p[1] se scrie, iar pe la capatul p[0] se citeste. Insa ambele
+procese pot scrie la capatul p[1], si/sau sa citeasca la capatul p[0].
+c) dimensiunea pipe-ului (i.e. capacitatea bufferului fifo) este limitata la o anumita
+dimensiune maxima (4ko, 16ko, etc.), ce difera de la un sistem Linux/Unix la altul.
+- daca pipe-ul este plin si se incearca un write in el, apelul write va fi blocat
+pina cind se va face loc in pipe (prin citire de la celalalt capat).
+d) pipe-ul functioneaza ca o coada (o lista FIFO = First-In-First-Out)
+- citirea din pipe se face cu distrugerea (consumul) din canal a
+informatiei citite (Obs.: citirea din pipe difera de citirea din fisiere obisnuite,
+unde citirea se face fara consumul informatiei din fisier).
+e) pentru a se putea citi EOF din pipe, trebuie ca mai intii ambele procese sa inchida
+canalul in scriere.
+f) functia read() returneaza 0 numai daca a citit EOF din pipe, altfel ea ramine
+blocata pina cind reuseste sa citeasca din pipe (deci pina cind are ce sa citeasca;
+aceasta se va intimpla in momentul cind alt proces va scrie ceva in pipe).
+g) daca un proces incearca sa scrie in pipe si nici un proces nu mai este capabil sa
+citeasca din canal vreodata (toate procesele si-au inchis capatul de citire), atunci
+sistemul trimite acelui proces semnalul SIGPIPE, ce cauzeaza intreruperea sa.
+Observatie: Un pipe unidirectional (unul din procese doar scrie iar celalat doar
+citeste) nu poate duce niciodata la deadlock total chiar daca dimensiunea blocului de scris
+este mai mare decit dimensiunea pipe-ului.
+Exemplul 1:
+Programul urmator creaza un pipe pentru comunicarea intre 2 procese ( extras din
+pagina de manual a functiei pipe: man pipe )
+ #include <sys/wait.h>
+       #include <assert.h>
+       #include <stdio.h>
+       #include <stdlib.h>
+       #include <unistd.h>
+       #include <string.h>
+       int
+       main(int argc, char *argv[])
+       {
+           int pfd[2];
+           pid_t cpid;
+           char buf;
+           assert(argc == 2);
+           if (pipe(pfd) == ­1) { perror("pipe"); exit(EXIT_FAILURE); }
+           cpid = fork();
+           if (cpid == ­1) { perror("fork"); exit(EXIT_FAILURE); }
+           if (cpid == 0) {    /* Child reads from pipe */
+               close(pfd[1]);          /* Close unused write end */
+               while (read(pfd[0], &buf, 1) > 0)
+                   write(STDOUT_FILENO, &buf, 1);
+               write(STDOUT_FILENO, "\n", 1);
+               close(pfd[0]);
+               _exit(EXIT_SUCCESS);
+
+Sisteme de Operare
+
+Laborator nr. 10
+
+           } else {            /* Parent writes argv[1] to pipe */
+               close(pfd[0]);          /* Close unused read end */
+               write(pfd[1], argv[1], strlen(argv[1]));
+               close(pfd[1]);          /* Reader will see EOF */
+               wait(NULL);             /* Wait for child */
+               exit(EXIT_SUCCESS);
+           }
+       }
+
+Exemplul 2:
+Programul de mai jos este un exemplu de utilizare a unui pipe intern pentru
+comunicatia intre 2 procese. Procesul tata citeste un sir de caractere de la tastatura (sir
+terminat cu: CTRL+D, i.e. EOF in Unix), si le transmite procesului fiu, prin intermediul pipeului, doar pe acelea care sunt litere mici; procesul fiu citeste din pipe caracterele trasmise
+de parinte si le afiseaza pe ecran.
+Obs.: programul foloseste functiile I/O de nivel scazut (nebufferizate) read & write.
+/*   Exemplu   de   utilizare   a   unui   pipe   intern   pentru   comunicatia   intre   2  
+procese,folosind functii I/O de nivel scazut (nebufferizate).
+*/
+#include<stdio.h>
+#include<errno.h>
+extern int errno;
+#define NMAX 1000
+void main()
+{
+  int pid, p[2];
+  char ch;
+  /* creare pipe intern */
+  if(pipe(p) == ­1)
+  {
+    fprintf(stderr,"Error: can't open a channel, errno=%d\n",errno);
+    exit(1);
+  }
+  /* creare proces fiu */
+  if( (pid=fork()) == ­1)
+  {
+    fprintf(stderr,"Error: can't create a child!\n");
+    exit(2);
+  }
+  if(pid)
+  { /* in tata */
+    /* tatal isi inchide capatul Read */
+    close(p[0]);
+    /* citeste caractere de la tastatura,
+       pentru terminare: CTRL+D (i.e. EOF in Unix),
+       si le transmite doar pe acelea care sunt litere mici */
+    while( (ch=getchar()) != EOF)
+      if((ch>='a') && (ch<='z'))
+        write(p[1],&ch,1);
+    /* tatal isi inchide capatul Write,
+       pentru ca fiul sa poata citi EOF din pipe */
+    close(p[1]);
+
+Sisteme de Operare
+
+Laborator nr. 10
+
+    /* asteapta terminarea fiului */
+    wait(0);
+  }
+  else
+  { /* in fiu */
+    char buffer[NMAX];
+    int nIndex = 0;
+    /* fiul isi inchide capatul Write */
+    close(p[1]);
+    /* fiul citeste caracterele din pipe si salveaza in buffer, pina
+       depisteaza EOF, apoi afiseaza continutul bufferului. */
+    
+    while( read(p[0],&ch,1) != 0)
+      if(nIndex < NMAX)
+        buffer[nIndex++] = ch;
+    buffer[ (nIndex==NMAX) ? NMAX­1 : nIndex ] = '\0';
+    printf("Fiu: am citit buffer=%s\n",buffer);
+    /* fiul isi inchide capatul Read */
+    close p[0];
+    /* Obs: nu mai era nevoie de acest close explicit, deoarece
+       oricum toti descriptorii sunt inchisi la terminarea programului. */
+  }
+}
+/* eof */
+
+Exemplul 3:
+Programul de mai jos este un alt exemplu de utilizare a unui pipe intern pentru
+comunicatia intre 2 procese. Procesul tata citeste un sir de numere de la tastatura (sir
+terminat cu: CTRL+D, i.e. EOF in Unix), si le transmite procesului fiu, prin intermediul pipeului; procesul fiu citeste din pipe numerele trasmise de parinte si le afiseaza pe ecran.
+Obs.1: programul foloseste functiile I/O de nivel inalt (bufferizate) fscanf & fprintf ;
+din acest motiv a fost nevoie de conversia descriptorilor de fisiere de la tipul int la tipul
+FILE* !
+Obs. 2: numerele au fost scrise in pipe ca si secventa cifrelor care le compun (si nu
+ca reprezentare binara pe 2 octeti) si din acest motiv ele trebuie separate printr-un
+caracter care nu este cifra (in program am folosit caracterul '\n', dar poate fi folosit oricare
+altul), cu scopul ca aceste numere sa poata fi citite corect (i.e. fara a se "amesteca" intre
+ele) la destinatar.
+/*
+  Exemplu   de   utilizare   a   unui   pipe   intern   pentru   comunicatia   intre   2  
+procese,folosind functii I/O de nivel inalt (bufferizate).
+*/
+#include<stdio.h>
+#include<errno.h>
+extern int errno;
+void main()
+{
+  int pid, nr, p[2];
+  FILE *fin,*fout;
+  if(pipe(p) == ­1)
+  {
+    fprintf(stderr,"Error: can't open channel, err=%d\n",errno);
+    exit(1);
+
+Sisteme de Operare
+
+Laborator nr. 10
+
+  }
+  /* atasare descriptori de tip FILE* la cei de tip int */
+  fin = fdopen(p[0],"r"); /* capatul de citire  */
+  fout= fdopen(p[1],"w"); /* capatul de scriere */
+  /* creare proces fiu */
+  if( (pid=fork()) == ­1)
+  {
+    fprintf(stderr,"Error: can't create a child!\n");
+    exit(2);
+  }
+  if(pid)
+  { /* in tata */
+    /* tatal isi inchide capatul Read */
+    fclose(fin);
+    /* citeste numere de la tastatura,
+       pentru terminare: CTRL+D (i.e. EOF in Unix),
+       si le transmite prin pipe procesului fiu.
+       OBS: in pipe numerele sunt separate printr­un caracter care nu­i
+       cifra, in acest caz '\n', pentru a nu se "amesteca" cifrele de la
+       numere diferite la citirea lor din pipe ! */
+    while(scanf("%d",&nr) != EOF)
+    {
+      fprintf(fout,"%d\n",nr);
+      fflush(fout);
+    }
+    /* tatal isi inchide capatul Write,
+       pentru ca fiul sa poata citi EOF din pipe */
+    fclose(fout);
+    /* asteapta terminarea fiului */
+    wait(0);
+  }
+  else
+  { /* in fiu */
+    /* fiul isi inchide capatul Write */
+    fclose(fout);
+    /* fiul citeste numerele din pipe si le afiseaza pe ecran,
+       pina depisteaza EOF in pipe.
+       OBS: conform celor de mai sus, caracterul '\n' este folosit
+       ca separator de numere ! */
+    while(fscanf(fin,"%d",&nr) != EOF)
+    {
+      printf("%d\n",nr);
+      fflush(stdout);
+    }
+    /* fiul isi inchide capatul Read */
+    fclose(fin);
+    /* Obs: nu mai era nevoie de acest fclose explicit, deoarece
+       oricum toti descriptorii sunt inchisi la terminarea programului. */
+  }
+}
+/* eof */
+
+Sisteme de Operare
+
+Laborator nr. 10
+
+Probleme ce pot apare la comunicatia prin pipe (pot apare chiar si la
+comunicatia prin fisiere obisnuite !):
+- in cazul transmiterii de mesaje cu lungime variabila, acestea trebuie formatate
+astfel:
+mesaj = header(contine lungimea) + mesajul propriu-zis
+- in cazul in care mai multe procese folosesc acelasi canal:
+mesaj = header(lungimea;ID-emitator;ID-destinatar) + mesajul propriu-zis
+- daca exista vreo limitare a lungimii maxime pe care o pot avea mesajele, atunci
+mesajele trebuie "impartite" in pachete (de lungime fixa, <= cu limita admisibila) si
+atunci:
+pachet = header(ID-pachet;ID-emitator;ID-destinatar) + mesajul pachetului
+ID-pachet este necesar pentru refacerea mesajului din pachete la destinatie,
+deoarece ordinea de emisie nu este obligatoriu sa coincida cu ordinea in care sunt
+receptionate pachetele.
+Observatie: In cazul cind dorim o sa realizam o comunicatie bidirectionala
+folosind pipe-uri, crearea unui pipe bidirectional poate duce la deadlock total. In acest caz
+trebuie create doua pipe-uri (unul pentru citire/scrire, altul scriere/citire). Descriptorii de
+fisier blocati sunt tot doi pentru fiecare proces, ceilalti doi putind fi inclusi ca in exemplele
+anterioare.
+2. Canale externe (FIFO)
+Un FIFO combina trasaturile unui pipe cu acelea ale unui fisier. Ca si fisierul, FIFOul are un nume, o pozitie in sistemul de fisiere si poate fi accesat de orice proces care are
+drepturi asupra lui. Spre deosebire de pipe-urile clasice, cu ajutorul unui FIFO pot
+comunica oricare doua procese indiferent de relatia lor de rudenie. Din momentul in care a
+fost deschis insa, FIFO se comporta ca pipe. Datele se pot citi in ordinea FIFO, apelurile
+de tip read/write fiind atomice, cu conditia sa nu depaseasca capacitatea FIFO-ului
+(>=4 ko). Lseek nu are are efect iar datele nu mai pot fi scrise inapoi. Atunci cind un FIFO
+este deschis pentru citire, kernelul asteapta pina cind un alt proces deschide acelasi FIFO
+pentru scriere (se asteapta unul pe altul la deschiderea canalului de comunicatie, rendezvous, sincronizat inaintea comunicatiei propiu-zise).
+Pentru ca deschiderea pentru citire sa returneaze imediat se poate folosi apelul
+fcntl pentru a seta flagul O_NDELAY, fara sa astepte ca FIFO-ul sa fie deschis pentru
+scriere, in timp ce deschiderea pentru scriere returneaza eroare (kernelul nu poate garanta
+pastrarea permanenta a datelor care se inscriu in FIFO-ul care nu este citit imediat).
+#include <fcntl.h>
+if(fcntl(fd,F_SETFL,O_NDELAY)<0)
+  perror("eroare fcntl\n");
+
+In plus, la inchiderea canalului de comunicatie fara comunicarea tuturor datelor
+scrise, acestea se pierd fara a se indica eroare. Flagul O_NDELAY afecteaza apelurile de
+citire/scriere si la pipe-urile clasice. Crearea unui FIFO se face cu mknod:
+#include <sys/types.h>
+#include <sys/stat.h>
+init res;
+char *path;
+res=mknod(path,S_IFIFO|0666,0);
+
+res = 0 - in caz de succes
+res = 1 - in caz de eroare
+
+Sisteme de Operare
+
+Laborator nr. 10
+
+Path reprezinta numele FIFO (la fel ca la fisiere) si 0666 drepturi de acces. Mknod
+foloseste pentru crearea unor fisiere normale, a unor subdirectoare, sau a unor fisiere
+speciale, dar aceste facilitati sunt accesibile numai supervizorului. Parametrul S_IFIFO
+este accesibil oricarui user. Cu fstat putem prelua starea unui FIFO deschis anterior, iar
+cu stat starea unui FIFO nedeschis inca. ( man 2 fstat )
+#include <sys/types.h>
+#include <sys/stat.h>
+int res,fd;
+char *path;
+struct stat *sbuf ;
+res = fstat(fd,sbuf);       // res=0 succes;  res=1 eroare
+res = stat(path,sbuf);
+
+Informatiile obtinute prin aceste apeluri : lungime (cite caractere sunt in FIFO),
+timpul/data de creare, actualizare, numarul de Inode, numarul de legaturi (links=0 pentru
+pipe clasic, acesta neexistind pe disc), uid, gid, etc.
+Exemplul 4:
+O prima aplicare a FIFO este de a implementa un pipe clasic. In locul unui apel de
+sistem vom deschide FIFO de doua ori, odata pentru scriere si odata pentru citire si apoi
+putem trata cei doi descriptori ca la pipe clasic. De fapt FIFO s-au introdus nu pentru a
+inlocui pipe ci mesajele.
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <errno.h>
+#include <fcntl.h>
+#define MAXOPEN  7
+#define MAXTRIES 3
+#define NAPTIME  5
+#define FALSE    0
+#define TRUE     1
+static char *fifoname(key) /*creeaza un nume de fisier temporar */
+long key;
+{
+static char fifo[20];
+sprintf(fifo,"/temp/fifo%ld ",key);
+return fifo;
+}
+static int mkfifos(path)   /*  creeaza un FIFO  */
+char *path;
+{  
+return mknod(path,S_IFIFO|0666,0);
+}
+
+ 
+   
+
+static int openfifo(key,flags)
+long key;
+int flags;
+{  
+static struct
+{
+long key;
+  
+int fd;
+  
+int time;
+
+Sisteme de Operare
+
+Laborator nr. 10
+
+}fifos[MAXOPEN];
+static int clock ;
+int i,avail,oldest,fd,tries;
+char *fifo;
+extern int errno;
+avail=­1;  /*  caut_ un loc liber  */
+for(i=0;i<MAXOPEN;i++)
+{
+  if(fifos[i].key==key)
+  {
+    fifos[i].time=clock;
+    return fifos[i].fd;
+  }
+  if(fifos[i].key==0 && avail==­1)
+  avail=i;
+}
+if(avail==­1)  /* daca nu foloseste cel mai vechi  */
+{
+  oldest=­1;
+  for(i=0;i<MAXOPEN;i++)
+  
+    if(oldest==­1 || fifos[i].time < oldest)
+        oldest=fifos[i].time;
+        avail=i;
+        if(close(fifos[avail].fd)==­1)
+       
+    return ­1;
+}
+fifo=fifoname(key);
+if(mkfifos(fifo)== ­1 && errno != EEXIST)
+  
+return ­1;
+for(tries=1;tries < MAXTRIES;tries++)
+{
+  if((fd=open(fifo,flags|O_NDELAY)) != ­1)
+    break;
+  if(errno != ENXIO) return ­1;
+    sleep(NAPTIME);
+ }
+if(fd == ­1)
+{
+  errno=ENXIO;
+  return ­1;
+}
+if(fcntl(fd,F_SETFL,flags)== ­1)   /* reseteaza O_NDELAY */
+  return ­1;
+fifos[avail].key=key;
+fifos[avail].fd=fd;
+fifos[avail].time=clock;
+return fd;
+}
+int send(dstkey,buf,nbytes)   /* trimite un mesaj */
+long dstkey;
+char* buf;
+int nbytes;
+{
+int fd;
+if ((fd=openfifo(dstkey,O_WRONLY)== ­1)
+return FALSE;
+return write(fd,buf,nbytes) != ­1;
+}
+int receive(srckey,buf,nbytes)   /* primeste un mesaj */
+
+Sisteme de Operare
+
+Laborator nr. 10
+
+long srckey;
+char *buf;
+int nbytes;
+{
+int fd,nread;
+if((fd=openfifo(srckey,O_RDONLY))==­1)
+return FALSE;
+while((nread=read(fd,buf,nbytes))==0)
+sleep(NAPTIME);
+return (nread != ­1) ;
+}
+
+void rmqueue(key)
+long key;
+{
+int errno ;
+if(unlink(fifoname(key)) == ­1 && errno != ENOENT)
+  perror("eroare unlink\n");
+}
+/* eof */
+/* Receive.c */
+#include"mesaje.h"
+void main()
+{
+MESSAGE m;
+setbuf(stdout,NULL);
+while(receive(1000L,&m,sizeof(m)))
+printf("Received %d from  %d \n ",m.number,m.pid);
+perror("eroare receive !\n");
+exit(1);
+}
+/* eof */
+/* Send.c */
+#include"mesaje.h"
+void main()
+{
+MESSAGE m;
+m.pid=getpid();
+for(m.number = 1 ; m.number <= 4; m.number++)
+{
+  sleep(1);
+  if(!send(1000L,&m,sizeof(m))) 
+    perror("eroare send !\n");
+}
+}
+/* eof */
+/* Mesaje.h */
+typedef struct
+{
+long unused;
+int pid;
+int number;
+}MESSAGE;
+/* eof */
+
+Sisteme de Operare
+
+Laborator nr. 10
+
+3. Probleme rezolvate
+3.1. Fie urmatorul program in care 2 procese (in relatia parinte-fiu) comunica prin
+pipe:
+#include <stdio.h> 
+char msg1[]="abcdefghij"; 
+char msg2[]="1234567890"; /* functie de mesaje */ 
+main() 
+{ 
+char buf[128]; 
+int pfd[2], pid; 
+pipe( pfd); 
+if (( pid=fork())==0) { 
+printf("Fiul transmite: %s\n", msg1); 
+write( pfd[1], msg1, 11); 
+read( pfd[0], buf, 13); 
+printf("Fiul receptat: %s\n", buf); 
+exit(1); 
+} 
+else { 
+read( pfd[0], buf, 11); 
+printf("Tatal receptat: %s\n", buf); 
+write( pfd[1], msg2, 13); 
+printf("Tatal transmite: %s\n", msg2); 
+} 
+} 
+
+3.2. Sa se scrie un program care afiseaza continutul fisierului primit ca argument in
+linia de comanda. Programul afiseaza continutul fisierului pagina cu pagina.
+#include <sys/wait.h> 
+#include "hdr.h" 
+#define DEF_PAGER "/usr/bin/more" 
+main( int argc, char *argv[]) 
+{ 
+int pfd[2], n; 
+pid_t pid; 
+char buf[MAXLINE], *pager, *arg; 
+FILE *fp; 
+if ( argc !=2 ) 
+err_quit("Utilizare: a.out <path>\n"); 
+if ( pipe( pfd) < 0 ) 
+err_sys("Eroare pipe"); 
+if ( ( fp=fopen( argv[1], "r")) == NULL) 
+err_sys("Eroare fopen %s", argv[1]); 
+switch ( fork() ) { 
+case 1: err_sys("Eroare fork"); 
+case 0: /* fiul citeste */ 
+close( pfd[1]); 
+if ( pfd[0] != 0) { 
+if ( dup2( pfd[0], 0) != 0) 
+err_sys("Eroare dup2"); 
+close( pfd[0]); /* nu mai e necesar */
+} 
+if ( ( pager=getenv("PAGER")) == NULL) 
+pager=DEF_PAGER; 
+if ( ( arg=strrchr( pager, '/')) != NULL) 
+arg++; 
+else 
+arg=pager; 
+if ( execl( pager, arg, NULL) < 0) 
+err_sys("Eroare execl la %s", pager); 
+default: /* scrie parintele */ 
+
+Sisteme de Operare
+
+Laborator nr. 10
+close( pfd[0]); 
+while ( fgets( buf, MAXLINE, fp) != NULL) { 
+n=strlen( buf); 
+if ( write( pfd[1], buf, n) != n) 
+err_sys("Eroare write"); 
+} 
+if ( ferror( fp)) 
+err_sys("Eroare ferror"); 
+close( pfd[1]); 
+if ( waitpid( pid, NULL,0) < 0) 
+err_sys("Eroare waitpid"); 
+exit(0); 
+
+} 
+} 
+
+3.3. Sa se scrie un program care citeste datele dintr-un fisier, primit ca argument in
+linia de comanda si foloseste filtrul sort pentru a le ordona alfabetic. In final, datele sortate
+sunt afisate.
+#include <stdio.h> 
+#include "hdr.h" 
+void fsort( char *); 
+int main( int argc, char *argv[]) 
+{ 
+if ( argc < 2) 
+err_quit("Utilizare: fsort <nume.txt>\n"); 
+fsort( argv[1]); 
+} 
+void fsort( char *path) 
+{ 
+int pfdout[2], pfdin[2], fd, nr; 
+char buf[512]; 
+if ( pipe( pfdout) < 0 || pipe( pfdin) < 0) 
+err_sys("Eroar pipe"); 
+switch( fork()) { 
+case 1: err_sys("Eroare fork"); 
+case 0: /* procesul fiu nu va citi din pfdin[0] si 
+nu va scrie in pfdout[1] */ 
+if ( close( pfdin[0]) < 0 || close( pfdout[1]) < 0) 
+err_sys("Eroare close unused"); 
+if ( close(0) < 0) 
+err_sys("Eroare close stdin"); 
+if ( dup( pfdout[0]) != 0) 
+err_sys("Eroare dup la stdin"); 
+if ( close(1) < 0) 
+err_sys("Eroare close stdout"); 
+if ( dup( pfdin[1]) != 1) 
+err_sys("Eroare dup la stdout"); 
+/* se elibereaza descriptorii anterior folositi */ 
+if ( close(pfdout[0]) < 0 || close( pfdin[1]) < 0) 
+err_sys("Eroare close"); 
+execlp("sort", "sort", NULL); 
+err_sys("Eroare execlp"); 
+} 
+/* procesul parinte */ 
+if ( close( pfdout[0]) < 0 || close( pfdin[1]) < 0) 
+err_sys("Parinte: Eroare close unused"); 
+/* deschiderea fisierului de date */ 
+if ( ( fd=open( path, 0)) < 0) 
+err_sys("Eroare open"); 
+
+Sisteme de Operare
+
+Laborator nr. 10
+
+/* scrierea datelor nesortate in pipe */ 
+while (( nr=read( fd, buf, sizeof(buf))) != 0) { 
+if ( nr < 0) 
+err_sys("Eroare read date nesortate"); 
+if ( write( pfdout[1], buf, nr) < 0) 
+err_sys("Eroare write date nesortate"); 
+} 
+/* inchiderea fisierului si EOF pentru pipe */ 
+if ( close(fd) < 0 || close( pfdout[1]) < 0) 
+err_sys("Eroare close DATA & pfdout[1]"); 
+/* citirea datelor din conducta */ 
+while ( ( nr=read( pfdin[0], buf, sizeof( buf))) != 0) { 
+if ( nr < 0) 
+err_sys("Eroare read date sortate"); 
+if ( write( 1, buf, nr) < 0) 
+err_sys("Eroare write date sortate"); 
+} 
+if ( close(pfdin[0])==1) 
+perror("close"); 
+} 
+
+4. Bibliografie:
+• Iosif Ignat, Adrian Kacso, UNIX Gestionarea Proceselor, Ed. Albastră, 2006
+• W. Richard Stevens, Stephen A. Rago, Advanced Programming in the UNIX Environment: Second Edition, Addison Wesley, 2005
+• Kurt Wall, Mark Watson, and Mark Whitis, Linux Programming Unleashed, Sams
+Publishing, 1999
+• A. D. Marshall, Programming in C. UNIX System Calls and Subroutines using C,
+http://www.cs.cf.ac.uk/Dave/C/
+• Guide to Unix IPC http://beej.us/guide/bgipc/output/html/singlepage/bgipc.html
+• Mark Mitchell, Jeffrey Oldham, and Alex Samuel, Advanced Linux Programming,
+New Riders Publishing, 2001, http://www.advancedlinuxprogramming.com/
+• Compiler, assembler, linker and loader: a brief story
+http://tenouk.com/ModuleW.html
+
+

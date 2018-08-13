@@ -1,0 +1,4 @@
+Nr 2
+Sa se scrie un program care la primirea semnalului SIGUSR1 <pid> afiseaza PID'ul propriu
+si cel al procesului parinte si executa comanda "ps" (se va crea un proces fiu pentru a executa comanda
+- se folosesc functiile fork() si exec()). Semnalul SIGUSR1 se va transmite din linia de comanda.

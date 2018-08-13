@@ -1,0 +1,757 @@
+Sisteme de Operare
+
+Laborator nr. 9
+Laborator nr. 9
+
+Sincronizarea proceselor cu ajutorul semafoarelor
+Atunci cind mai multe procese concureaza pentru resursele sistemului este nevoie
+de un mecanism de sincronizare (printre aceste resurse sunt si regiunile critice ale
+programelor). Bazele lucrului cu semafoare au fost puse de Dijkstra.
+1. Premisele teoretice ale problemei
+O situatie tipica este urmatoarea: doua procese vor sa acceseze acelasi segment
+de memorie. Ele nu pot accesa memoria direct, ci trebuie sa folosesca un semafor (sau
+variabila de sincronizare), pentru a vedea daca in momentul respectiv este permis accesul
+la segmentul de memorie respectiv.
+Un semafor poate fi privit ca o variabila care ia numai valori intregi si pozitive.
+Pentru a se putea realiza sincronizarea, este nevoie sa fie implementate doua operatii de
+baza, blocarea (P(s)) si eliberarea (V(s)). Aceste doua operatii trebuie sa fie atomice, cu
+alte cuvinte nimeni nu are voie sa aiba o prioritate atit de mare incit sa le intrerupa. Din
+acest motiv cele doua operatii trebuie sa fie implementate ca apeluri ale nucleului.
+In implementarile curente un semafor este o variabila intreaga s, careia i se
+asociaza o valoare initiala e0(s), o valoare curenta e(s) si o coada de asteptare f(s). Sunt
+prezentate in continuare cele mai cunoscute primitive de sincronizare P si V.
+P(v) 
+{ 
+e(v)=e(v)­1; 
+if( e(v) < 0) { 
+stare_proces = blocat; 
+procesul este trecut in coada f(v); 
+} 
+} 
+V(v) 
+{ 
+e(v)=e(v)+1; 
+if ( e(v) <= 0) { 
+selecteaza un proces din coada f(v); 
+stare_proces_selectat = activ; 
+} 
+}
+
+Valoarea curenta a semaforului este:
+unde
+
+e(s) = e0(v) + nV(v) ­ nP(v)
+nV(s) reprezinta numarul de primitive
+
+v executate asupra semaforului s, iar
+numarul de primitive p executate asupra semaforului s.
+Pentru realizarea unei regiuni (sectiuni) critice se va proceda astfel: valoarea initiala
+a semaforului este 1, iar regiunea critica este delimitata de primitiva P si V astfel:
+nP(v) reprezinta
+
+P(v); 
+regiune critica; 
+V(v); 
+rest proces; 
+
+2. Implementarea semafoarelor in sistemele Linux si Unix
+In UNIX System V, notiunea de semafor a fost generalizata. Astfel, asupra unui
+semafor pot fi date mai multe operatii simultan (primitivele P si V erau apelate la momente
+de timp diferite intr-un proces), iar valoarea de decrementare sau incrementare nu trebuie
+sa fie neaparat 1. Toate operatiile executate de functiile de sistem aferente sunt
+indivizibile. Daca nucleul nu poate executa toate operatiile cerute intr-un proces, nu se
+
+Sisteme de Operare
+
+Laborator nr. 9
+
+executa nici una, procesul fiind trecut in stare de asteptare pana cand vor putea fi
+executate toate operatiile.
+Un proces poate crea un ansamblu de semafoare. Ansamblul are o intrare in tabela
+semafoarelor, care constituie antetul setului.
+Nucleul asociaza procesului o tabela cu atatea elemente, cate semafoare sunt in
+set. Fiecare element pastreaza valoarea asociata semaforului corespondent.
+Gestionarea semafoarelor este asemanatoare cu gestionarea memoriei comune si
+a cozilor de mesaje. Astfel, un proces poate avea acces la structurile legate de semafoare
+numai daca cunoaste cheia asociata. Intern setul de semafoare este identificat printr-un
+numar intreg, numit identificatorul setului. Prin intermediul identificatorului setului, un
+proces poate opera asupra unui anumit semafor.
+Un set de semafoare are asociate: un identificator, care este un numar intreg
+pozitiv, similar cu descriptorul de fisier si o structura de date de tipul semid_ds.
+struct semid_ds { 
+struct ipc_perm sem_perm; 
+struct sem *sem_base; 
+int sem_nsens; 
+time_t sem_otime; 
+time_t sem_ctime; 
+}; 
+
+Campurile structurii au urmatoarele semnificatii:
+sem_perm - este o structura de tipul ipc_perm prezentata deja.
+sem_base - este un pointer la primul semafor din set. Nu este util unui proces
+utilizator, deoarece refera o adresa in nucleu.
+sem_nsens - indica numarul semafoarelor din set. Fiecare semafor din ansamblu
+are un numar de identificare intre 0 si numarul semafoarelor minus 1,
+numit sem_num;
+sem_otime - indica timpul la care a avut loc ultima operatie asupra ansamblului de
+semafoare prin operatia semop;
+sem_ctime - indica timpul la care a avut loc ultima modificare a structurii de date.
+Un proces poate avea acces la un set de semafoare daca indeplineste una din
+conditiile urmatoare:
+ procesul este al superuser-ului;
+ ID utilizatorului, uid, coincide cu sem_perm.cuid sau cu sem_perm.uid si este
+prevazut in sem_perm.mode dreptul de acces dorit;
+ utilizatorul are ID de grup, gid, identic cu sem_perm.cgid sau cu
+sem_perm.gid si este prevazut in sem_perm.mode dreptul de acces dorit;
+ utilizatorul face parte din categoria "alti utilizatori" si este prevazut in
+sem_perm.mode dreptul de acces dorit.
+Structura de date asociata unui semafor este:
+struct sem { 
+ushort semval; 
+pid_t sempid; 
+ushort semncnt; 
+ushort semzcnt; 
+}; 
+
+unde:
+semval
+sempid
+
+- este valoarea semaforului, o valoare intreaga mai mare sau egala cu zero;
+- reprezinta ID ultimului proces care a operat asupra semaforului;
+
+Sisteme de Operare
+
+Laborator nr. 9
+
+- este numarul proceselor care asteapta ca valoarea semaforului semval sa
+mare decat valoarea sa actuala;
+semzcnt - este numarul proceselor care asteapta ca valoarea semaforului semval sa
+devina zero.
+semncnt
+
+devina mai
+
+3. Functii sistem pentru semafoare
+3.1. Functia de sistem semget
+Functia de sistem semget permite obtinerea ID unui set de semafoare. Daca setul
+de semafoare nu exista anterior, acesta este creat. Indiferent daca setul exista sau nu,
+procesul trebuie sa cunoasca cheia asociata semaforului.
+Interfata functiei semget este:
+#include <sys/types.h> 
+#include <sys/ipc.h> 
+#include <sys/sem.h> 
+int semget( key_t cheie, int nrsem, int ind); 
+
+Functia semget returneaza ID semaforului in caz de succes, (-1) in caz de eroare.
+Argumente:
+cheie – reprezinta cheia atasata setului de semafoare;
+nrsem – este numarul semafoarelor din set. Daca un nou set este creat (de
+regula in server), trebuie precizata valoarea nrsem. Daca se refera un set care exista,
+valoarea nrsem este 0.
+ind – indica actiunea de creare si drepturile de acces la setul de semafoare.
+Pentru a crea un set de semafoare, trebuie precizate toate cele trei argumente, iar
+indicatorul IPC_CREAT trebuie pozitionat. Este recomandata si pozitionarea indicatorului
+IPC_EXCL cu rolul de a semnala existenta unui set de semafoare avand atasata aceeasi
+cheie. Argumentul ind este specificat sub forma:
+drepturi_de_acces | IPC_CREAT | IPC_EXCL 
+
+Daca nu este setat indicatorul IPC_EXCL, atunci in cazul existentei setului creat
+anterior asociat la cheia indicata, nu se semnaleaza eroare, ci se returneaza ID setului.
+Un exemplu de creare a unui set de semafoare:
+#define KEY 1995 
+semid=semget( (key_t) KEY, 5, 0666 | IPC_CREAT); 
+
+Daca se doreste numai obtinerea ID unui set de semafoare, apelul functiei semget
+se face precizand valoarea cheii si zero pentru ceilalti parametri.
+La crearea unui set de semafoare, structura de date asociata este completata cu
+urmatoarele informatii:
+ sem_perm.cuid,   sem_perm.uid – contin ID utilizatorului atasat procesului care a
+lansat apelul semget;
+ sem_perm.cgid, sem_perm.uid – contin ID grupului de utilizatori atasat procesului
+care a lansat apelul semget;
+ sem_perm.mode – contine drepturile de acces prevazute in apelul functiei semget de
+argumentul ind;
+ sem_nsems – contine numarul de semafoare indicat in apelul functiei semget;
+ sem_ctime – este completat cu valoarea curenta a timpului;
+ sem_otime – are valoarea 0.
+Un set de semafoare poate sa nu aiba cheie de acces atasata. In acest caz, la
+creare setului, apelul functiei semget se face precizand drept valoare pentru cheie
+constanta simbolica IPC_PRIVATE.
+3.2. Functia de sistem semctl
+Functia de sistem semctl are rolul de a efectua o serie de operatii asupra structurii
+asociate unui set de semafoare: citirea si modificarea informatiilor din structura de date
+
+Sisteme de Operare
+
+Laborator nr. 9
+
+asociata setului de semafoare sau din cea asociata unui semafor sau stergerea setului.
+Interfata functiei semctl este:
+#include <sys/types.h> 
+#include <sys/ipc.h> 
+#include <sys/sem.h> 
+int semctl( int semid, int nr_sem, int cmd, union semun arg); 
+
+Functia semctl returneaza valorile aferente pentru toate comenzile GET, exceptie
+facind comanda GETALL. In rest 0.
+Argumente:
+semid – reprezinta ID setului de semafoare obtinut prin apelul functiei
+semget;
+nr_sem – este numarul semaforului din set asupra caruia se executa
+comanda cmd indicata
+in functia semctl (numerotarea incepe cu 0);
+cmd – este operatia dorita, avand urmatoarele valori:
+ GETVAL – Functia returneaza valoarea semval a semaforului cu
+numarul nr_sem;
+ SETVAL – Actualizeaza valoarea semval a semaforului cu numarul
+nr_sem la valoarea specificata de campul arg.val.
+ GETPID – Functia returneaza valoarea sempid pentru semaforul
+nr_sem;
+ GETNCNT – Functia returneaza valoarea semncnt pentru semaforul
+nr_sem;
+ GETZCNT – Functia returneaza valoarea semzcnt pentru semaforul
+nr_sem;
+ GETALL – Valorile semval ale tuturor semafoarelor din set sunt
+memorate in tabloul referit de arg.array;
+ SETALL – Valorile semval ale tuturor semafoarelor din set sunt
+actualizate la valorile corespondente din tabloul arg.array.
+ IPC_STAT – Elementele structurii semid_ds sunt salvate in structura
+referita de arg.buf;
+ PC_SET – Valorile pentru campurile sem_perm.uid, sem_perm.gid si
+sem_perm.mode sunt actualizate conform valorilor din arg.buf.
+Modificarea poate fi facuta de un proces superuser sau de catre un
+proces al carui ID utilizator efectiv este egal cu sem_perm.uid sau
+sem_perm.cuid.
+ IPC_RMID – Stergerea setului de semafoare. Stergerea este
+imediata, astfel incat orice alt proces ce foloseste semaforul va
+receptiona o eroare la operatii asupra semaforului ( EIDRM).
+Comanda poate fi executata numai de un proces superuser sau de un
+proces al carui ID utilizator efectiv egal cu sem_perm.uid sau
+sem_perm.cuid.
+arg – este un tip variabil pentru specificarea argumentelor operatiei cmd:
+union semun { 
+int val; /* pentru SETVAL */ 
+struct semid_ds *buf; /* pentru IPC_STAT si IPC_SET */ 
+ushort *array; /* pentru GETALL si SETALL */ 
+}; 
+
+3.3. Functia de sistem semop
+Functia de sistem semop are rolul de a efectua operatii de adunare si scadere
+asupra unor semafoare din set.
+Interfata functiei este:
+#include <sys/types.h> 
+
+Sisteme de Operare
+
+Laborator nr. 9
+
+#include <sys/ipc.h> 
+#include <sys/sem.h> 
+int semop( int semid, struct sembuf oper[], size_t nr_oper); 
+
+Functia semop returneaza 0 in caz de succes, (-1) in caz de eroare.
+Argumente:
+semid – reprezinta ID setului de semafoare obtinut prin apelul functiei semget;
+oper – este un pointer la un set de nr_oper structuri de tipul sembuf. Structura
+sembuf este definita astfel:
+struct sembuf { 
+ushort sem_num; 
+short sem_op; 
+short sem_flg; /* IPC_NOWAIT, SEM_UNDO */ 
+}; 
+
+unde:
+sem_num – indica numarul semaforului din set identificat prin semid.
+sem_op – indica operatia de efectuat dupa conventiile date de valoarea lui sem_flg.
+Operatia pe fiecare membru al setului este specificata de valoarea aferenta sem_op. Daca:
+ sem_op < 0
+a) Daca semval   >=  |sem_op|, atunci semval  =   semval  ­   |sem_op|. Acest
+
+lucru asigura ca valoarea rezultata pentru semafor este >= 0. Daca
+indicatorul SEM_UNDO este pozitionat, atunci |sem_op| este adunat la
+semadj corespondent semaforului in tabela asociata in proces pentru setul
+de semafoare;
+b) Daca (semval < |sem_op|) & (sem_flg & IPC_NOWAIT) = true, functia
+returneaza un cod de eroare;
+c) Daca (semval < |sem_op) si indicatorul IPC_NOWAIT nu este specificat,
+procesul este blocat pana cand se indeplineste una dintre conditiile:
+1. semval >= |sem_op| (alt proces a eliberat vreo resursa);
+2. semaforul este sters din sistem. Functia returneaza in acest caz (-1) si
+errno=ERMID.
+3. daca un semnal este tratat de proces si se revine din rutina de tratare.
+In acest caz valoarea semncnt pentru acest semafor este
+decrementata si functia returneaza (-1) cu errno=EINTR.
+4. sem_op > 0 atunci semval=semval + sem_op. Daca indicatorul
+SEM_UNDO este pozitionat, atunci in tabela asociata in proces pentru
+setul de semafoare semadj = semadj - semop pentru semaforul
+asupra caruia se executa operatia.
+
+
+sem_op == 0 
+
+a) Daca semval == 0, atunci functia se termina imediat;
+b) Daca (sem_val <> 0) si indicatorul IPC_NOWAIT este pozitionat, functia
+returneaza (-1) si errno=EAGAIN;
+c) Daca (sem_val <> 0) si indicatorul IPC_NOWAIT nu este pozitionat,
+procesul este blocat pana cand sem_val devine zero, sau setul de semafoare
+este distrus sau procesul primeste un semnal.
+Indicatorul undo pentru un semafor este de fapt indicatorul corespunzator bitului
+SEM_UNDO din sem_flg.
+
+Sisteme de Operare
+
+Laborator nr. 9
+
+4. Probleme rezolvate:
+4.1. Programul urmator implementeaza primitivele P si V folosind semafoare.
+Pentru a ilustra aceste primitive se considera un program de test care creeaza trei procese
+fiu; fiecare proces fiu doreste sa acceseze o resursa comuna. Regiunea critica este de 10
+secunde. In realitate zonele critice trebuie sa fie mult mai scurte. Semaforul asigura
+accesul individual al fiecarui proces in regiunea critica.
+/********************** PV.h ********************** 
+#include "hdr.h" 
+static void semcall( int semid, int op) 
+{ 
+struct sembuf pbuf; 
+pbuf.sem_num = 0; 
+pbuf.sem_op = op; 
+pbuf.sem_flg = 0; 
+if ( semop( semid, &pbuf, 1) < 0) 
+err_sys("Eroare semop"); 
+} 
+void P( int semid) 
+{ 
+semcall( semid, ­1); 
+} 
+void V( int semid) 
+{ 
+semcall( semid, 1); 
+}
+/********************** SEM.C *********************/ 
+/* 
+A se compila cu: gcc ­o s sem.c err.o 
+Implementeaza regiunea critica 
+*/ 
+#include <sys/types.h> 
+#include <sys/ipc.h> 
+#include <sys/sem.h> 
+#include "pv.h" 
+#define SEMPERM 0600 
+void rut_sinc( int semid); 
+int initsem( key_t semkey); 
+void main( void) 
+{ 
+key_t semkey=0x200; 
+int semid; 
+semid=initsem( semkey); 
+if ( fork() == 0) 
+rut_sinc( semid);
+if ( fork() == 0) 
+rut_sinc( semid); 
+if ( fork() == 0) 
+rut_sinc( semid);
+} 
+void rut_sinc( int semid) 
+{ 
+pid_t pid; 
+pid=getpid(); 
+P( semid); 
+printf("Procesul %d este in regiunea criticaƒ\n", pid); 
+sleep( random() % 5); 
+printf("Procesul %d paraseste regiunea criticaƒ\n", pid); 
+V( semid); 
+exit(0);
+
+Sisteme de Operare
+
+Laborator nr. 9
+
+} 
+int initsem( key_t semkey) 
+{ 
+int semid;
+semid=semget( semkey, 1, SEMPERM | IPC_CREAT);
+if ( semctl( semid, 0, SETVAL, 1) < 0)
+err_sys("Eroare semctl");
+return semid;
+}
+
+4.2. Acelasi program, dar functiile P si V sunt implementate fara a folosi o functie
+suplimentara.
+/*
+pv.h */
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/sem.h>    
+#define SEMPERM 0600                        
+/*
+oplist.c
+*/
+#include  "pv.h"
+initsem(Key_t semkey)
+{                                             
+  int status, semid;
+  semid=semget(semkey, 1, SEMPERM | IPC_CREAT);
+  status=semctl(semid, 0, SETVAL, 1);
+  return semid;
+}
+p(int semid)
+{
+  struc sembuf pbuf;
+  pbuf.sem_num=0;
+  pbuf.sem_op=­1;
+  pbuf.sem_flg=SEM_UNDO;
+  semop(semid, &pbuf, 1);
+  return 0;
+}
+v(int semid)
+{
+  struct sembuf vbuf;
+  vbuf.sem_num = 0;
+  vbuf.sem_op=1;
+  vbuf.sem_flg=SEM_UNDO;
+  semop(semid, &vbuf, 1);
+  return 0;
+}
+handlesem(int semid)
+{
+  int pid=getpid();
+  printf("Procesul %d inainte de regiunea critica\n",pid);
+  p(semid);
+  printf("Procesul %d in regiunea critica\n", pid);
+  sleep(10);
+  printf("Procesul %d paraseste regiunea critica\n",pid);
+  v(semid);
+  printf("Procesul %d terminat\n",pid);
+  exit(0);
+}
+
+Sisteme de Operare
+
+Laborator nr. 9
+
+main()
+{
+  key_t semkey=0x200;
+  int semid;
+  semid=initsem(semkey);
+  if(fork() == 0)
+    handlesem(semid);
+  if(fork() == 0)
+    handlesem(semid);
+  if(fork() == 0)
+    handlesem(semid);
+}
+
+4.3. Un exemplu care combina doua mecanisme de comunicare intre procese este
+implementarea problemei producator-consumator. In implementarea de fata se considera
+ca procesele producator sunt identice intre ele. Un proces producator are ca scop
+"producerea" pe rind a caracterelor din intervalul [a,z]. Fiecare proces producator va
+genera 26 de caractere. Bufferul este circular si este partajat de procesele producator si
+consumator. Procesele consumator sunt si ele identice intre ele si au ca scop
+"consumarea" unui caracter din buffer. Dimensiunea bufferului se considera a fi fixa. Daca
+bufferul este plin, procesele producatoare sunt puse in asteptare. In mod analog, daca
+bufferul este gol, procesele consumatoare sunt puse in asteptare. O operatie asupra
+bufferului este o operatie atomica, care se desfasoara intr-o regiune critica.
+Pentru implementarea problemei s-a considerat ca bufferul este implementat intr-o
+zona de memorie comuna. Zona respectiva contine numarul proceselor producator, doi
+indecsi ce permit localizarea primului loc liber si primului loc ocupat din buffer si bufferul
+propriu-zis. Structura este definita in fisierul pcsem.c. Sunt necesare trei semafoare:
+spacesleft - semafor ce indica spatiul liber din buffer;
+itemsready - semafor ce indica numarul de articole produse;
+mutex - semafor binar care asigura excluderea mutuala
+Primitivele P si V care opereaza asupra semafoarelor au fost implementate folosind apelul
+sistem semop.
+/******************** PCSEM.h ***********************
+Problema producator­consumator
+*/ 
+#include <sys/types.h> 
+#include <sys/ipc.h> 
+#include <sys/sem.h> 
+#include <sys/shm.h> 
+#include <stdio.h> 
+#include "hdr.h" 
+#define SEMPERM 0600 
+#define N 3 
+#define BUFFMAX 4 
+key_t semkey=0x700; 
+key_t shmkey=0x800; 
+struct databuf { 
+int nr_prod; 
+int nextin; 
+int nextout; 
+char d_buff[BUFFMAX]; 
+}; 
+typedef enum { spacesleft, itemsready, mutex} semaphore; 
+int P( int semid, int name) 
+{ 
+struct sembuf pbuf;
+
+Sisteme de Operare
+
+Laborator nr. 9
+
+pbuf.sem_num=name;
+pbuf.sem_op = ­1;
+pbuf.sem_flg=0;
+semop( semid, &pbuf, 1);
+return 0;
+} 
+int V( int semid, int name) 
+{ 
+struct sembuf pbuf;
+pbuf.sem_num=name;
+pbuf.sem_op = 1;
+pbuf.sem_flg=0;
+semop( semid, &pbuf, 1);
+return 0;
+} 
+
+void afis( char *p, int l1, int l2) 
+{ 
+int i; 
+for ( i=l1; i<l2+1; (i++) % (BUFFMAX+1)) 
+putchar(p[i]);
+putchar('\n'); 
+} 
+
+Pentru a vizualiza continutul bufferului la fiecare adaugare a unui articol in buffer a
+fost implementata functia afis. Programul pentru un proces producator este urmatorul:  
+/******************** PROD.C *********************/ 
+/* 
+A se compila cu: gcc ­o prod prod.c err.o 
+*/ 
+#include "pcsem.h" 
+main( void) 
+{ 
+producer(); 
+} 
+void put( char ch) 
+{ 
+int shmid; 
+struct databuf *pbuf; 
+char *pd_buf; 
+shmid=shmget( shmkey, 0, SEMPERM); 
+pbuf=( struct databuf *) shmat( shmid, 0, 0); 
+pd_buf=pbuf­>d_buff; 
+pd_buf[pbuf­>nextin] = ch; 
+pbuf­>nextin = (pbuf­>nextin + 1) % (BUFFMAX + 1); 
+/* afisarea completa a bufferului circular */ 
+afis( pd_buf, 0, 4); 
+} 
+producer( void) 
+{ 
+char local; 
+int semid, shmid; 
+struct databuf *pbuf; 
+shmid=shmget( shmkey, 0, SEMPERM); 
+pbuf=( struct databuf *) shmat( shmid, 0, 0); 
+pbuf­>nr_prod++; 
+semid=semget( semkey, 0, SEMPERM); 
+for ( local= 'a'; local <= 'z'; local++) { 
+P( semid, spacesleft);
+P( semid, mutex);
+
+Sisteme de Operare
+
+Laborator nr. 9
+
+put( local);
+V( semid, mutex);
+V( semid, itemsready);
+} 
+pbuf­>nr_prod­­; 
+exit(0); 
+} 
+
+Se poate observa pe acest cod ca procesul producator este blocat la accesul
+bufferului in situatia in care bufferul este plin sau daca exista un alt proces care executa
+vreo operatie asupra bufferului. Campul nr_prod din structura bufferului esste folosit la
+terminarea proceselor consumator. Codul unui program consumator este:
+/*********************** CONS.C ********************/ 
+/* 
+A se compila cu: gcc ­o cons cons.c err.o 
+*/ 
+#include "pcsem.h" 
+#include <signal.h> 
+main() 
+{ 
+consumer(); 
+} 
+char take() 
+{ 
+int shmid; 
+struct databuf *pbuf; 
+char cch, *pd_buf; 
+shmid=shmget( shmkey, 0, SEMPERM); 
+pbuf=( struct databuf *) shmat( shmid, 0, 0); 
+pd_buf=pbuf­>d_buff; 
+cch = pd_buf[pbuf­>nextout]; 
+pd_buf[pbuf­>nextout]=' '; 
+pbuf­>nextout = (pbuf­>nextout + 1) % (BUFFMAX + 1); 
+return cch; 
+} 
+int E_prod_buf() 
+{ 
+int shmid; 
+struct databuf *pbuf; 
+char *pd_buf; 
+shmid=shmget( shmkey, 0, SEMPERM); 
+pbuf=( struct databuf *) shmat( shmid, 0, 0); 
+pd_buf=pbuf­>d_buff; 
+/* Consumatorul se termina cand nu mai sunt producatori */ 
+if ( pbuf­>nr_prod==0 && pd_buf[pbuf­>nextout] == ' ') { 
+/* poate apare vreun producator in 10 sec ? */ 
+sleep( 10); 
+if ( pbuf­>nr_prod==0 && pd_buf[pbuf­>nextout] == ' ') { 
+kill(getpid(),SIGTERM); 
+return 0; 
+} 
+else /* A aparut cel putin un producator */ 
+return 1; 
+} else { 
+/* Consumatorul a luat caracterul inainte ca producatorul sa 
+consemneze ca a terminat.*/ 
+if ( pd_buf[pbuf­>nextout] != ' ' || pbuf­>nr_prod > 1) 
+return 1; 
+sleep( 10); 
+if ( pbuf­>nr_prod==0) { 
+kill( getpid(),SIGTERM); 
+
+Sisteme de Operare
+
+Laborator nr. 9
+
+return 0; 
+} else 
+return 1; 
+} 
+} 
+consumer( void) 
+{ 
+char local; 
+int semid; 
+semid=semget( semkey, 0, SEMPERM); 
+while ( E_prod_buf()) { 
+P( semid, itemsready); 
+P( semid, mutex); 
+local=take(); 
+printf("Consumat %d: %c\n", getpid(), local); 
+V( semid, mutex); 
+V( semid, spacesleft); 
+} 
+printf("Consumator %d terminat.\n", getpid()); 
+exit(0); 
+} 
+
+Analog, procesul consumator este blocat la accesul bufferulului daca bufferul este
+gol sau daca alt proces executa vreo operatie asupra acestuia. Conditia de terminare a
+unui proces consumator este stabilita de functia E_prod_buf, care verifica daca mai sunt
+procese producator si daca toate caracterele din buffer au fost consumate. Daca timp de
+10 secunde bufferul este gol, un proces consumator poate conchide ca acesta se poate
+termina. Acest lucru este realizat prin transmiterea semnalului SIGTERM la propriul
+proces.
+Inainte de a testa acest program este necesar un program de initializare care
+creeaza setul de semafoare si memoria partajata si initializeaza primele trei campuri ale
+structurii databuf. Codul acestuia este: 
+/********************** INIT.C ****************** 
+A se compila cu: gcc ­o init init.c err.o 
+*/ 
+#include "pcsem.h" 
+#include <signal.h> 
+int shmid; 
+void initsem( int semid, int semnr, int val) 
+{ 
+semctl( semid, semnr, SETVAL, val); 
+printf("Initializarea este: semnr=%d, val=%d\n", semnr, val); 
+} 
+main( void) 
+{ 
+int semid, i; 
+struct databuf *pbuf; 
+if ( (semid=semget( semkey, N, SEMPERM | IPC_CREAT)) < 0) 
+err_sys("Eroare semget"); 
+if ( (shmid=shmget( shmkey, sizeof( struct databuf), IPC_CREAT | IPC_EXCL 
+| 0600 )) < 0) 
+err_sys("Eroare shmget"); 
+initsem( semid, spacesleft, BUFFMAX + 1); 
+initsem( semid, itemsready, 0); 
+initsem( semid, mutex, 1); 
+pbuf=( struct databuf *) shmat( shmid, 0, 0); 
+pbuf­>nextin=0; pbuf­>nextout=0; pbuf­>nr_prod=0; 
+} 
+
+Functia initsem permite initializarea semaforului precizat de argumentul al doilea
+
+Sisteme de Operare
+
+Laborator nr. 9
+
+la valoarea precizata de argumentul al treilea.Pentru a sterge zona de memorie comuna
+dupa executia programelor producator si consumator, se foloseste programul:  
+/******************* DEL.C ***************** 
+A se compila cu: gcc ­o del del.c err.o 
+*/ 
+#include "pcsem.h" 
+main() 
+{ 
+int shmid, semid; 
+if ( (shmid=shmget( shmkey, 0, 0)) < 0) 
+err_sys("Eroare ­ Nu exista zona de memorie "); 
+if ( shmctl( shmid, IPC_RMID, 0) < 0) 
+err_sys("Eroare shmctl"); 
+if ( (semid=semget( semkey, 0, 0)) < 0) 
+err_sys("Eroare ­ Nu exista setul de semafoare "); 
+if ( semctl( semid, 0, IPC_RMID, 0) < 0) 
+err_sys("Eroare semctl"); 
+printf("OK.\n"); 
+exit(0); 
+}
+
+5. Probleme propuse pentru rezolvare
+5.1 Sa se scrie un script care sa permita compilarea si rularea aplicatiei ce
+implementeaza problema producator-consumator din sectiunea 4.3 de mai sus. Pasii care
+trebuie parcursi de script:
+a. initializarea semafoarelor si a zonei de memorie comuna:
+$ init
+
+b. lansarea a 3 procese producator si a 2 consumator
+$ prod & prod & cons & cons & prod 
+
+c. stergerea zonei comune de memorie si a setului de semafoare.
+$ del
+
+5.2. Sa se scrie un program C care sa implementeze problema filozofilor (varianta
+cu utilizarea semaforului valet). Pentru semafoare se va folosi codul functiilor P si V din
+lucrare. Programul creaza 5 procese fii (pentru cei 5 filozofi). Numarul de iteratii in
+sectiunea critica executate de procesele fiu este primit de programul principal ca argument
+in linia de comanda. Daca nu este nici un argument in linia de comanda programul nu va
+rula. Dupa compilare rezulta un singur executabil.
+5.3. Sa se scrie un program C care sa implementeze problema barbierului. Pentru
+semafoare se va folosi codul functiilor P si V din lucrare. Datele de intrare (numarul
+clientilor si numarul de scaune) pot fi date ca argumente in linia de comanda sau citite
+dintr-un fisier de configurare. Pentru barbier si clienti se creeaza procese fiu. Bucla while
+pentru barbier este infinita. Programul principal asteapta terminarea proceselor fiu ce
+ruleaza codul pentru clienti si trimite SIGTERM catre procesul fiu care ruleaza codul
+pentru barbier. Dupa compilare rezulta un singur executabil.
+NOTA: In rezolvarea problemelor se va utiliza o structura de proiect (inclusiv fisierul
+build.sh) asemanatoare cu aceea ceruta in lucrarea 4 la problemele propuse pentru
+rezolvare.
+
+Sisteme de Operare
+
+Laborator nr. 9
+
+6. Bibliografie:
+• Iosif Ignat, Adrian Kacso, UNIX Gestionarea Proceselor, Ed. Albastră, 2006
+• W. Richard Stevens, Stephen A. Rago, Advanced Programming in the UNIX Environment: Second Edition, Addison Wesley, 2005
+• Kurt Wall, Mark Watson, and Mark Whitis, Linux Programming Unleashed, Sams
+Publishing, 1999
+• A. D. Marshall, Programming in C. UNIX System Calls and Subroutines using C,
+http://www.cs.cf.ac.uk/Dave/C/
+• Guide to Unix IPC http://beej.us/guide/bgipc/output/html/singlepage/bgipc.html
+• Mark Mitchell, Jeffrey Oldham, and Alex Samuel, Advanced Linux Programming,
+New Riders Publishing, 2001, http://www.advancedlinuxprogramming.com/
+
+

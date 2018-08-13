@@ -1,0 +1,9 @@
+p2.cpp: In function ‘int main()’:
+p2.cpp:5:2: error: ‘cout’ was not declared in this scope
+  cout<<"Program in c++";
+  ^
+p2.cpp:5:2: note: suggested alternative:
+In file included from p2.cpp:1:0:
+/usr/include/c++/4.8.2/iostream:61:18: note:   ‘std::cout’
+   extern ostream cout;  /// Linked to standard output
+                  ^

@@ -1,0 +1,108 @@
+1.Care este rolul Hardware Abstraction Layer (Hal) la Windows?...
+
+
+2.Descrieti alocarea memoriei prin metoda celei mai bune potriviri (Best-fit)...
+
+
+3.Descrieti alocarea indexata a spatiului pentru fisiere ....
+
+
+4.Care din urmatoarele clase de prioritati apartin sistemului lui de oper.Limx-Real,
+kernel,time-shared.
+
+
+5.Descrie Conceptul Lightweight processes de la s.o.solaris...
+
+
+6.Def.de blocaj. ...
+
+
+7.Care semt. etop.pe care unitatea de descriere trebuie sa le parcurga pentru a putea
+avea acces la un anumit sector de disc....
+
+
+8.Alocarea memoriei cu partitii fixe presupune
+ 
+
+9.Planificarea proceselor
+ 
+
+10.Descrieti alocarea inlantuita a spatiului pentru fisiere 
+
+
+11.Care sunt starile proceselor la sincronizarea cu bariere
+ 
+
+12.Modul concret de inplementare a protectiei sistemului de calcul  
+	-poate fi preluat de la un tip de sisteme de calcul SO la altu 
+	-depinde  de arhitectura sistemului de calcul 
+	-depinde de arhitectura sistemului de calcul 
+
+
+13.Definiti notiunea de proces 
+
+
+14.Care algoritm de planificare este preventiv 
+	-SJF
+	-RR
+	-FCTS
+
+
+15.Definiti sistem de operare 
+
+
+16.Care sunt conditiile in care apare situatia de interblocaj?
+
+
+17.Care sunt pasii care se executa la o schimbare context 
+
+
+18.Urmatoarele afirmatii reprezinta dezavantaje ale folosirii asteptarii active 
+	-grad ridicat de dificultate in leabolarea al protocoalelor de intrare si esire 
+	-apare asa numitul "randez-vous"
+	-se consuma timp CPU inutil daca nu este echilibrat in cararea proceselor 
+
+
+19.Descrieti algoritmul RR de planificare a proceselor 
+
+
+20.ce este un semafor privat si ce valoare initiala are 
+
+
+21.care sunt caracteristicele JFS
+
+
+22.care sunt obiectivele care se urmaresc la proiectarea unui sistem de I/O
+
+
+23.Explicati tipul de resurse
+	-Consumabile
+	-reutilizabile
+
+
+24.Definiti sectiunea critica 
+
+
+25.Ce afirmatie caracterizeaza un controler 
+	-este o componenta electronica 
+	-este identic cu dispozitivul hardwer 
+	-interactioneaza cu sistemul de operare 
+
+
+26.care din urmatorii algoritmmi reprezinta algoritm pentru alocarea cadrelor 
+	-metoda alocarii prin camarazi
+	-metoda celei mai bune potriviri 
+	-alg.MFU
+
+
+27.descrieti algoritmul SJF preocuptiv de planificarea a proceselor 
+
+
+28.descrieti algoritmul C-Scan de planificare a proceselor 
+
+
+29.pentru  alocarea segmentata care din afirmatiile urmatoare sunt adevarate 
+	-Intrarea tablei de segment ce contine adresa de baza a segmentului 
+	-fiecare procedura are proprietetile lui tab. de pagini 
+	????????????????????????????
+30.? 

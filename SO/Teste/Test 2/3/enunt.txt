@@ -1,0 +1,4 @@
+Nr 3
+Sa se scrie un program care la primirea SIGINT scrie PID'ul procesului parinte intr-un fisier
+si va executa comanda "pwd" (se va crea un proces fiu pentru a executa comanda -
+se folosesc functiile fork() si exec()). Semnalul SIGINT se va transmite din linia de comanda. 

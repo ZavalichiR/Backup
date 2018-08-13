@@ -1,0 +1,7 @@
+Nr. 5
+Sa se scrie un program in care se creeaza doua procese in relatia parinte(1) - fiu(1).
+Cele doua procese citesc cate o linie de date dintr-un fisier input.txt si vor scrie
+intr-un fisier out.txt o linie de forma: "Sunt procesul x si am citit datele",
+unde x este PID-ul procesului. Sincronizarea se va face cu ajutorul semafoarelor.
+Functiile pentru semafoare vor fi implementate in fisierele sem.c si sem.h,
+iar pentru programul principal se va scrie un fisier main.c.

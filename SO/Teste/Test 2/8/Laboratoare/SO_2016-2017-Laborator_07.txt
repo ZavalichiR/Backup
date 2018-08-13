@@ -1,0 +1,1100 @@
+Sisteme de Operare
+
+Laborator nr. 7
+Laborator nr. 7
+Apeluri sistem de baza
+
+Lucrarea de fata prezinta o serie de apeluri sistem uzuale folosite in operatiile de
+intrare-iesire cu fisiere si in crearea de procese. Fiecare apel sistem este prezentat
+folosind definirea sau prototipul functiei. Aceasta abordare permite precizarea semnificatiei
+si tipului fiecarui argument si tipul valorii returnate.
+1. Apeluri sistem de baza pentru lucrul cu fisiere
+Operatiile de I/O pe fisiere pot fi realizate folosind cinci functii: open, read, write, lseek
+si close. Aceste functii sunt referite ca I/O fara buffer, deoarece ele determina un apel
+sistem in nucleu (kernel). Partajarea resurselor intre procese tine cont de conceptul de
+operatie atomica. Se evidentiaza acest concept prin folosirea adecvata a argumentelor
+apelului sistem open.
+1.1. Descriptori de fisier
+Pentru kernel toate fisierele deschise sunt referite de un descriptor de fisier = un
+intreg pozitiv. La deschiderea unui fisier sau la crearea unui fisier nou, kernel-ul returneaza
+un descriptor de fisier procesului care a executat apelul.
+La primele versiuni ale sistemului Unix, fiecare proces avea la dispozitie 20
+descriptori de fisier. Numarul acestora a fost extins apoi la 64, iar la acum este teoretic
+infinit si configurabil de catre administrator. Prin conventie, primii trei sunt deschisi automat
+la inceputul unui proces. Descriptorul de fisier 0 identifica intrarea standard, 1 identifica
+iesirea standard, iar 2 iesirea standard de erori. Descriptorii ramasi pot fi folositi de
+proces pentru deschiderea de fisiere ordinare, pipe, speciale sau directoare.
+Exista cinci apeluri sistem care genereaza descriptori de fisiere: creat, open, fcntl, dup si
+pipe. In aceasta lucrare sunt descrise primele doua apeluri sistem. Cele ramase vor fi
+studiate in lucrarile urmatoare.
+1.2. Apeluri sistem pentru lucrul cu fisierele
+1.2.1. Apelul sistem OPEN
+Deschiderea sau crearea unui fisier se poate face prin apelul sistem open. Sintaxa
+acestui apel este:
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+int open( const char *path, int flags,... /* mode_t mod */);
+
+Returneaza descriptorul de fisier sau -1 in caz de eroare.
+Numarul de argumente al acestei functii poate fi doi sau trei. Argumentul al treilea
+este folosit doar la crearea de fisiere noi. Apelul cu doua argumente este folosit pentru
+citirea si scrierea fisierelor existente. Functia returneaza cel mai mic descriptor de fisier
+disponibil. Acesta poate fi utilizat in apelurile sistem: read, write, lseek si close. UID
+efectiv sau GUID efectiv al procesului care executa apelul trebuie sa aibe drepturi de
+citire/scriere, functie de valoarea argumentului flags. Pointerul din fisier este pozitionat pe
+primul octet din fisier.
+Argumentul flags se formeaza printr-un SAU pe biti intre constantele:
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+O_RDONLY Fisierul este deschis in citire.
+O_WRONLY Fisierul este deschis in scriere.
+O_RDWR
+Fisierul este deschis in adaugare (citire+scriere).
+Acestea sunt definite in fisierul antet fcntl.h.
+Urmatoarele constante simbolice sunt optionale:
+O_APPEND Scrierile succesive se produc la sfarsitul fisierului.
+O_CREAT
+Daca fisierul nu exista el este creat.
+O_EXCL
+Daca fisierul exista si O_CREAT este pozitionat, apelul open esueaza.
+O_NDELAY La fisiere pipe si cele speciale pe bloc sau caracter cauzeaza trecerea
+in modul fara blocare atat pentru apelul open cat si pentru operatiile
+viitoare de I/O. In versiunile noi System V inlocuit cu O_NONBLOCK.
+O_TRUNC
+Daca fisierul exista ii sterge continutul.
+O_SYNC
+Forteaza scrierea efectiva pe disc prin write. Intarzie mult intregul
+sistem, dar e eficace in cazuri critice.
+Argumentul al treilea, mod, poate fi o combinatie de SAU pe biti intre constantele
+simbolice:
+S_IRUSR, S_IWUSR, S_IXUSR
+User: read, write, execute
+S_IRGRP, S_IWGRP, S_IXGRP
+Group: read, write, execute
+S_IROTH, S_IWOTH, S_IXOTH
+Other: read, write, execute
+Acestea definesc drepturile de acces asupra unui fisier si sunt definite in fisierul
+antet sys/stat.h.
+1.2.2. Apelul sistem CREAT
+Un fisier nou este creat prin:
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+int creat( const char *path, mode_t mod);
+
+Returneaza descriptorul de fisier sau -1 in caz de eroare. Apelul este echivalent cu:
+open( path, O_WRONLY | O_CREAT | O_TRUNC, mod);
+
+Argumentul path specifica numele fisierului, iar mod drepturile de acces.
+Daca fisierul creat nu exista, este alocat un nou i-node si o legatura spre el este
+plasata in directorul unde acesta a fost creat. Proprietarul (UID efectiv si GUID efectiv)
+procesului care executa acest apel trebuie sa aibe permisiunea de scriere in director.
+Fisierul deschis va avea drepturile de acces specificate de argumentul al doilea din apel
+(vezi umask). Apelul intoarce cel mai mic descriptor de fisier disponibil (vezi pipe). Fisierul
+este deschis in scriere iar dimensiunea sa initiala este 0. Timpii de accces si modificare din
+i-node sunt actualizati.
+Daca fisierul exista (este nevoie de permisiunea de cautare in director) continutul lui
+este pierdut si el este deschis in scriere. Nu se modifica proprietarul sau drepturile de
+acces ale fisierului. Argumentul al doilea este ignorat.
+1.2.3. Apelul sistem READ
+Pentru a citi un numar de octeti dintr-un fisier, de la pozitia curenta, se foloseste
+apelul read. Sintaxa este:
+#include <unistd.h>
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+ssize_t read( int fd, void *buf, size_t noct);
+
+Returneaza numarul de octeti cititi efectiv, 0 la EOF, -1 in caz de eroare. Functia
+citeste noct octeti din fisierul deschis referit de fd si ii depune in bufferul referit de buf.
+Pointerul in fisier este incrementat automat dupa o operatie de citire cu numarul de octeti
+cititi. Procesul care executa o operatie de citire asteapta pana cand kernel-ul depune
+datele de pe disc in bufferele cache. In mod uzual, kernel-ul incearca sa accelereze
+operatiile de citire citind in avans blocuri de disc consecutive pentru a anticipa eventualele
+cereri viitoare.
+1.2.4. Apelul sistem WRITE
+Pentru a scrie un numar de octeti intr-un fisier, de la pozitia curenta, se foloseste
+apelul write. Sintaxa este:
+#include <unistd.h>
+ssize_t write( int fd, const void *buf, size_t noct);
+
+Returneaza numarul de octeti scrisi si -1 in caz de eroare. La apelul functiei sunt
+scrisi noct octeti din bufferul buf in fisierul a carui descriptor este fd.
+Interesant de semnalat la acest apel este faptul ca scrierea fizica pe disc este
+intarziata. Ea se efectueaza la initiativa nucleului fara ca utilizatorul sa fie informat.
+Daca procesul care a efectuat apelul, sau un alt proces, citeste datele care inca nu au fost
+scrise pe disc, kernel-ul le citeste inapoi din bufferele cache. Scrierea intarziata este mai
+rapida, dar are trei dezavantaje:
+a) o eroare disc sau caderea kernelului produce pierderea datelor;
+b) un proces care a initiat o operatie de scriere nu poate informat in cazul aparitiei
+unei erori de scriere;
+c) ordinea scrierilor fizice nu poate fi controlata.
+Pentru a elimina aceste dezavantaje, in anumite cazuri, se foloseste flag-ul
+O_SYNC. Deoarece aceast lucru scade viteza sistemului si avand in vedere fiabilitatea
+sistemelor UNIX de astazi se prefera mecanismul de lucru cu buffere cache.
+1.2.5. Apelul sistem CLOSE
+Pentru a disponibiliza descriptorul atasat unui fisier in vederea unei noi utilizari se
+foloseste apelul close.
+#include <unistd.h>
+int close( int fd);
+
+Returneaza 0 in caz de succes si -1 in caz de eroare. Apelul nu goleste bufferele
+kernel-ului si, deoarece fisierul este oricum inchis la terminarea procesului, apelul se
+considera a fi redundant.
+1.2.6. Apelul sistem LSEEK
+Pentru pozitionarea absoluta sau relativa a pointerului de fisier pentru un apel read
+sau write se foloseste apelul lseek.
+#include <sys/types.h>
+#include <unistd.h>
+off_t lseek( int fd, off_t offset, int interp);
+
+Returneaza un deplasament in fisier sau -1 in caz de eroare. Nu se efectueaza nici
+o operatie de I/O si nu se trimite nici o comanda controlerului de disc. Daca interp este
+SEEK_SET pozitionarea este fata de inceputul fisierului (primul octet din fisier este la
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+deplasament zero). Daca interp este SEEK_CUR pozitionarea este relativa la pozitia
+curenta. Daca interp este SEEK_END pozitionarea este fata de sfarsitul fisierului.
+Apelurile open, creat, write si read executa implicit lseek. Daca un fisier este
+deschis folosind constanta simbolica O_APPEND se efectueaza un apel lseek la sfarsitul
+fisierului inaintea unei operatii de scriere.
+1.2.7. Apelul sistem LINK
+Pentru a adauga o noua legatura la un director se foloseste apelul:
+#include <unistd.h>
+int link(const char *oldpath, const char newpath);
+
+Returneaza 0 in caz de reusita si -1 in caz contrar. Argumentul oldpath trebuie sa fie
+o legatura existenta. Apelul furnizeaza numarul i-node-ului. Daca legaturile . si .. din
+fiecare director sunt ignorate structura sistemului de fisiere este arborescenta. Programe
+care parcurg structura ierarhica (de exemplu, comanda find) pot fi usor implementate fara
+probleme de traversare multipla sau bucla infinita. Pentru a respecta aceasta cerinta doar
+superuser-ul are dreptul sa stabileasca o noua legatura la un director. Crearea celei de a
+doua legaturi la un director este utila pentru a-l putea muta in alta parte a arborelui sau
+pentru a-l putea redenumi.
+1.2.8. Apelul sistem UNLINK
+Pentru a sterge o legatura (cale) dintr-un director se foloseste apelul:
+#include <unistd.h>
+int unlink( const char *path);
+
+Returneaza 0 in caz de reusita si -1 in caz contrar. Apelul decrementeaza contorul
+de legaturi din i-node si sterge intrarea director. Daca acesta devine 0 spatiul ocupat de
+fisierul in cauza devine disponibil pentru o alta utilizare, la fel si i-node-ul. Doar superuserul poate sa stearga un director.
+1.3. Implementarea semafoarelor prin fisiere
+Apelul sistem creat esueaza daca: fisierul exista si nu exista permisiunea de
+scriere. Acest lucru permite utilizarea unui fisier pe post de semafor. Se poate astfel crea
+un mecanism de acces la o resursa partajabila. Doua procese cu acces exclusiv la resursa
+vor executa urmatoarea secventa:
+a) Inainte de a accesa resursa, procesele incearca sa creeze un fisier (cu nume
+cunoscut) dar fara permisiunea de scriere.
+b) Ambele procese vor executa creat, dar doar unul din ele va reusi. Procesul care nu
+reuseste ramane in starea de asteptare.
+c) Procesul care a reusit apelul creat executa codul propriu de lucru cu resursa dupa
+care elibereaza resursa prin stergerea fisierului semafor, printr-un apel unlink.
+Aceasta facilitate poate fi exploatata numai de utilizatorii obisnuiti (fara drept de
+superuser), deoarece un apel creat executat de superuser truncheaza fisierul indiferent de
+drepturile sale de acces.
+Protocolul de semafor poate fi descris prin doua functii, lock si unlock, care respecta
+secventa:
+if ( lock("semaf")) {
+... unul singur ...
+unlock("semaf");
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+} else
+... n-a reusit lock ...
+
+Numele semaf este arbitrar, dar este de dorit ca el sa fie unic. Functia lock
+selecteaza dintre procesele care executa concurent acesta secventa de cod, un singur
+proces care va executa secventa protejata unul singur.
+Codul functiei lock si unlock:
+#define LOCKDIR "/tmp/"
+#define MAXINCERC 3
+#define WAITTIME 5
+BOOLEAN lock( char *name)
+{
+char *path, *lockpath();
+int fd, incerc;
+extern int errno;
+path = lockpath( name); /* genereaza nume semafor */
+incerc = 0;
+while (( fd=creat( path, 0)) < 0 && errno == EACCES) {
+if ( ++incerc>=MAXINCERC)
+return FALSE;
+sleep( WAITTIME);
+}
+if ( fd < 0 || close(fd) < 0)
+err_sys("lock");
+return(TRUE);
+}
+unlock( char *name)
+{
+char *lockpath();
+if ( unlink( lockpath( name)) < 0)
+err_sys("unlock");
+}
+static char *lockpath( char *name)
+{
+static char path[20];
+char *strcat();
+strcpy( path, LOCKDIR);
+return( strcat( path, name));
+}
+
+Functia lockpath genereaza un nume de fisier care se utilizeaza ca semafor. Acest
+fisier este creat in directorul /tmp, deoarece acest director exista in orice sistem UNIX si
+oricine are permisiuni de scriere acolo.
+Daca apelul creat nu reuseste se testeaza variabila errno, deoarece singurul caz
+acceptat este absenta dreptului de scriere ('permision denied'). Constanta simbolica
+EACCES este definita in fisierul errno.h.
+Numarul de incercari de a crea fisierul semafor nu depaseste MAXINCERC si
+timpul scurs intre incercari succesive e WAITTIME.
+Functia unlock trebuie doar sa stearga fisierul.
+Constanta simbolica O_EXCL ofera o cale generala (atat pentru superuser) de
+folosire a unui fisier ca semafor. Ca atare, in functia lock in locul liniei:
+while (( fd=creat( path, 0)) < 0 && errno == EACCES) {
+
+va apare linia:
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+while ((fd=open( path, O_WRONLY | O_CREAT | O_EXCL, 0666)) < 0 && errno ==
+EEXIST) {
+
+Se constata ca doua procese ce executa simultan apelul open pe acelasi fisier cu
+O_EXCL si O_CREAT nu reusesc amandoua. De regula, un fisier utilizat ca semafor nu
+contine date utilizator.
+NOTA!: Apelurile sistem intorc, de regula, o valoare. In general, daca un apel sistem
+intoarce valoarea (-1), apelul respectiv nu a reusit. In acest caz variabila errno
+contine un cod de eroare. Aflarea erorii propriu-zise se poate face prin apelul
+functiei strerror cu argumentul valoarea variabilei errno. Netratarea erorilor in
+cazul operatiilor de I/O poate conduce la erori greu de depistat.
+1.4. Citirea unui director
+Un director poate fi citit de oricine are drept de citire asupra directorului. Scrierea
+unui director poate fi facuta doar de catre kernel.
+Structura unui director depinde de versiunea de UNIX. Pentru Unix versiunea 7, un
+director este format din intrari de 16 octeti, din care 14 octeti pentru numele fisierului si 2
+octeti pentru i-node. Ridicarea restrictiei de 14 caractere pentru numele fisierului, odata cu
+versiunea 4.2BSD fiecare intrare a devenit de lungime variabila, adica fiecare program ce
+va citi un director este dependent de sistem. Pentru a simplifica acest lucru, au fost
+introduse urmatoarele functii:
+#include <sys/types.h>
+#include <dirent.h>
+DIR *opendir( const char *pathname);
+
+Returneaza pointer daca este OK, NULL in caz de eroare.
+struct dirent *readdir( DIR *dp);
+
+Returneaza pointer daca este OK, NULL in caz de eroare.
+rewinddir( DIR *dp);
+int closedir( DIR *dp);
+
+Returneaza -1 in caz de eroare.
+Structura dirent definita in fisierul antet dirent.h este dependenta de implementare.
+SVR4 si 4.3+BSD definesc structura astfel incat ea contine cel putin doi membri:
+struct dirent {
+ino_t d_ino;
+char d_name[NAME_MAX +1];
+}
+
+Structura DIR este o structura interna folosita de aceste patru functii pentru a pastra
+informatii despre directorul citit. Primul apel readdir citeste prima intrare dintr-un director.
+Ordinea intrarilor dintr-un director este dependenta de implementare. De regula, ordinea
+nu este alfabetica.
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+2. Procese Linux/Unix. Procese parinte-fiu
+Pentru a înţelege şi controla un sistem de operare de tip Linux/Unix este foarte
+importantă noţiunea de proces. Procesul stă la baza oricărei activităţi din sistemul de
+operare. La lansarea unei comenzi utilizator se creează şi un nou proces. Controlul
+proceselor este un element important în programarea pe sisteme multitasking. Ea include
+operatii de creare de procese, terminare şi sincronizare. Sistemul Linux este şi un sistem
+multi-utilizator acest lucru fiind un aspect important în dezvoltarea aplicaţiilor multiutilizator.
+Controlul proceselor este realizat prin câteva apeluri sistem, care nu sunt altceva decât
+funcţii, înglobate în nucleu, accesibile utilizatorului. Utilizarea corectă a apelurilor este
+esenţială în controlul corect al proceselor Linux.
+2.1. Procese. Consideratii teoretice
+Un proces este instanţa execuţiei unui program. Procesele nu se confundă cu
+programul, care este fişierul executat de proces. Pe un sistem multitasking mai multe
+procese pot executa acelaşi program concurent şi fiecare proces se poate autotransforma
+pentru a executa un program anume.
+Fiecare proces în Linux/Unix are asociat un identificator unic numit identificator de
+proces, prescurtat PID. Pentru identificator se utilizează în continuare prescurtarea PID.
+PID este un număr pozitiv atribuit de sistemul de operare fiecarui proces nou creat.
+Un proces poate să determine PID-ul său folosind apelul sistem getpid(). Cum PID-ul
+unui proces este unic el nu poate fi schimbat, dar se poate refolosi cand procesul nu mai
+există.
+Apel
+
+Acţiune
+Returnează ID procesului apelant;
+Returnează ID grupului de procese;
+Returnează ID procesului părinteş
+Tab.1. Apeluri care întorc identificatori de proces.
+
+int getpid()
+int getpgrp()
+int getppid()
+
+Orice proces nou în Linux/Unix este creat de un proces anterior existent, dând
+naştere unei relaţii părinte-fiu. Execepţie face procesul 0, care este creat şi utilizat chiar de
+nucleu. Un proces poate să determine PID-ul părintelui prin apelul getppid(). PID-ul
+procesului părinte nu se poate modifica.
+Sistemul de operare ţine evidenţa proceselor într-o structură de date internă numită
+tabela de procese. Ea are o intrare pentru fiecare proces din sistem. Lista proceselor din
+tabela de procese poate fi obţinută prin comanda ps.
+Uneori se doreşte crearea unui subsistem ca un grup de procese înrudite în locul
+unui proces singular. De exemplu, un sistem complex de gestiune al unei baze de date
+poate fi împărţit în câteva procese pentru a "cîştiga" operaţii de I/O cu discul.
+2.2. Grup de procese
+Pe lângă ID asociat unui proces, care permite identificarea individuală a fiecăruia,
+fiecare proces are şi un ID de grup de procese, prescurtat (PGID), care permite
+identificarea unui grup de procese. PGID este mostenit de procesul fiu de la procesul
+parinte. Contrar PID-ului, un proces poate să-şi modifice PGID, dar numai prin crearea
+unui nou grup. Acest lucru se realizează prin apelul sistem setpgrp().
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+int setpgrp();
+
+setpgrp actualizeaza PGID-ul procesului apelant la valoarea PID-ului său şi
+întoarce noul PGID. Procesul apelant părăseşte astfel vechiul grup devenind liderul
+propriului grup urmand a-şi crea procesele fiu, care să formeze grupul. Deoarece procesul
+apelant este primul membru al grupului şi numai descendenţii săi pot să aparţină grupului
+(prin moştenirea PGID), el este referit ca reprezentantul (liderul) grupului.
+Deoarece doar descendenţii liderului pot fi membri ai grupului, există o corelaţie
+între grupul de procese şi arborele proceselor. Fiecare lider de grup este rădăcina unui
+subarbore, care după eliminarea rădăcinii conţine doar procese ce aparţin grupului. Dacă
+nici un proces din grup nu s-a terminat lăsând fii care au fost “adoptaţi” de procesul init,
+acest subarbore contine toate procesele din grup.
+Un proces poata determina PGID său folosind apelul sistem:
+int getpgrp();
+
+Apelul întoarce PGID procesului apelant. Deoarece PID-ul liderului este acelaşi cu
+PGID-ul, getpgrp identifica liderul.
+Un proces poate fi asociat unui terminal, care este numit terminalul de control
+asociat procesului. Acesta este moştenit de la procesul părinte la crearea unui nou proces.
+Un proces este deconectat (eliberat) de terminalul său de control la apelul setpgrp,
+devenind astfel un lider de grup de procese ( nu se închide terminalul). Ca atare, numai
+liderul poate stabili un terminal de control, devenind procesul de control pentru terminalul
+în cauză.
+Raţiunea existenţei unui grup este legată de comunicarea prin semnale. În mod
+uzual, procesele din acelaşi grup sunt conectate logic în acest fel. De exemplu, managerul
+unei baze de date multiproces este constituit dintr-un proces master şi câteva procese
+subsidiare. Pentru a face din suita proceselor bazei de date un grup de procese, procesul
+master apeleaza setpgrp înainte de a crea procesele subsidiare.
+Definiţie: Un proces care nu este asociat cu un terminal de control este numit
+daemon. Spoolerul de imprimantă este un exemplu de astfel de proces. Un proces
+daemon este identificat în rezultul afişării comenzii ps prin simbolul ? plasat in coloana
+TTY.
+2.3. Programe şi procese
+Un program este o colectie de instructiuni si date pastrate intr-un fisier ordinar pe
+disc. In i-node-ul său, fisierul este marcat executabil si continutul sau este aranjat conform
+regulilor stabilite de nucleu.
+Un program in Unix este format din mai multe segmente. In segmetul de cod se
+gasesc instructiuni sub forma binara. In segmentul de date se gasesc date predefinite (de
+exemplu constante) si date initializate. Al treilea segment este segmentul de stiva, care
+contine date alocate dinamic la executia procesului. Aceste trei segmente sunt si parti
+functionale ale unui proces Unix. Pentru a executa un program nucleul este informat
+pentru a crea un nou proces, care nu este altceva decat un mediu in care se executa un
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+program. Un proces consta din trei segmente: segmentul de instructiuni, segmentul de
+date utilizator si segmentul de date sistem. Programul este folosit pentru a initializa
+primele doua segmente, dupa care nu mai exista nici o legatura intre procesul si
+programul pe care-l executa. Datele sistem ale unui proces includ informatii ca directorul
+curent, descriptori de fisiere deschise, cai implicite, tipul terminalului, timp CPU, etc. Un
+proces nu poate accesa sau modifica direct propriile date sistem, deoarece acestea sunt
+in afara spatiului de adresare. Exista insa multiple apeluri sistem pentru a accesa sau
+modifica aceste informatii. Structura arborescenta a sistemului de fisiere implica o
+structura identica pentru procese. Toate procesele active la un moment dat in Unix sunt de
+fapt descendenti directi sau indirecti ai unui singur proces, lansat la pornirea sistemului
+prin comanda /sbin/init.
+Dupa pornirea sistemului, printr-un dialog la consola se poate opta pentru trecerea
+in mod multiutilizator. In acest caz, sistemul citeste din fisierul /etc/ttys numerele
+terminalelor utilizator. Pentru fiecare dintre aceste terminale va fi lansat un nou proces.
+Procesul de la un terminal precum si urmasii lui vor avea intrarea standard, iesirea
+standard si iesirea de erori fixate la terminalul respectiv. Se seteaza apoi viteza de lucru,
+se citesc parametrii de comunicatie ai terminalelor, paritatea, etc. Utilizatorul introduce
+apoi numele si eventual parola proprie, care in cazul in care sunt corecte, se lanseaza un
+nou proces care nu este altcineva decat interpretorul de comenzi shell. Acesta are
+menirea de a interpreta comenziile utilizator. Intr-un sistem multitasking si multiuser la
+lansarea unui program se creeaza de fiecare data un nou proces. Acest lucru se
+realizeaza prin apelul sistem fork. La fiecare executie a acestui apel, se obtin doua
+procese concurente, identice la inceput, dar cu nume diferite. Apelul sistem fork realizeaza
+o copie a procesului initial, ca atare imaginea proceselor in memorie este identica.
+Procesul care a initiat apelul fork este identificat ca proces parinte sau tata, iar procesul
+rezultat in urma apelului este identificat ca proces fiu.
+De exemplu, se considera comanda:
+$ echo Exemplu
+Shell-ul desparte comanda de argumente. Se executa apelul fork si rezulta procesul
+fiu. Procesul parinte prin apelul sistem wait cedeaza procesorul procesului fiu. Procesul fiu
+cere nucleului, prin apelul sistem exec, executia unui nou program, respectiv echo si
+comunica in acelasi timp si argumentele pentru noul program. Nucleul elibereaza zona
+alocata pentru shell si incarca un nou program pentru procesul fiu. Procesul continua cu
+executia noului program. Executia lui exit are ca efect terminarea procesului curent (fiu),
+stergerea legaturilor si transmiterea unui cod de terminare procesului parinte, care
+paraseste astfel starea de asteptare si inlatura procesul fiu din sistem. Este posibila
+executia unei comenzi intr-un plan secundar (background), daca, dupa specificarea
+comenzii este adaugat caracterul &. La o astfel de comanda interpretorul raspunde cu un
+numar dupa care afiseaza prompterul. Acest numar reprezinta ID de proces al comenzii
+introduse. Procesul shell care lanseaza comanda nu mai asteapta incheierea procesului
+fiu. Acesta din urma se va executa independent de procesul care l-a creat, iar dupa apelul
+exit el ramane in stare inactiva in sistem pana cand shell-ul va executa un apel wait in
+urma caruia procesul este inlaturat din sistem.
+2.3.1. Apelurile sistem FORK si EXEC
+Apelul sistem fork are sintaxa:
+#include <sys/types.h>
+#include <unistd.h>
+pid_t fork( void);
+
+Returneaza 0 in procesul fiu, PID fiului in procesul parinte si -1 in caz de eroare.
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+Figura de mai jos ilustreaza cum se obtine prin fork o copie identica a procesului
+parinte.
+Procesul parinte
+
+Procesul fiu
+
+...
+pid=fork();
+if ( pid==0) {
+/* fiu */
+} else { /* parinte */ }
+
+fork()
+-------->
+start -->
+
+...
+pid=fork();
+if ( pid==0) {
+/* fiu */
+} else { /* parinte */ }
+
+Fig.1. Generarea unui nou proces prin fork
+In noul proces (fiu) toate vechile variabile isi pastreaza valorile, toti descriptorii de fisier
+sunt aceeasi, se mosteneste acelasi UID real si GUID real, acelasi ID de grup de procese,
+aceleasi variabile de context. Bineinteles ca noua copie a procesului parinte se gaseste
+fizic la o alta adresa de memorie. Din momentul revenirii din apelul fork, procesul
+parinte si procesul fiu se executa independent, concurand unul cu celalalt pentru
+obtinerea resurselor. Procesul fiu isi incepe executia din locul unde ramasese
+procesul parinte. Nu se poate preciza care dintre procese va porni primul. Este
+posibila insa separarea executiei in cele doua procese prin testarea valorii intoarse de
+apelul fork. Secventa de mai jos partitioneaza codul programului in cele doua procese:
+...
+if ((pid=fork())==0)/* actiuni specifice fiului */
+else if ( pid!=0) /* actiuni specifice parintelui */
+else /* eroare la apelul fork */
+
+Cazul de eroare poate apare daca s-a atins limita maxima de procese pe care le
+poate lansa un utilizator sau daca s-a atins limita maxima de procese ce se pot executa
+deodata in sistem.
+Ratiunea a doua procese identice are sens daca se poate modifica segmentul de
+date si cel de cod al procesului rezultat asa incat sa se poata incarca un nou program.
+Pentru acest lucru exista apelul exec (impreuna cu familia de astfel de apeluri execl,
+execlp, execv si execvp). Partea de sistem a procesului nu se modifica in nici un fel
+prin apelul exec. Deci nici numarul procesului nu se schimba. Practic procesul fiu executa
+cu totul altceva decat parintele sau. Dupa un apel exec reusit nu se mai revine in vechiul
+cod. A nu se uita ca fisierele deschise ale parintelui se regasesc deschise si la fiu
+dupa apelul exec si ca indicatorul de citire/scriere al fisierelor deschise ramane
+nemodificat, ceea ce poate cauza neplaceri in cazul in care parintele si fiul vor sa
+scrie in acelasi loc. Un apel exec nereusit returneaza valoarea -1, dar cum alta valoare
+nu se returneaza ea nu trebuie testata. Insuccesul poate fi determinat de cale eronata sau
+fisier neexecutabil. Diferitele variante de exec dau utilizatorului mai multa flexibilitate la
+transmiterea parametrilor. Sintaxele lor sunt:
+#include <unistd.h>
+(1) execl ( const char
+(2) execv ( const char
+(3) execlp( const cahr
+(4) execvp( const cahr
+
+*path, const char *arg0, ..., NULL);
+*path, char *argv[]);
+*filename, const char *arg0, ..., NULL);
+*filename, char *argv[]);
+
+Returneaza -1 in caz de eroare, nimic in caz de succes.
+Intre apelurile (1) si (3), respectiv intre (2) si (4), exista doua deosebiri de
+implementare. Prima este ca la ultimele doua apeluri cauta programul pe caile implicite
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+setate de variabila PATH si se pot lansa si proceduri shell. Daca filename nu contine
+caractere slash(/) se expandeaza numele fisierului cu caile gasite in variabila PATH si se
+incearca gasirea unui fisier executabil care sa se potriveasca cu calea obtinuta. Daca nu
+se gaseste nici un astfel de fisier se presupune ca este o comanda shell si se executa
+/bin/sh. Daca in cale se precizeaza caractere slash (/) se presupune calea completa si
+nu se face nici o cautare.
+A doua deosebire se refera la transmiterea argumentelor ca lista sau vector. In
+cazul listelor fiecare argument este precizat separat si sfarsitul listei este marcat printr-un
+pointer NULL. In cazul vectorului se specifica doar adresa unui vector cu adresele
+argumentelor. Mai aproape de modul obisnuit de lucru este apelul (2). Se foloseste des in
+momentul compilarii cand nu se cunoaste numarul de argumente.
+Se observa ca fara fork, exec este limitat ca actiune, iar fara exec, fork nu are
+aplicabilitate practica. Desi efectul lor conjugat este cel dorit, ratiunea existentei a doua
+apeluri distincte va rezulta din parcurgerea lucrarilor urmatoare.
+O raţiune pentru care apelurile fork şi exec nu au fost contopite într-un unic apel
+sistem este ca între ele să se poată face unele prelucrări (Ex: comunicarea interproces
+prin pipe, semnale, semafoare din lucrarile de laborator urmatoare).
+2.3.2. Sincronizare parinte-fiu. Apelul sistem WAIT si WAITPID
+Procesul parinte poate asteapta terminarea (normala sau cu eroare) procesului fiu
+folosind apelul sistem wait sau waitpid.
+#include <sys/types.h>
+#include <sys/wait.h>
+pid_t wait( int *pstatus);
+pid_t waitpid(pid_t pid, int *pstatus, int opt);
+
+Returneaza PID in caz de succes sau 0 ( waitpid), -1 in caz de eroare.
+Argumentul pstatus este adresa cuvantului de stare.
+Un proces ce apeleaza wait sau waitpid poate:
+• sa se blocheze (daca toti fiii sai sunt in executie),
+• sa primeasca starea de terminare a fiului (daca unul dintre fii s-a terminat),
+• sa primeasca eroare (daca nu are procese fiu).
+Diferentele intre cele doua functii constau in urmatoarele:
+a) wait blocheaza procesul apelant pana la terminarea unui fiu, in timp ce
+waitpid are o optiune, precizata prin argumentul opt, care evita acest lucru.
+b) waitpid nu asteapta terminarea primului fiu, ci poate specifica prin argumentul
+opt procesul fiu asteptat.
+c) waitpid permite controlul programelor prin argumentul opt.
+Daca, nu exista procese fiu, apelul wait intoarce valoarea -1.
+In ce mod s-a terminat procesul fiu, normal sau cu eroare, se poate afla cu ajutorul
+parametrului pstatus. Exista cazurile:
+Procesul fiu
+Procesul parinte
+pstatus
+oprit
+motiv
+0177
+terminat cu exit(nr)
+nr
+0000
+terminat cu semnal
+0000
+nr_sem
+terminat cu semnal si vidaj 0200
+nr_sem
+de memorie
+Tab.2. Valorile returnate prin parametrul pstatus.
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+Exista trei moduri de a termina un proces: apelul exit, receptionarea unui semnal
+fatal, sau caderea sistemului. Codul de stare returnat prin variabila pstatus indica care din
+cele doua moduri a cauzat terminarea ( in al treilea mod procesul parinte si nucleul dispar,
+asa incat pstatus nu conteaza).
+Functia waitpid exista in SRV4 si 4.3+BSD. Argumentul opt poate avea valorile:
+Constantă
+WNOHANG
+
+Descriere
+Apelul nu se blocheaza daca fiul specificat prin pid nu este disponibil. In
+acest caz valoarea de retur este 0.
+WUNTRACED Daca implementarea permite controlul lucrarilor, starea fiecarui proces
+fiu oprit si neraportata este intoarsa. Macrodefinita WIFSTOPPED
+determina daca valoarea intoarsa corespunde unui proces fiu oprit
+Tab.3. Valorile argumentului opt.
+Argumentul opt poate fi si 0 sau rezultatul unui SAU intre constantele simbolice
+WNOHANG si WUNTRACED.
+In functie pid, interpretarea functiei waitpid este:
+pid==-1
+pid > 0
+pid==0
+pid< -1
+
+Se asteapta orice proces fiu (echivalent wait).
+Se asteapta procesul pid.
+Se asteapta orice proces cu ID de grup de proces egal cu cel al
+apelantului.
+Se asteapta orice proces cu ID de grup de proces egal cu valoarea
+absoluta a pid.
+
+Apelul waitpid returneaza (-1) daca nu exista proces sau grup de procese cu
+pid-ul specificat sau pid-ul respectiv nu este al unui fiu de al sau.
+Pentru a analiza starea in care s-a terminat un proces fiu exista trei macrouri
+excluse mutual, toate prefixate de WIF si definite in fisierul sys/wait.h. Pe langa
+acestea, exista alte macrouri pentru determinarea codului de exit, numar semnal, etc.
+Acestea sunt ilustrate mai jos:
+Macro
+Descriere
+WIFEXITED( status) Adevarat daca informatia de stare, status, provine de la un
+proces terminat normal. In acest caz se poate folosi:
+WEXITSTATUS( status) pentru a extrage octetul mai putin
+semnificativ.
+WIFSIGNALED(status Adevarat daca informatia de stare, status, provine de la un
+)
+proces terminat anormal. In acest caz se poate folosi:
+WTERMSIG( status) pentru a extrage numarul semnalului.
+In SVR4 si 4.3+BSD macroul WCOREDUMP( status) este
+adevarat daca s-a generat fisier core.
+WIFSTOPPED(status) Adevarat daca informatia de stare, status, provine de la un
+proces temporar oprit. In acest caz se poate folosi:
+WSTOPSIG( status) pentru a extrage numarul semnalului
+care a oprit procesul.
+Tab.4. Macrouri pentru determinarea starii.
+2.3.3. Apelul sistem EXIT
+Procesul fiu semnaleaza terminarea sa parintelui aflat in asteptare. Pentru aceasta
+exista apelul exit care transmite prin parametrul sau un numar care semnaleaza parintelui
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+o terminare normala sau cu eroare. Prin conventie, un cod de stare 0 semnifica terminarea
+normala a procesului, iar un cod diferit de zero indica aparitia unei erori. Sintaxa apelului
+este:
+void exit( int status);
+
+Acest apel termina procesul care-l executa cu un cod de stare egal cu octetul mai
+semnificativ al cuvantului de stare, status, si inchide toate fisierele deschise de acesta.
+Dupa aceea, procesului parinte ii este transmis semnalul SIGCLD.
+Pentru procesele aflate intr-o relatie parinte-fiu la un apel exit sunt esentiale trei
+cazuri:
+1. procesul parinte se termina inaintea procesului fiu;
+2. procesul fiu se termina inaintea procesului parinte;
+3. procesul fiu, mostenit de procesul init, se termina.
+Procesul init devine parintele oricarui proces pentru care procesul parinte s-a
+terminat. Cand un proces se termina nucleul parcurge toate procesele active pentru a
+vedea daca printre ele exista un proces care are ca parinte procesul terminat. Daca exista
+un astfel de proces, pid-ul procesului parinte devine 1 (pid-ul lui init). Nucleul garanteaza
+astfel ca fiecare proces are un parinte.
+Daca procesul fiu se termina inaintea procesului parinte, nucleul trebuie sa pastreze
+anumite informatii ( pid, starea de terminare, timp de utilizare CPU) asupra modului in care
+fiul s-a terminat. Aceste informatii sunt accesibile parintelui prin apelul wait sau waitpid. In
+terminologie Unix un proces care s-a terminat si pentru care procesul parinte nu a
+executat wait se numeste zombie. In aceasta stare, procesul nu are resurse alocate, ci
+doar intrarea sa in tabela proceselor. Nucleul poate descarca toata memoria folosita de
+proces si inchide fisierele deschise. Un proces zombie se poate observa prin comanda
+Unix ps care afiseaza la starea procesului litera 'Z'.
+Daca un proces care are ca parinte procesul init se termina, acesta nu devine
+zombie iarasi deoarece, procesul init apeleaza una dintre functiile wait pentru a analiza
+starea in care procesul a fost terminat. Prin aceasta comportare procesul init evita
+incarcarea sistemului cu procese zombie.
+Apelul _exit nu goleste bufferele de I/O.
+2.4. Gestiunea si planificarea proceselor
+Nucleul sistemului Unix asigura gestiunea si planificarea pentru executie a
+proceselor. Starea sistemului la un moment dat reprezinta o ierarhie de procese
+organizate astfel:
+Proces 0
+Proces 1
+sh1
+
+sh2
+
+...
+
+shn
+
+cron
+
+update
+
+Procesul 0 (swapper) este un proces sistem care asigura gestiunea memoriei printrun mecanism de swapping. Procesul 1 (init) este lansat in faza de initializare fiind un
+proces permanent in sistem. Acesta este procesul care initializeaza procesul fiu login pe
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+terminalele anuntate si dupa deschiderea unei sesiuni de lucru genereaza procese
+corespunzatoare de asistenta a utilizatorului (implicit un proces shell). Acesta la randul sau
+utilizeaza un mecanism de tip fork-exec pentru executia comenzilor. Procesele cron si
+update sunt create de fisiere de comenzi shell etc/rc si sunt executate la trecerea din mod
+monoutilizator in multiutilizator.
+Gestiunea tuturor proceselor este asigurata de nucleu prin intermediul unei tabele
+interne de procese, fiecare proces fiind nominalizat la generare printr-un numar pozitiv.
+Planificarea proceselor este realizata dupa un principiul de timesharing, care consta in
+partitionarea timpului sistem intre procesele active dupa prioritati. Prioritatile proceselor
+utilizator sunt evaluate dinamic la intervale fixe:
+Prioritate proces_i =
+
+timp in UC proces_i
+timp in memorie proces_i
+
+fiind preferate procesele cu valori mici ale prioritatilor (cele cu o activiatate de I/O intensa
+si cele abia intrate in memorie). Prioritatile proceselor sistem sunt fixe si mai mari decat
+ale proceselor utilizator. Algoritmul corespunde, in mare, unui mecanism de tip round-robin
+( daca se considera procesele fara I/O), care asigura eliberarea unitatii centrale de catre
+procesul curent intr-un timp finit.
+3. Exemple probleme rezolvate
+3.1. Exemplu de functie ce copie continutul unui fisier existent intr-un alt fisier. Se
+presupune ca oricare dintre apelurile sistem read sau write poate genera erori.
+#define BUFSIZE 512
+void mycopy( depe, pe)
+char *depe, *pe;
+{
+int depefd, pefd, nr, nw, n;
+char buf[BUFSIZE];
+if (( depefd=open( depe, O_RDONLY)) < 0)
+err_sys( depe);
+if (( pefd=creat( pe, 0666)) < 0)
+err_sys( pe);
+while(( nr=read( depefd, buf, sizeof( buf))) != 0) {
+if ( nr < 0) err_sys("read");
+nw=0;
+do {
+if (( n=write( pefd, buf, nr))==1)
+err_sys("write");
+nw += n;
+} while ( nw < nr);
+}
+close( depefd); close(pefd);
+}
+
+3.2. Sa se scrie programul par.c, care creeaza un proces fiu ce executa programul
+numit fiu. Procesul parinte asteapta terminarea fiului si afiseaza pid-ul procesului fiu si
+starea cu care s-a terminat acesta (in zecimal si hexazecimal).
+/* par.c */
+main()
+{
+int pid, stare;
+printf(" Parinte: inainte de fork()\n");
+
+Sisteme de Operare
+
+}
+
+if ( (pid=fork()) !=0)
+wait( &stare);
+else
+execl("fiu", 0);
+printf("Parinte: dupa fork()\n");
+printf("\tId proces fiu=%d; Terminat
+stare);
+
+Laborator nr. 7
+
+cu
+
+valoarea
+
+%d=%x\n",pid,
+
+stare,
+
+/* fiu.c */
+main()
+{
+int pid;
+printf("Fiul: incepe executia \n");
+pid=getpid();
+printf("Fiul: %d se termina\n", pid);
+exit( pid);
+}
+
+3.3. Compilati si rulati programul de mai jos si explicati rezultatul.
+#include <fcntl.h>
+#include "hdr.h"
+int fdR, fdW;
+char c;
+main( int argc, char * argv[])
+{
+if ( argc != 3) exit(1);
+if (( fdR=open( argv[1], O_RDONLY)) == 1)
+err_sys( "Eroare open1\n");
+if (( fdW=open( argv[2], O_WRONLY)) == 1)
+err_sys( "Eroare open2\n");
+fork(); rd_wr(); exit(0);
+}
+rd_wr() {
+for ever {
+if ( read( fdR, &c, 1) == 0) return;
+write( fdW, &c, 1);
+}
+}
+
+3.4. Exemplu de functie (pr_exit) care, folosind macrodefinitiile definite in
+lucrare, permite afisarea informatiilor de stare.
+#include <sys/types.h>
+#include <sys/wait.h>
+extern char *sys_siglist[];
+void print_exit( int status)
+{
+if ( WIFEXITED( status))
+printf("Terminare normala, starea de exit=%d\n", WEXITSTATUS( status) );
+else if ( WIFSIGNALED( status))
+printf("Terminare Anormala, numar semnal=%d=%s%s\n",WTERMSIG( status),
+sys_siglist[ WTERMSIG( status)],
+#ifdef WCOREDUMP
+WCOREDUMP( status) ? "( generat fisierul core":"");
+#else
+"");
+#endif
+else if ( WIFSTOPPED( status))
+printf("Proces fiu oprit, numar semnal=%d%s\n",WSTOPSIG( status),
+sys_siglist[ WSTOPSIG( status)] );
+}
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+3.5. Sa se scrie un program care preia argumente de la intrare si le executa ca si
+comenzi Unix. Se va folosi apelul sistem execlp. La asteptarea introducerii unei comenzi,
+programul afiseaza prompterul >.
+#include <sys/types.h>
+#include <sys/wait.h>
+#include "hdr.h"
+int main( void)
+{
+char buf[MAXLINE];
+pid_t pid;
+int status;
+printf("> ");
+while ( fgets( buf, MAXLINE, stdin) != NULL) {
+buf[ strlen( buf) -1 ] = 0;
+if ( (pid=fork()) < 0)
+err_sys("Eroare fork");
+else if ( pid == 0) {
+execlp( buf, buf, NULL);
+err_ret("Nu sa putut executa: %s", buf);
+exit( 127);
+}
+if ( (pid=waitpid( pid, &status, 0)) < 0)
+err_sys("Eroare waitpid");
+printf("> ");
+}
+exit(0);
+}
+
+4. Probleme propuse pentru rezolvare
+4.1. Scrieti un program de test, utilizind apelurile sistem de lucru cu procese, pentru
+functiile lock, unlock si lockpath ce implementează semafoarele cu ajutorul fiserelor
+din sectiunea 1.3 a lucrării de laborator.
+4.2. Realizati un program C care creeaza 5 procese (inclusiv parintele). Fiecare
+proces afiseaza pe ecran cate 10 linii. Cele 10 linii afisate de procesul parinte sunt de
+forma: [PID] cu procesele fiu: [PID1] [PID2] [PID3] [PID4]
+Liniile afisate de procesele fiu sunt de forma: [PID] cu parintele [PIDP]
+Inainte de afisarea celor 10 linii, procesele fiu vor apela functia sleep(x), unde x
+(reprezentand numarul de secunde) va fi o valoare intre 5 si 20. Procesele fiu se vor
+termina returnand valoarea lui x.
+Procesul parinte creeaza cele 4 procese fiu, afiseaza cele 10 linii dupa care asteapta
+terminarea executiei proceselor fiu (se folosesc apeluri de forma wait(&stare)) si va
+afisa valorile returnate. Pentru afisarea starii de terminare a proceselor fiu se foloseste
+functia pr_exit (din sectiunea 3).
+NOTA: PID, PIDP, PID1..4 sunt identificatorii de proces obtinuti la fiecare rulare prin
+apeluri sistem.
+4.3. Scrieti o varianta a programului anterior in care asteptarea terminarii proceselor
+fiu se face folosind apeluri de forma waitpid(pid,&status,0). Masurati durata
+executiei celor 2 programe folosind comanda time si explicati rezultatul.
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+5. Bibliografie
+• Iosif Ignat, Adrian Kacso, UNIX Gestionarea Proceselor, Ed. Albastră, 2006
+• W. Richard Stevens, Stephen A. Rago, Advanced Programming in the UNIX Environment: Second Edition, Addison Wesley, 2005
+• Kurt Wall, Mark Watson, and Mark Whitis, Linux Programming Unleashed, Sams Publishing, 1999
+• A. D. Marshall, Programming in C.
+http://www.cs.cf.ac.uk/Dave/C/
+
+UNIX System Calls and Subroutines using C,
+
+• Guide to Unix IPC http://beej.us/guide/bgipc/output/html/singlepage/bgipc.html
+• Mark Mitchell, Jeffrey Oldham, and Alex Samuel, Advanced Linux Programming, New
+Riders Publishing, 2001, http://www.advancedlinuxprogramming.com/,
+http://www.advancedlinuxprogramming.com/alp-folder/advanced-linux-programming.pdf
+• Compiler, assembler, linker and loader: a brief story http://tenouk.com/ModuleW.html
+• Exit Status https://www.gnu.org/software/libc/manual/html_node/Exit-Status.html
+6. Anexa
+6.1. Fisierul antet hdr.h de mai jos, este utilizat va fi utilizat si in programele din
+lucrarile urmatoare. Continutul sau este urmatorul:
+#ifndef __hdr_h
+#define __hdr_h
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#define MAXLINE 1024
+#define FILE_MODE ( S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH)
+#define DIR_MODE ( FILE_MODE | S_IXUSR | S_IXGRP | S_IXOTH)
+#define ever (;;)
+typedef void Sigfunc( int);
+void print_exit( int);
+void print_mask( const char*);
+Sigfunc *signal_intr( int, Sigfunc *);
+void err_sys( const char *, ...);
+void err_quit( const char *, ...);
+void err_dump( const char *, ...);
+void err_ret( const char *, ...);
+void err_msg( const char *, ...);
+#endif /* __hdr_h */
+
+6.2. Functiile din fisierul hdr.h sunt implementate in modulul err.c. Modulul trebuie
+compilat si inclus in linia de comanda la compilarea oricarui program ce foloseste aceste
+functii. Compilarea acestui fisier se face astfel:
+$ gcc -c err.c
+
+Rezultatul il reprezinta fisierul obiect err.o. Compilarea unui program ce utilizeaza
+acest modul se face utilizand o linie de comanda de forma:
+$ gcc –o <fisier_executabil> <fisier_sursa>.c <alte_fisiere>.o err.o
+
+Sisteme de Operare
+6.3. Continutul fisierului err.c este urmatorul:
+#include <errno.h>
+#include <stdarg.h>
+#include <sys/wait.h>
+#include <signal.h>
+#include <errno.h>
+#include "hdr.h"
+/*
+* extern char *sys_siglist[];
+*/
+static void err_do( int, const char *, va_list);
+char *pname=NULL;
+/* Eroare fatala datorata unui apelsistem.
+* Afiseaza mesaj si termina procesul.
+* */
+void err_sys(const char *frmt,...)
+{
+va_list ap;
+va_start(ap, frmt);
+err_do(1,frmt,ap);
+va_end(ap);
+exit(1);
+}
+/* Eroare fatala independenta de apelul sistem.
+* Afiseaza mesaj si termina procesul.
+* */
+void err_quit(const char *frmt,...)
+{
+va_list ap;
+va_start(ap, frmt);
+err_do(0,frmt,ap);
+va_end(ap);
+exit(1);
+}
+/* Eroare nefatala datorata unui apel sistem.
+* Afiseaza mesaj si revine.
+* */
+void err_ret(const char *frmt,...)
+{
+va_list ap;
+va_start(ap, frmt);
+err_do(1,frmt,ap);
+va_end(ap);
+return;
+}
+/* Eroare nefatala independenta de un apel sistem.
+* Afiseaza mesaj si revine.
+* */
+void err_msg(const char *frmt,...)
+{
+va_list ap;
+va_start(ap, frmt);
+err_do(0,frmt,ap);
+va_end(ap);
+return;
+}
+
+Laborator nr. 7
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+/* Eroare fatala relativa la un apel sistem.
+* Afiseaza mesaj, dump core si termina procesul.
+* */
+void err_dump( const char *frmt, ...)
+{
+va_list ap;
+va_start( ap, frmt);
+err_do( 1, frmt, ap);
+va_end(ap);
+abort(); /* dump core */
+exit(1);
+}
+static void err_do( int errfan, const char *frmt, va_list ap)
+{
+int errno_save;
+char buf[MAXLINE];
+errno_save=errno;
+vsprintf( buf, frmt, ap);
+if ( errfan)
+sprintf( buf+strlen( buf), ": %s", strerror( errno_save));
+strcat( buf, "\n");
+fflush( stdout);
+fputs( buf, stderr);
+fflush( NULL);/*goleste toate stdio si stdout*/
+return;
+}
+/* Functia print_exit permite afsarea unor informatii de stare
+* */
+void print_exit(int status)
+{
+if (WIFEXITED (status))
+printf("Terminare normala, starea de \
+exit = %d\n", WEXITSTATUS(status));
+else if ( WIFSIGNALED (status))
+printf("Terminare Anormala, numar \
+semnal = %d = %s%s\n", WTERMSIG(status),
+sys_siglist[WTERMSIG(status)],
+#ifdef WCOREDUMP
+WCOREDUMP(status) ? "(generat fisierul core":" ");
+#else
+" ");
+#endif
+else if (WIFSTOPPED(status))
+printf("Proces fiu oprit, numar semnal=%d%s\n",
+WSTOPSIG(status), sys_siglist[ WSTOPSIG(status)] );
+}
+void print_mask( const char *str)
+{
+sigset_t sigset;
+int i, errno_save;
+errno_save=errno;
+if( sigprocmask (0,NULL, &sigset) < 0)
+err_sys("Eroare sigprocmask");
+printf("%s",str);
+for(i=1; i<NSIG;i++)
+if( sigismember(&sigset, i))
+switch (i){
+case SIGINT : printf("SIGINT "); break;
+case SIGQUIT : printf("SIGQUIT "); break;
+case SIGALRM : printf("SIGALRM "); break;
+case SIGUSR1 : printf("SIGUSR1 "); break;
+
+Sisteme de Operare
+
+Laborator nr. 7
+
+/*restul de semnale care intereseaza*/
+}
+printf("\n");
+errno=errno_save;
+}
+/* * * */
+
+

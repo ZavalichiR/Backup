@@ -1,0 +1,5 @@
+Nr 1
+Sa se implementeze functiile P si V ale semafoarelor cu ajutorul fisierelor si sa se scrie
+un program de test. Se vor crea fisierele sem.h si sem.c pentru implementarea cu fisiere
+a semafoarelor iar pentru programul de test va fi scrie in fisierul main.c Testarea se face folosind
+3 procese, un proces parinte si 2 procese fiu, ce vor scrie intr-un fisier f.txt PID'ul propriu de 3 ori.
