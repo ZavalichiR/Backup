@@ -1,0 +1,55 @@
+package clientserver;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class MyServer {
+	public static void main(String[] args) throws IOException {
+
+        ServerSocket ss = new ServerSocket(5678);
+        
+        while(true)
+        {
+        Socket s = ss.accept();
+        new Thread(){
+        	public void run()
+        	{
+        	
+        
+        PrintWriter socketWriterToServer = new PrintWriter(s.getOutputStream(), true);
+        
+        
+        BufferedReader socketReaderFromClient = new BufferedReader(new InputStreamReader(s.getInputStream()));
+        
+        
+        BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
+
+
+        socketWriterToServer.println("Welcome to MyServer!");
+        
+        
+        String line;
+        while(!(line = socketReaderFromClient.readLine()).equals("bye")) {
+        	
+            System.out.println(line);
+            
+
+            line = consoleReader.readLine();
+            
+
+            socketWriterToServer.println(line);
+        }
+        socketWriterToServer.println("bye");
+        
+
+        s.close();
+        	}
+        }.start();
+        }
+        ss.close();
+    }
+}

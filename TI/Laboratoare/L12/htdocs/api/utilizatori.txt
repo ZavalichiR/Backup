@@ -1,0 +1,7 @@
+{"utilizatori":
+[
+{"nume_utilizator":"admin","parola":"admin"},
+{"nume_utilizator":"admin2","parola":"admin2"},
+{"nume_utilizator":"Zavalichi","parola":"totaia"}
+]
+}

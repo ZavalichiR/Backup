@@ -1,0 +1,64 @@
+package clientserver;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class MyServer {
+
+    public static void main(String[] args) throws IOException {
+        
+        ServerSocket ss = new ServerSocket(5678); // pornește un server pe portul 5678
+        
+        // așteaptă conectarea unui client la server
+        // s - socket-ul clientului conectat
+        try {
+            while(true) {
+                final Socket s = ss.accept();
+                new Thread() {
+                    public void run() {
+                        try {
+                            // socketWriter - wrapper peste fluxul de ieșire folosit pentru a transmite date clientului
+                            PrintWriter socketWriterToServer = new PrintWriter(s.getOutputStream(), true);
+                            // socketReader - wrapper peste fluxul de intrare folosit pentru a primi date de la client
+                            BufferedReader socketReaderFromClient = new BufferedReader(new InputStreamReader(s.getInputStream()));
+
+                            // trimiterea mesajului ”hello” la client
+                            socketWriterToServer.println("hello! start sending messages...");
+                            // are loc un dialog între server și client care se termină în momentul în care clientul trimite textul ”bye”
+                            String line;
+                            while(!(line = socketReaderFromClient.readLine()).equals("bye")) {
+                                // mesajul primit de la client este afișat la consola serverului
+                                System.out.println("[CLIENT " + ss.getLocalSocketAddress().toString() + "] " + line);
+                                // mesajul primit de la client este transmis inapoi la client
+                                socketWriterToServer.println("[SERVER] " + line);
+                            }
+                            socketWriterToServer.println("bye");
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        finally {
+                            // închide conexiunea cu clientul
+                            // la apelul metodei close() se închid automat fluxurile de intrare și ieșire (socketReader și socketWriter)
+                            try {
+                                s.close();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }.start();
+            }
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            // închide serverul
+            ss.close();
+        }
+    }
+}

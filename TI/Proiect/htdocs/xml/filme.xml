@@ -1,0 +1,103 @@
+<filme>
+	<film>
+
+		<id>1</id>
+		<title>Dunkirk</title>
+		<originalt>Dunkirk</originalt>
+		<gen>Acțiune | Istoric | Dramă</gen>
+		<durata>107</durata>
+		<limba>Engleză</limba>
+		<premiera>21/10/2017</premiera>
+		<regizor>Christopher Nolan</regizor>
+		<actori>Tom Hardy, Cillian Murphy, Kenneth Branagh</actori>
+		<anul>2017</anul>
+		<descriere> Povestea filmului Dunkirk surprinde trupele britanice şi ale aliaţilor înconjurate de inamici pe plaja franceză şi forţate să facă faţă unui asalt aproape imposibil de rezistat.Filmul reuneşte o distribuţie impresionantă din care fac parte actorii Tom Hardy („Mad Max: Drumul furiei”), Mark Rylance, Kenneth Branagh, Cillian Murphy şi debutantul Fionn Whitehead. Filmul este produs de Christopher Nolan şi Emma Thomas, iar Jake Myers este producător executiv..</descriere>
+		<src>images/Filme/Dunkirk.jpg</src>	
+		<trailer>https://www.youtube.com/embed/VQ01tJ4EWeg?ecver=2</trailer>
+
+	</film>
+	<film>
+
+		<id>2</id>
+		<title>Star Wars: Ultimii Jedi</title>
+		<originalt>Star Wars: The last Jedii</originalt>
+		<gen>Acțiune | Aventuri | Fantastic</gen>
+		<durata>152</durata>
+		<limba>Engleză</limba>
+		<premiera>15/12/2017</premiera>
+		<regizor>Rian Johnson</regizor>
+		<actori>Daisy Ridley, John Boyega, Mark Hamill</actori>
+		<anul>2017</anul>
+		<descriere> 	După ce a pășit in universul Star Wars (Star Wars: The Force Awakens (2015), Rey își continuă drumul epic, alături de Finn, Poe și Luke Skywalker, în următorul capitol din saga..</descriere>
+		<src>images/Filme/StarWars.jpg</src>	
+		<trailer>https://www.youtube.com/embed/Q0CbN8sfihY?ecver=2</trailer>
+
+	</film>
+	<film>
+
+		<id>3</id>
+		<title>Jocuri secrete</title>
+		<originalt>Molly`s game</originalt>
+		<gen>Biography | Dramă</gen>
+		<durata>140</durata>
+		<limba>Engleză</limba>
+		<premiera>05/01/2018</premiera>
+		<regizor>Aaron Sorkin</regizor>
+		<actori>Jessica Chastain, Idris Elba, Kevin Costne</actori>
+		<anul>2017</anul>
+		<descriere> 	Molly’s Game (2017) este un film biografic care urmărește povestea tinerei Molly Bloom, o fostă schioare profesionistă, care la sfârșitul anilor 2000 a devenit cunoscută sub numele de „prințesa poker-ului“ din Los Angeles. Încă din copilărie, Molly a fost talentată, strălucitoare și încăpățânată. După ce nu a reușit să se alăture echipei olimpice, ea a decis să-și ia un an liber înainte de a începe dreptul, cu intenția de a obține un loc de muncă în Los Angeles..</descriere>
+		<src>images/Filme/JocuriSecrete.jpg</src>	
+		<trailer>https://www.youtube.com/embed/Vu4UPet8Nyc?ecver=2</trailer>
+
+	</film>
+	<film>
+
+		<id>4</id>
+		<title>Jumanji: Aventura in jungla</title>
+		<originalt>Jumanji: Welcome to the jungle</originalt>
+		<gen>Acțiune | Aventuri | Comedie</gen>
+		<durata>119</durata>
+		<limba>Engleză</limba>
+		<premiera>29/12/2017</premiera>
+		<regizor>Jake Kasdan</regizor>
+		<actori>Dwayne Johnson, Karen Gillan, Kevin Hart</actori>
+		<anul>2017</anul>
+		<descriere> 	Four teenagers discover an old video game console and are literally drawn into the game's jungle setting becoming the adult avatars they chose..</descriere>
+		<src>images/Filme/Jumanji.jpg</src>	
+		<trailer>https://www.youtube.com/embed/leE10vdvkho?ecver=2</trailer>
+
+	</film>
+	<film>
+
+		<id>5</id>
+		<title>Liga Dreptății</title>
+		<originalt>Liga Dreptății</originalt>
+		<gen>Acțiune | Aventură | Fantastic</gen>
+		<durata>120</durata>
+		<limba>Engleză</limba>
+		<premiera>17/11/2017</premiera>
+		<regizor>Zack Snyder</regizor>
+		<actori>Ben Affleck, Gal Gadot, Jason Momoa</actori>
+		<anul>2017</anul>
+		<descriere> 	Evenimentele au loc imediat după Cei mai tari supereroi din benzile desenate se întâlnesc pe marele ecran pentru a salva (pentru a câta oară?) omenirea de la catastrofe dezastruoase. Superman, Batman, Femeia Fantastică, Aquaman și alții trebuie să uite de orgolii și să colaboreze pentru că au de-a face cu unii dintre cei mai redutabili eroi negativi ieșiți vreodată din benzile desenate. Și, cine știe, cu această ocazie poate vom afla și originea tuturor acestor supereroi..</descriere>
+		<src>images/Filme/LigaDreptatii.jpg</src>	
+		<trailer>https://www.youtube.com/embed/dvJaSmunY7Y?ecver=2</trailer>
+	</film>
+	<film>
+
+		<id>6</id>
+		<title>Thor Ragnarok</title>
+		<originalt>Thor Ragnarok</originalt>
+		<gen>Acțiune | Aventură | Fantastic</gen>
+		<durata>130</durata>
+		<limba>Engleză</limba>
+		<premiera>27/10/2017</premiera>
+		<regizor>Taika Waititi</regizor>
+		<actori>Chris Hemsworth, Tom Hiddleston, Mark Ruffalo</actori>
+		<anul>2017</anul>
+		<descriere> Evenimentele au loc imediat după The Avengers: Age of Ultron, când Thor se recuperează în urma cumplitei lupte cu robotul hotărât să distruga umanitatea. Doar că ceea ce Ultron amenința să facă pe Terra iată că se pregătește pe Asgard: apocalipsa ar putea distruge din temelii luminoasa lume condusă de Odin, iar Thor va avea mare nevoie de ajutorul lui Loki pentru a înfrunta pericolul ce-i amenință tărâmul de baștină</descriere>
+		<src>images/Filme/ThorRagnarok.jpg</src>	
+		<trailer>https://www.youtube.com/embed/eQVXIPVRbCU?ecver=2</trailer>
+
+	</film>
+</filme>

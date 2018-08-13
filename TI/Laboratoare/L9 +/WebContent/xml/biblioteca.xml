@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<biblioteca>
+	<carte>
+		<id>14</id>
+		<titlu>De vorba cu mine insumi</titlu>
+		<autor>Prentice Mulford</autor>
+		<anAparitie>2017</anAparitie>
+	</carte>
+	<carte>
+		<id>200</id>
+		<titlu>Abc-ul Bunelor Maniere</titlu>
+		<autor>Nicolae Armes</autor>
+		<anAparitie>2015</anAparitie>
+	</carte>
+	<carte>
+		<id>1</id>
+		<titlu>Arta Razboiului</titlu>
+		<autor>Sun Tzu</autor>
+		<anAparitie>1772</anAparitie>
+	</carte>
+	<carte>
+		<id>4</id>
+		<titlu>Splendida cetate a celor o mie de sori</titlu>
+		<autor>Khaled Hossein</autor>
+		<anAparitie>2008</anAparitie>
+	</carte>
+	<carte>
+		<id>5</id>
+		<titlu>Trenul Orfanilor</titlu>
+		<autor>Christina Baker Kline</autor>
+		<anAparitie>2015</anAparitie>
+	</carte>
+	<carte>
+		<id>5</id>
+		<titlu>Testamentul lui Abraham</titlu>
+		<autor>Igor Bergler</autor>
+		<anAparitie>2017</anAparitie>
+	</carte>
+	<carte>
+		<id>5</id>
+		<titlu>Fotograful curții Regale</titlu>
+		<autor>Simona Antonescu</autor>
+		<anAparitie>2016</anAparitie>
+	</carte>
+</biblioteca>

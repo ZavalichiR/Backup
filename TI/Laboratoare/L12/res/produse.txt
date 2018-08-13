@@ -1,0 +1,11 @@
+{"id":1,"nume":"Televizor LCD 81 cm", "producator": "Samsung", "pret": 1300}
+{"id":2,"nume":"Laptop", "producator": "Acer" , "pret": 4200}
+{"id":3,"nume":"Huawei Nova", "producator": "Huawei", "pret": 1700}
+{"id":4,"nume":"Samsung S7", "producator": "Samsung", "pret": 1700}
+{"id":5,"nume":"Samsung S8", "producator": "Samsung", "pret": 3600}
+{"id":6,"nume":"SmartWatch W1", "producator": "Huawei", "pret": 1200}
+{"id":7,"nume":"SmartWatch Gear S3", "producator": "Samsung", "pret": 1932}
+{"id":8,"nume":"Gear Fit2", "producator": "Samsung", "pret": 900}
+{"id":9,"nume":"Mi Band2", "producator": "Xiaomi", "pret": 140}
+{"id":10,"nume":"Bunul simt", "producator": "Omul", "pret": 0}
+{"id":11,"nume":"Respect", "producator": "Omul", "pret": 0}

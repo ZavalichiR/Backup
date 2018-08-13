@@ -1,0 +1,132 @@
+@charset "UTF-8";
+body{
+	background-color: white;
+}
+h1{
+    text-align:center;
+	margin:0px;
+}
+ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:#0c0b0b;
+}
+li{
+    float:left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+     background-color: #98acb9;
+}
+span{
+  float:left;
+
+}
+aside{
+  padding: 10px;
+  margin:0px;
+  display:block;
+  height:10px;
+  width:10px;
+}
+section{
+
+	border: 2px solid black;
+	margin: 5%;
+	padding-left:10px;
+	padding-bottom:20px;
+	color:black;
+	width:700px;
+}
+
+
+footer{
+  position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   text-align:center;
+   background:#999;
+}
+
+.buton4x1{
+	//default
+}
+
+.buton1x4{
+	float:left;
+}
+
+article.buton2x2:nth-child(odd){
+	clear:both;
+	float:left;
+}
+
+article.buton2x2:nth-child(even){
+	float:left;
+}
+
+#loto1{
+	display:inline-flex;
+	padding:25px;
+	line-height:1;
+}
+#loto2{
+	display:inline-flex;
+	padding:25px;
+	line-height:1;
+}
+
+.continut {
+    border: 2px solid gray;
+    box-shadow: 10px 10px 5px #888888;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 20px 20px 20px 20px;
+    margin-top: 20px;
+    width: 97%;
+    font-size: 1.2em;
+}
+
+nav button{
+	background-color: #d9d0b5;
+	border: none;
+	margin-left: 3%;
+	margin-right: 3%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+	cursor: pointer;
+	outline: none;
+}
+
+
+/* tabel */
+#tabel {
+    display: none;
+    padding: 15px;
+    border-collapse: collapse;
+    font-size: 1.2em;
+    margin-left:auto; 
+    margin-right:auto;
+    text-align: center;
+}
+
+#tabel td {
+    padding: 10px;
+    border: 2px solid green;
+}
+
+#tabel tr:hover {
+    background-color: lightgray;
+}

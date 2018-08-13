@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Red Panda</title>
+	<meta charset = "utf-8" />
+</head>
+
+<body>
+	<header>
+	    <h1><img height="100" width="100" src="./imagini/red_panda.png" alt="Red Panda" />	Red Panda</h1>
+	</header>
+
+	<hr>
+	
+	<nav>
+		<a href="index.html">Acasă</a> &nbsp;&nbsp;
+		<a href="inregistrare.html">Înregistrare</a> &nbsp;&nbsp;
+		<a href="video.html">Video</a> &nbsp;&nbsp;
+		<a href="despre.html">Despre</a>
+		<a href="desen.html">Desen</a>
+	</nav>
+	
+	<hr>
+	
+	<br />
+	
+	<main>
+		<section>
+			<h2>Înregistrare</h2>
+			<fieldset>
+			<legend>Informații generale</legend>
+			Nume utilizator: <input type="text" name="text"/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Parola:			 <input type="password" name="password"/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Nume: 			 <input type="text" name="text"/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Prenume: 		 <input type="text" name="text"/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Email: 			 <input type="email" name="email"/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Telefon: 		 <input type="tel" name="telefon"/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</fieldset>
+		<fieldset>
+			<legend>Informații personale</legend>
+			Sexul: 			<select name="sex">
+							<option value="M">M</option>
+							<option value="F">F</option>
+							</select><br>
+			
+			Banca:			<input list="banci" name="banci"/>	
+							<datalist id="banci">
+							<option value="BCR">BCR</option>
+							<option value="BRD">BRD</option>
+							</datalist><br>
+			Culoare: 		<input type="color" name="color"/><br/>
+			Data nasterii: 	<input type="date" name="date"/><br/>
+			Ora nasterii: 	<input type="time" name="time"/><br/>
+			Varsta: 		<input type="range" name="range"/><br/>
+			Adresa paginii: <input type="url" name="url"/><br/>
+			Descrierea: 	<textarea></textarea>
+		</fieldset>
+		</section>
+	</main>
+	
+	<hr>
+	
+	<br />
+	<footer>
+		&copy; 2017 - Zava
+	</footer>
+</body>
+</html>

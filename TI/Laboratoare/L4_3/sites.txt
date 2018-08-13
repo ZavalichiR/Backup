@@ -1,0 +1,6 @@
+http://www.prosport.ro/rss.xml
+http://www.hotnews.ro/rss
+http://www.timesnewroman.ro/?act=rss
+http://www.dc.ac.tuiasi.ro/feed/
+
+

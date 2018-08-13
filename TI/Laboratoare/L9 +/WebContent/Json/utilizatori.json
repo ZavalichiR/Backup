@@ -1,0 +1,7 @@
+{
+	"utilizatori":[
+	    {"nume":"zava", "parola":"zava"}, 
+	    {"nume":"iohannis", "parola":"incet"},
+	    {"nume":"popescu", "parola":"icsulescu"}
+	]
+}

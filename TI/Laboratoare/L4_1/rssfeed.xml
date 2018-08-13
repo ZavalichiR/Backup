@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Departamentul de Calculatoare</title>
+		<link>http://www.dc.ac.tuiasi.ro</link>
+		<description>Facultatea AC</description>
+		<item>
+			<title>Plaforma Moodle actualizată</title>
+			<description><![CDATA[Platforma Moodle a fost actualizată în vederea anului universitar 2016-2017.]]></description>
+			<link>http://www.dc.ac.tuiasi.ro/2016/09/30/plaforma-moodle-actualizata/</link>
+		</item>
+		<item>
+			<title>Actualizare orar</title>
+			<description><![CDATA[În data de 30.09.2016 a fost actualizat orarul Departamentului de Calculatoare.]]></description>
+			<link>http://www.dc.ac.tuiasi.ro/2016/09/30/actualizari-orar-anii-ii-iv-si-master-i/</link>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,46 @@
+[
+    {
+        "nume": "Zavalichi",
+        "prenume": "Razvan",
+        "telefon": "0754937907",
+        "bilete": [
+            "r7-l7",
+            "r7-l8"
+        ]
+    },
+    {
+        "nume": "Test2",
+        "prenume": "Test2",
+        "telefon": "0754937907",
+        "bilete": [
+            "r10-l12",
+            "r10-l13"
+        ]
+    },
+    {
+        "nume": "Razvan",
+        "prenume": "Razvan",
+        "telefon": "0754937907--",
+        "bilete": [
+            "r9-l8",
+            "r9-l7"
+        ]
+    },
+    {
+        "nume": "boglis",
+        "prenume": "carmen",
+        "telefon": "0765808655",
+        "bilete": [
+            "r6-l6"
+        ]
+    },
+    {
+        "nume": "Zavalichi",
+        "prenume": "Razvan",
+        "telefon": "0754937907",
+        "bilete": [
+            "r10-l7",
+            "r10-l6"
+        ]
+    }
+]

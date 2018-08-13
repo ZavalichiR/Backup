@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<meta charset="UTF-8" />
+		<link href="css/style.css" rel="stylesheet"  type="text/css" />
+		<script src="js/tools.js" type="text/javascript"></script>
+		<title>TI</title>
+	</head>
+	<body onload="date()">
+		<header>
+			<h1>
+			TI
+			</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="#s1">Date</a></li>
+				<li><a href="#s2">Loto</a></li>
+				<li><a href="#s3">Canvas</a></li>
+				<li><a href="#s4">Tabel</a></li>
+			</ul>
+		</nav>
+		<aside> 
+			</br>
+				<button >4x1</button></br></br>
+				<button >1x4</button></br></br>
+				<button >2x2</button></br></br>
+		</aside>
+		<main>
+			<section id="s1" >
+				<h2 >Date</h2>
+				<span id="sistem"></span></br>
+				<span id="date"></span></br>
+				<span id="url"></span></br>
+				<span id="browser"></span></br>
+				<span id="nume"></span></br>
+				
+			</section>
+			
+			<section id="s2" class="default">
+				<h2>Loto</h2>
+				<p>Introduceţi numere</p>
+				<input id="v1" type="text" pattern="[A-F0-9]{2}"/>
+				<input id="v2" type="text" pattern="[A-F0-9]{2}"/>
+				<input id="v3" type="text" pattern="[A-F0-9]{2}"/>
+				<input id="v4" type="text" pattern="[A-F0-9]{2}"/><br>
+				<input id="v5" type="text" pattern="[A-F0-9]{2}"/>
+				<input id="v6" type="text" pattern="[A-F0-9]{2}"/>
+				<input id="v7" type="text" pattern="[A-F0-9]{2}"/>
+				<input id="v8" type="text" pattern="[A-F0-9]{2}"/>
+				
+				<button onclick="loto()">Extragere</button>
+				
+				
+				<div id="loto1">
+				<p>Rezultat:  </p>&nbsp;
+					<p id="n0">| X |</p>
+					<p id="n1">X |</p>
+					<p id="n2">X |</p>
+					<p id="n3">X |</p>
+					<p id="n4">X |</p>
+					<p id="n5">X |</p>
+					<p id="n6">X |</p>
+					<p id="n7">X |</p>
+				</div>
+				</br>
+				<div id="loto2">
+					<p>Ai ghicit: </p> 
+					<p id="rezultat"><p>
+				</div>
+					
+			</section>
+			
+			<section id="s3" class="default">		
+				<h2>Desen</h2>
+				<canvas style="border:2px outset #111" width="400" height="400" id="desen" onclick="Draw(event)" ></canvas><br>
+				<input type="color" id="contur">Contur</input>
+				<input type="color" id="umplere">Umplere</input>	
+			</section>
+			
+			
+		
+			
+			<section id="s4" class="default">
+				<h2>Tabel</h2>
+				<table id="tabel" >
+					<tr>
+						<th></th>
+						<th></th>
+					 </tr>
+					 <tr>
+						<td></td>
+						<td></td>
+					 </tr>
+				</table>
+				<button onclick="GenLinie()">Linie</button>
+				<button onclick="GenColoana()">Coloana</button>
+				<input id="poz" type="text"></input>
+				<input id="culoare" type="color">Fundal</input>
+				<input id="border" type="color">Border</input><br>
+				<br>
+			</section>
+		</main>
+		
+	
+	
+		<footer>&copy;2017 Zava
+		</footer>
+	</body>
+</html>

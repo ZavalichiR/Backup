@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="CSS/mystyle.css">
+		<script src="js/myscript.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<img src="imagini/frog_logo.jpg" alt="FNN_LOGO" width="200" height="100"/>
+		</header>
+		<nav class="nav">
+			<ul>
+				<li><a href="#Section1">Section1</a></li>
+				<li><a href="#Section2">Section2</a></li>
+				<li><a href="#Section3">Section3</a></li>
+				<li><a href="#Section4">Section4</a></li>
+			</ul>
+		</nav>
+		
+		<aside id="aside_left">
+			
+
+			<nav class="aside_nav">
+				<ul>
+					<li id="DYNAMIC_4X1" onclick="DYNAMIC_function(this.id)"><span>4X1</span></li>
+					<li id="DYNAMIC_1X4" onclick="DYNAMIC_function(this.id)"><span>1X4</span></li>
+					<li id="DYNAMIC_2X2" onclick="DYNAMIC_function(this.id)"><Span>2X2</span></li>
+				</ul>
+			</nav>
+			<script>
+				var canvas = document.getElementById('can');
+				//document.getElementById("DYNAMIC_4X1").style.backgroundColor="red";
+				function DYNAMIC_function(liID){
+					if(liID=="DYNAMIC_4X1")
+					{
+						//document.getElementById(liID).style.backgroundColor="red";
+						//document.getElementById("DYNAMIC_1X4").style.backgroundColor="black";
+						//document.getElementById("DYNAMIC_2X2").style.backgroundColor="black";
+						document.getElementById("Section1").className="SectionID_section4X1";
+						document.getElementById("Section2").className="SectionID_section4X1";
+						document.getElementById("Section3").className="SectionID_section4X1";
+						document.getElementById("Section4").className="SectionID_section4X1";
+						document.getElementById("MainSection").className="main_section4X1";
+						canvas.width = canvas.offsetWidth;
+					canvas.height = canvas.offsetHeight;
+					}
+					else if(liID=="DYNAMIC_1X4")
+					{
+						//document.getElementById(liID).style.backgroundColor="red";
+						//document.getElementById("DYNAMIC_4X1").style.backgroundColor="black";
+						//document.getElementById("DYNAMIC_2X2").style.backgroundColor="black";
+						document.getElementById("Section1").className="SectionID_section1X4";
+						document.getElementById("Section2").className="SectionID_section1X4";
+						document.getElementById("Section3").className="SectionID_section1X4";
+						document.getElementById("Section4").className="SectionID_section1X4";
+						document.getElementById("MainSection").className="main_section1X4";
+						canvas.width = canvas.offsetWidth;
+						canvas.height = canvas.offsetHeight;
+					}
+					else if(liID=="DYNAMIC_2X2")
+					{
+						//document.getElementById(liID).style.backgroundColor="red";
+						//document.getElementById("DYNAMIC_4X1").style.backgroundColor="black";
+						//document.getElementById("DYNAMIC_1X4").style.backgroundColor="black";
+						document.getElementById("Section1").className="SectionID_section2X2";
+						document.getElementById("Section2").className="SectionID_section2X2";
+						document.getElementById("Section3").className="SectionID_section2X2";
+						document.getElementById("Section4").className="SectionID_section2X2";
+						document.getElementById("MainSection").className="main_section2X2";
+						canvas.width = canvas.offsetWidth;
+						canvas.height = canvas.offsetHeight;
+					}
+				}
+			</script>
+		</aside>
+		
+		<section class="main_section4X1" id="MainSection">
+			<section class="SectionID_section4X1" id="Section1">
+				<header class="header_section">
+					Section 1 - Informatii despre sectiuni
+				</header>
+				<form action="">
+					<input type="text" value="1" id="x1"/>
+					+
+					<input type="text" value="2" id="x2"/>
+					<input type="submit" value="=" onclick="aduna();return false;"/>
+					<span id="rez">3</span>
+				</form>
+				
+				<p id="Section1_Date"></p>
+				<script>
+					window.onload=ShowDate();
+				</script>
+				
+				<p id="Section1_URL"></p>
+				<script>
+					window.onload=ShowURL();
+				</script>
+				
+				<p id="Section1_Location"></p>
+				<script>
+					var x=document.getElementById("Section1_Location");
+					function getLocation()
+					{
+						if (navigator.geolocation)
+						{
+							navigator.geolocation.getCurrentPosition(showPosition);
+						}
+						else
+						{
+							x.innerHTML="Geolocation is not supported by this browser.";
+						}
+					}
+					function showPosition(position)
+					{
+						x.innerHTML="<b>Latitude</b>: " + position.coords.latitude +  "<br><b>Longitude</b>: " + position.coords.longitude;  
+					}
+					getLocation()
+				</script>
+				
+				<p id="Section1_BrowserInfo"></p>
+				<script>
+					window.onload=ShowBrowserInfo();
+				</script>
+				
+				</script>
+				
+				<p id="Section1_SO"></p>
+				<script>
+					window.onload=ShowSO();
+				</script>
+				
+			</section>
+			
+			<section class="SectionID_section4X1" id="Section2">
+				<header class="header_section">
+					Section 2 - Internet LOTO
+				</header>
+				<form action="">
+					<input type="submit" value="GENERATE" onclick="loto();return false;"/>
+					<br>
+					Numerele generate sunt:
+					<input type="text" size="30" value="" id="LOTOrez"/>
+					<br>
+					Introduceti numerele dumneavoastra:
+					<br>Numar 1:<input type="text" size="3" value="" id="LOTO1" pattern="[A-Z0-9]{2}"/>
+					<br>Numar 2:<input type="text" size="3" value="" id="LOTO2" pattern="[A-Z0-9]{2}"/>
+					<br>Numar 3:<input type="text" size="3" value="" id="LOTO3" pattern="[A-Z0-9]{2}"/>
+					<br>Numar 4:<input type="text" size="3" value="" id="LOTO4" pattern="[A-Z0-9]{2}"/>
+					<br>Numar 5:<input type="text" size="3" value="" id="LOTO5" pattern="[A-Z0-9]{2}"/>
+					<br>Numar 6:<input type="text" size="3" value="" id="LOTO6" pattern="[A-Z0-9]{2}"/>
+					<br>Numar 7:<input type="text" size="3" value="" id="LOTO7" pattern="[A-Z0-9]{2}"/>
+					<br>Numar 8:<input type="text" size="3" value="" id="LOTO8" pattern="[A-Z0-9]{2}"/>
+					<br><input type="submit" value="CLEAR ALL!" onclick="LOTOclearAll();return false;"/>
+					<br><span id="LOTOmatches"></span>
+				</form>
+			</section>
+			
+			<section class="SectionID_section4X1" id="Section3">
+				<header class="header_section">
+					Section 3 - CANVAS
+				</header>
+				Contur: <input type="color" name="contur" id="contur"/>
+				Umplere: <input type="color" name="umplere" id="umplere"/>
+				<form action="">
+					<input type="submit" value="Clear Canvas!" onclick="CANVASclearAll();return false;"/>
+				</form>
+				<canvas id="can"></canvas>
+				<script>
+					var canvas = document.getElementById('can');
+					var	ctx = canvas.getContext("2d");
+					canvas.addEventListener("mousedown", function (e) {
+							drawOnCanvas(e);
+						}, false);
+					canvas.width = canvas.offsetWidth;
+					canvas.height = canvas.offsetHeight;
+					var isDrawing=false;
+					var startX;
+					var startY;
+					
+					var offsetX = canvas.offsetLeft;
+					var offsetY = canvas.offsetTop;
+					
+					function drawOnCanvas(e){
+						var pos = getMousePos(canvas,e);
+						mouseX=pos.x;
+						mouseY=pos.y;
+						if(isDrawing)
+						{
+							isDrawing=false;
+							ctx.beginPath();
+							ctx.lineWidth="6";
+							ctx.strokeStyle=document.getElementById("contur").value;
+							ctx.rect(startX,startY,mouseX-startX,mouseY-startY);
+							ctx.stroke();
+							ctx.fillStyle = document.getElementById("umplere").value;
+							ctx.fill();
+							canvas.style.cursor="default";
+						}
+						else
+						{
+							isDrawing=true;
+							startX=mouseX;
+							startY=mouseY;
+							canvas.style.cursor="crosshair";
+						}
+					}
+					
+					function getMousePos(canvas, e) {
+						var rect = canvas.getBoundingClientRect();
+						return {
+							x: e.clientX - rect.left,
+							y: e.clientY - rect.top
+						};
+					}
+					
+					function CANVASclearAll(){
+						ctx.clearRect(0, 0, canvas.width, canvas.height);
+					}
+				</script>
+			</section>
+			
+			<section class="SectionID_section4X1" id="Section4">
+				<header class="header_section">
+					Section 4 - Tabel dinamic
+				</header>
+				<form action="">
+					Pozitie: <input type="text" value="" id="TABLEposition"/>
+					Culoare: <input type="color" name="CuloareInsertieInTabel" id="TABLEcolor"/>
+					<input type="submit" value="New line" id="TABLEinsertLINE" onclick="TABLEinsert(this.id);return false;"/>
+					<input type="submit" value="New column" ID= "TABLEinsertCOLUMN"onclick="TABLEinsert(this.id);return false;"/>
+				</form>
+				<br>
+				<table id="myTable">
+					<tr>
+						<td>A</td>
+						<td>B</td>
+						<td>C</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+					</tr>
+				</table>
+				<script>
+					var no_rows=2;
+					var no_cells=3;
+					
+					function TABLEinsert(clickID){
+						var table = document.getElementById("myTable");
+						var x=document.getElementById("TABLEposition").value;
+						var culoare=document.getElementById("TABLEcolor").value;
+						
+						if(clickID=="TABLEinsertLINE")
+						{
+							var row = table.insertRow(parseInt(x)-1);
+							no_rows++;
+							for (i = 0; i < no_cells; i++)
+							{
+								cell=row.insertCell(i);
+								cell.style.backgroundColor=culoare;
+								cell.innerHTML = "NEW CELL";
+							}
+						}
+						else if(clickID=="TABLEinsertCOLUMN")
+						{
+							no_cells++;
+							for (i = 0; i < no_rows; i++)
+							{
+								cell=table.rows[i].insertCell(parseInt(x)-1);
+								cell.style.backgroundColor=culoare;
+								cell.innerHTML = "NEW CELL";
+							}
+						}
+					}
+				</script>
+			</section>
+		</section>
+		<footer class="footer">
+			<a>&copy; 2017  By Zava</a>		
+		</footer>
+	</body>
+</html>
