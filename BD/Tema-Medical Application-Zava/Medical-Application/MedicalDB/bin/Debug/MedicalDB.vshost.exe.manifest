@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MedicalDB.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MedicalDB" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MedicalDB.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.VisualStudio.Language.NavigateTo.Interfaces" version="12.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Data.SqlServerCe" version="4.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FirstFloor.ModernUI.dll" size="249344">
+      <assemblyIdentity name="FirstFloor.ModernUI" version="1.0.11.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4FyY6yY0bqYiFZha8SEVhRUCLXIgAysQc3p90AScRTI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr\FirstFloor.ModernUI.resources.dll" size="5120">
+      <assemblyIdentity name="FirstFloor.ModernUI.resources" version="1.0.11.0" language="fr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>/3mJIKLL+gugcgZ/gfsafo/a4ydPspR2iXQmvsdzsxc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="it\FirstFloor.ModernUI.resources.dll" size="5120">
+      <assemblyIdentity name="FirstFloor.ModernUI.resources" version="1.0.11.0" language="it" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>v2nRAjyq/LIwhQ/WrcDiXzI5SiY6eAL4exluX9NbAv0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl\FirstFloor.ModernUI.resources.dll" size="5120">
+      <assemblyIdentity name="FirstFloor.ModernUI.resources" version="1.0.11.0" language="pl" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>r/Bn15YQq517PRTB4q9P3KTC+d2YbBN1Y+FhGg8WWKk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ru\FirstFloor.ModernUI.resources.dll" size="5120">
+      <assemblyIdentity name="FirstFloor.ModernUI.resources" version="1.0.11.0" language="ru" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>sjFS67sR0koOiePl7QJCsOoj04xjto2v9wW8/ZmBXCI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MedicalDB.exe" size="15462832">
+      <assemblyIdentity name="MedicalDB" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>QWd2FwLt9QcqTceiRjOHW72ZpASbWvYfQc8kKn6RinA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MetroFramework.dll" size="361472">
+      <assemblyIdentity name="MetroFramework" version="1.4.0.0" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>FmlKOAnvI0nx9fT8M546HNck6OTXBBiy1v0/gZvnJ3c=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MetroFramework.Design.dll" size="16896">
+      <assemblyIdentity name="MetroFramework.Design" version="1.4.0.0" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ampUqtg5rDFEcE9I3AE2sZ4vYwnDX3YJ4ft9qCG9CaE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MetroFramework.Fonts.dll" size="672256">
+      <assemblyIdentity name="MetroFramework.Fonts" version="1.4.0.0" publicKeyToken="5F91A84759BF584A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>cbaJws97Ys/q1YrFsnfe1qugmdNH0CbXcasPHuYyHks=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.ReportViewer.WinForms.dll" size="563392">
+      <assemblyIdentity name="Microsoft.ReportViewer.WinForms" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>sQraLWiB7q2Q3DGfeRq9DV1vAo41MrfXZBrd0AGvuTw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualBasic.PowerPacks.Vs.dll" size="269344">
+      <assemblyIdentity name="Microsoft.VisualBasic.PowerPacks.Vs" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>jdtxd2sS/GAR6K8OHfT7S3JBSwXU0RywsX+ucaNWQF4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.CoreUtility.dll" size="58632">
+      <assemblyIdentity name="Microsoft.VisualStudio.CoreUtility" version="15.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ryVaDrDYEd9uRaHQgOdAYe9fQ38H+xkoytCz3VBmiBk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.Text.Data.dll" size="137472">
+      <assemblyIdentity name="Microsoft.VisualStudio.Text.Data" version="15.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>yey8vsikN/8TiQ3QmCCbVPgWZb2i3Mrq7olds8su6+4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Toolbox.Extensions.dll" size="11776">
+      <assemblyIdentity name="Toolbox.Extensions" version="0.2.2.20176" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>QuhbttC2E86v5AnX7Cj2pV9EC/bkPmg/ONLuG58bX+g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Toolbox.Logger.dll" size="11776">
+      <assemblyIdentity name="Toolbox.Logger" version="0.2.2.20176" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>gS84Z9Yw4BKlDoGVZTIJFDj8Ftd1E59hZ+XQV0/rMPI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MedicalDatabase.mdf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>pEFv66n/xjJH2yRhAoG5ehrbP6CnNHWE3wSMAkq4XyU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MedicalDatabase_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>efOgbJnv+xqUmwjaqLpxYuerHa0gXRSYw7IlC5XPlsg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MedicalDatabase2.mdf" size="3211264" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>s6b4GQ+Py64ZP6TCe8mUVmGorzrafEBgItkUlnAgmi0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MedicalDatabase2_log.ldf" size="540672" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rKv6luxFb8WrtPUvmcdwADQJQILfqMOmXlM7Vyg1yJM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MedicalDB.exe.config" size="1382">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eFFJCrAtyu/cHBhL5BCfi9lX+NUbQxL/b8l0s+/PD5A=</dsig:DigestValue>
+    </hash>
+  </file>
+</asmv1:assembly>

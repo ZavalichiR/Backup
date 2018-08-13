@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F87F5FC-44C8-4806-9A34-B4BB62064E07}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MedicalDB</RootNamespace>
+    <AssemblyName>MedicalDB</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>C:\Users\uidn1609\Desktop\Medical\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3BA7514F2A1A88D4CC29253DE1EA04BD975B380F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>H M S_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirstFloor.ModernUI">
+      <HintPath>..\packages\ModernUI.WPF.Xrm.1.0.11\lib\net45\FirstFloor.ModernUI.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Documents\UI Modren\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\..\..\..\..\Documents\UI Modren\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Documents\UI Modren\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.CoreUtility, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.VisualStudio.CoreUtility.15.0.26606\lib\net45\Microsoft.VisualStudio.CoreUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Language.NavigateTo.Interfaces, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\VSSDK.NavigateTo.12.0.4\lib\net45\Microsoft.VisualStudio.Language.NavigateTo.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.Data, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.VisualStudio.Text.Data.15.0.26606\lib\net45\Microsoft.VisualStudio.Text.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Toolbox.Extensions">
+      <HintPath>..\packages\Toolbox.0.2.2\lib\net40\Toolbox.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Toolbox.Logger">
+      <HintPath>..\packages\Toolbox.0.2.2\lib\net40\Toolbox.Logger.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddNewPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewPerson.Designer.cs">
+      <DependentUpon>AddNewPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPerson.Designer.cs">
+      <DependentUpon>EditPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="MedicalDatabase2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDatabase2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicalDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient.Designer.cs">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util_Func.cs" />
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loginsys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loginsys.Designer.cs">
+      <DependentUpon>Loginsys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="messagebox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="messagebox.Designer.cs">
+      <DependentUpon>messagebox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxsave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxsave.Designer.cs">
+      <DependentUpon>MessageBoxsave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Welcom_from_sys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcom_from_sys.Designer.cs">
+      <DependentUpon>Welcom_from_sys.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddNewPerson.resx">
+      <DependentUpon>AddNewPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPerson.resx">
+      <DependentUpon>EditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient.resx">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loginsys.resx">
+      <DependentUpon>Loginsys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="messagebox.resx">
+      <DependentUpon>messagebox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxsave.resx">
+      <DependentUpon>MessageBoxsave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Welcom_from_sys.resx">
+      <DependentUpon>Welcom_from_sys.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDatabase2DataSet.xsc">
+      <DependentUpon>MedicalDatabase2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDatabase2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDatabase2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDatabase2DataSet.xss">
+      <DependentUpon>MedicalDatabase2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDatabaseDataSet.xsc">
+      <DependentUpon>MedicalDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MedicalDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicalDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicalDatabaseDataSet.xss">
+      <DependentUpon>MedicalDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.4.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 4.0 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pictureBox1.Image.gif" />
+    <None Include="Resources\loader.Image.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MedicalDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MedicalDatabase2.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MedicalDatabase2_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>MedicalDatabase2.mdf</DependentUpon>
+    </Content>
+    <Content Include="MedicalDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>MedicalDatabase.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,39 @@
+Timp: 50 min
+
+1. Creati o tabela masini cu 5 coloane:
+	- id		- coloana tip numeric de lungime 3
+	- model		- coloana tip caracter de lungime variabila cu dimensiune 20
+	- gama		- coloana tip caracter de lungime variabila cu dimensiune 20	
+	- marca		- coloana tip caracter de lungime variabila cu dimensiune 20
+	- data_model	- coloana tip data calendaristica
+avand urmatoarele constrangeri pentru coloane:
+	- id		- cheie primara
+	- data_model	- verificare sa fie mai mare decat 01.01.2000 
+Constrangerile vor avea denumirile masini_id_PK, respectiv masini_data_model_CK.
+
+2. Inserati 6 inregistrari in tabela de mai sus cu valorile:
+	- 1, Logan, Berlina, Dacia, 01.06.2010
+	- 2, MCV, Break, Dacia, 13.02.2011
+	- 3, Duster, SUV, Dacia, 03.05.2012
+	- 4, Sandero, Hatchback, Dacia, 01.10.2008
+	- 5, SLK55, AMG, Mercedes, 01.01.2004 
+	- 6, prototip, null, Dacia, 01.09.2018
+Folosind tabela masini, selectati marca, gama si modelul. Daca o masina nu are gama, afisati '*****'.
+
+3. Selectati din tabla masini numai coloana marca, fara a afisa duplicatele.
+Folosind wildcards, selectati din tabela masini toate masinile al caror model contine cifra 5.
+
+4. Afisati toate inregistrarile din tabela masini in ordine alfabetica a marcii, iar in cadrul aceleiasi marci, in ordine descrescatoare a datei modelului.
+
+5. Modificati tabela masini si adaugati o constrangere de tipul NOT NULL cu denumirea masini_model_NN pentru coloana model si o constrangere de tipul NOT NULL cu denumirea masini_marca_NN pentru coloana marca.
+
+6. Creati tabela masini_dacia ca o subselectie din tabela masini, ce va contine doar masinile marca Dacia.
+Modificati tabela masini_dacia si adaugati o noua coloana denumita data_lansare de tip data calendaristica.
+
+7. Inserati in coloana nou creata (data_lansare) date calendaristice care sa corespunda ultimei zi a lunii corespunzatoare datei modelului.
+
+8. Folosind tabela masini_dacia, afisati marca, gama si modelul, precum si numarul de luni de cand a fost lansata (folosind coloana data_lansare).
+
+9. Folosind operatorul de concatenare, afisati continutul tabelei masini sub forma marca, gama si model -> an
+(Ex: Mercedes AMG SLK55 -> 2004)
+Stergeti toate datele din tabela masini_dacia, folosind o comanda din limbajul de manipulare a datelor (DML – Data Manipulation Language).

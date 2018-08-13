@@ -1,0 +1,4 @@
+select department_id, avg(salary) from employees group by department_id;
+select first_name, salary from employees e where salary=(select max(salary) from employees e2); -- necorelata
+select first_name, salary from employees e where salary=(select max(salary) from employees e2 where e2.department_id=e.department_id); --corelata pt ca e.dept_id
+

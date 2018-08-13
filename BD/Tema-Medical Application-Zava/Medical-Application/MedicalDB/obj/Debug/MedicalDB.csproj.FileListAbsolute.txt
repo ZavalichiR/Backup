@@ -1,0 +1,218 @@
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe.config
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\obj\Debug\MedicalDB.exe
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\obj\Debug\MedicalDB.pdb
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase.mdf
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase2.mdf
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase2_log.ldf
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase_log.ldf
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe.manifest
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\MedicalDB.application
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\MedicalDB.pdb
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.CoreUtility.dll
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.Text.Data.dll
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.dll
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.dll
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.CoreUtility.xml
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.Text.Data.xml
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.pdb
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.xml
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.pdb
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.xml
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\fr\FirstFloor.ModernUI.resources.dll
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\it\FirstFloor.ModernUI.resources.dll
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\pl\FirstFloor.ModernUI.resources.dll
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\bin\Debug\ru\FirstFloor.ModernUI.resources.dll
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\obj\Debug\MedicalDB.addnewemp.resources
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Patient.resources
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Window.resources
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Home.resources
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Loginsys.resources
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\obj\Debug\MedicalDB.messagebox.resources
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\obj\Debug\MedicalDB.MessageBoxsave.resources
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Properties.Resources.resources
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Welcom_from_sys.resources
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\obj\Debug\MedicalDB.csproj.GenerateResource.Cache
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\obj\Debug\MedicalDB.exe.manifest
+C:\Users\uidn1609\Documents\Medicina\Medical-Application-master\Medical-Application\MedicalDB\obj\Debug\MedicalDB.application
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe.config
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.exe
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.pdb
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase.mdf
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase2.mdf
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase2_log.ldf
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase_log.ldf
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe.manifest
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDB.application
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDB.pdb
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.CoreUtility.dll
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.Text.Data.dll
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.dll
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.dll
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.CoreUtility.xml
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.Text.Data.xml
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.pdb
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.xml
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.pdb
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.xml
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\fr\FirstFloor.ModernUI.resources.dll
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\it\FirstFloor.ModernUI.resources.dll
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\pl\FirstFloor.ModernUI.resources.dll
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\bin\Debug\ru\FirstFloor.ModernUI.resources.dll
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Patient.resources
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Home.resources
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Loginsys.resources
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.messagebox.resources
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.MessageBoxsave.resources
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Properties.Resources.resources
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Welcom_from_sys.resources
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.exe.manifest
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.application
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase.mdf
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase2.mdf
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase2_log.ldf
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase_log.ldf
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe.config
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe.manifest
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDB.application
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\MedicalDB.pdb
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.CoreUtility.dll
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.Text.Data.dll
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.dll
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.dll
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.CoreUtility.xml
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.Text.Data.xml
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.pdb
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.xml
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.pdb
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.xml
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\fr\FirstFloor.ModernUI.resources.dll
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\it\FirstFloor.ModernUI.resources.dll
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\pl\FirstFloor.ModernUI.resources.dll
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\bin\Debug\ru\FirstFloor.ModernUI.resources.dll
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.AddNewPerson.resources
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.EditPerson.resources
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Patient.resources
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Window.resources
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Home.resources
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Loginsys.resources
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.messagebox.resources
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.MessageBoxsave.resources
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Properties.Resources.resources
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Welcom_from_sys.resources
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.csproj.GenerateResource.Cache
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.exe.manifest
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.application
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.exe
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.pdb
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.csprojResolveAssemblyReference.cache
+C:\Users\uidn1609\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.About.resources
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.AddNewPerson.resources
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.About.resources
+C:\Users\zzava\Desktop\Medical-Application\MedicalDB\obj\Debug\MedicalDB.EditPerson.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Debug\MedicalDB.AddNewPerson.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Debug\MedicalDB.About.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Debug\MedicalDB.EditPerson.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Patient.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Window.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Home.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Loginsys.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Debug\MedicalDB.messagebox.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Debug\MedicalDB.MessageBoxsave.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Properties.Resources.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Welcom_from_sys.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Debug\MedicalDB.csproj.GenerateResource.Cache
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe.config
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Debug\MedicalDB.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe.config
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.exe
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.pdb
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase.mdf
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase2.mdf
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase2_log.ldf
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase_log.ldf
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe.manifest
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\MedicalDB.application
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\MedicalDB.pdb
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.CoreUtility.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.Text.Data.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.CoreUtility.xml
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.Text.Data.xml
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.pdb
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.xml
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.pdb
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.xml
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\fr\FirstFloor.ModernUI.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\it\FirstFloor.ModernUI.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\pl\FirstFloor.ModernUI.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\bin\Debug\ru\FirstFloor.ModernUI.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.AddNewPerson.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.About.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.EditPerson.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Patient.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Home.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Loginsys.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.messagebox.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.MessageBoxsave.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Welcom_from_sys.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.exe.manifest
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema\Medical-Application\MedicalDB\obj\Debug\MedicalDB.application
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase.mdf
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase2.mdf
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase2_log.ldf
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\MedicalDatabase_log.ldf
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe.config
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe.manifest
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\MedicalDB.application
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\MedicalDB.exe
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\MedicalDB.pdb
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.CoreUtility.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.Text.Data.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.CoreUtility.xml
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\Microsoft.VisualStudio.Text.Data.xml
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.pdb
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\Toolbox.Extensions.xml
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.pdb
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\Toolbox.Logger.xml
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\fr\FirstFloor.ModernUI.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\it\FirstFloor.ModernUI.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\pl\FirstFloor.ModernUI.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\bin\Debug\ru\FirstFloor.ModernUI.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.AddNewPerson.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.About.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.EditPerson.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Patient.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Home.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Loginsys.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.messagebox.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.MessageBoxsave.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.Welcom_from_sys.resources
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.exe.manifest
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.application
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.exe
+C:\Users\zzava\Desktop\Semestrul II\BD\Tema-Medical Application-Zava\Medical-Application\MedicalDB\obj\Debug\MedicalDB.pdb

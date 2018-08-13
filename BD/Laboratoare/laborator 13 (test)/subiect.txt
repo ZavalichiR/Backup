@@ -1,0 +1,15 @@
+Timp: 40 min
+
+1. Folosind tabelele regions si countries afisati pentru fiecare regiune in parte numele acesteia cat si numarul de tari aferente acestei regiuni.
+(1p)
+
+2. Afisati numele si numarul de colegi din acelasi departament ai fiecarui angajat in parte (coloana se va numi "numar colegi").
+Managerii NU sunt considerati ca fiind colegii angajatilor.
+(2p)
+
+3. Folosind tabela employees, afisati numele si data angajarii a tuturor angajatilor mai vechi decat vechimea medie a celor din departamentul din care fac parte.
+(3p)
+
+4. Selectati numele, salariul (din tabela employees), numele jobului (din tabela jobs) si inca 2 coloane ce vor fi detaliate mai jos, pentru fiecare angajat in parte.
+In cele 2 coloane se va afisa cu cat castiga mai mult, respectiv mai putin fiecare angajat in parte fata de salariile minime (min_salary) si maxime (max_salary) aferente jobului angajatului. Denumiti aceste doua coloane: "peste minim" si "sub maxim".
+(3p)

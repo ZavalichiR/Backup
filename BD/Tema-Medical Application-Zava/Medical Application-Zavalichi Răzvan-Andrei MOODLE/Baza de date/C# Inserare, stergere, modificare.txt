@@ -1,0 +1,39 @@
+							//----Comenzi folosite----//
+//-----------Logare
+ADAPTER = new SqlDataAdapter("SELECT * FROM Login WHERE Name=@user AND Password=@pass ", con);
+
+//-----------Afisare pacienti în ordine alfabetică
+cmd = new SqlCommand("Select FirstName,LastName,Id from Patients order by FirstName ASC, LastName ASC", con);
+//-----------Afisare pacienti dupa ID           
+cmd = new SqlCommand("Select * from Patients where id=' "+Id+" ' " , con); 
+//-----------Afisare continut tabela Observations dupa id-ul unui pacient
+cmd = new SqlCommand("Select * from Observations where PId_fk=' "+Id+" ' ", con);
+//-----------Afisare continut tabela Nutritional dupa id-ul unui pacient
+cmd = new SqlCommand("Select * from Nutritional where id=(select NId_fk from Patients where id=' "+Id+" ' )", con);
+//-----------Afisare continut tabela Diseases dupa id-ul unui pacient       
+cmd = new SqlCommand(" SELECT d.Id, d.Disease, d.Conclusion FROM Diseases d JOIN Patients_Diseases pd ON d.Id = pd.DId_fk WHERE pd.PId_fk = '" + Id +" ' ", con);   
+//-----------Afisare continut tabela Nutritional dupa rezultatul ontinut
+cmd = new SqlCommand("Select * from Nutritional where Result='" + result + "'", con);
+
+//-----------Inserare date în tabela Patients
+cmd = new SqlCommand("insert into Patients (FirstName,LastName,Gender,Phone,Weight,Height,Age,Email,NId_fk) values (@fname, @lname,@gender,@phone, @weight, @height,@age,@email,@Nutritional_ID)", con);
+//-----------Inserare in tabela Observations, facand legatura One To One cu pacientul care a fost adăugat(ultimul)
+cmd = new SqlCommand("insert into Observations (PId_fk,Nutritional_Obs,Medical_Obs) values ( (select MAX (Id) from Patients), @n_obs,@m_obs)", con);   
+//-----------Inserare in tabela Patients_Diseases(tabela de legatura dintre Patients si Diseases) a id-urilor pentru a faca lagatura Many to Many
+cmd = new SqlCommand("insert into Patients_Diseases (PId_fk,DId_fk) values ( (select MAX(Id) from Patients), @DiseasesID)", con);
+cmd = new SqlCommand("insert into Patients_Diseases (PId_fk,DId_fk) values ( (select MAX(Id) from Patients),(select Id from Diseases where Disease=@DiseasesID) )", con);
+
+//-----------Pentru ștergerea unui pacient
+cmd = new SqlCommand("DELETE FROM Patients_Diseases WHERE PId_fk=' " + person.ID + " ' ", con);
+cmd = new SqlCommand("DELETE FROM Observations WHERE PId_fk=' " + person.ID + " ' ", con);   
+cmd = new SqlCommand("DELETE FROM Patients WHERE Id=' " + person.ID + " ' ", con);
+
+//-----------Modificarea datelor din tabela Patients
+cmd = new SqlCommand("UPDATE Patients Set FirstName=@fname,LastName=@lname,Gender=@gender,Phone=@phone,Weight=@weight,Height=@height,Age=@age,Email=@email,NId_fk=@Nutritional_ID where Id='"+person.ID+"' ", con);           
+//-----------Modificarea datelor din tabela Observations a unui pacient
+cmd = new SqlCommand("UPDATE Observations Set Nutritional_Obs=@n_obs,Medical_obs=@m_obs where PId_fk='" + person.ID + "' ", con);
+            
+//-----------Inserarea în tabela Patients_Diseases pentru a adăuga o nouă boală pentru pacient
+cmd = new SqlCommand("insert into Patients_Diseases (PId_fk,DId_fk) values ( '"+person.ID +"',(select Id from Diseases where Disease=@DiseasesID) )", con);                  
+//-----------Ștergerea din tabela Patients_Diseases pentru a șterge o anumită boală a pacientului
+cmd = new SqlCommand("delete from Patients_Diseases where DId_fk=(select Id from Diseases where Disease=@DiseaseName)", con);

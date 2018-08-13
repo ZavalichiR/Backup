@@ -1,0 +1,8 @@
+	Sa se modifice salariile managerilor de departamente (MANAGER_ID din DEPARTMENTS) care 
+se afla intr-un oras (CITY din LOCATIONS) astfel incat sa creasca cu 1% din maximul functiei 
+(MAX_SALARY din JOBS) fiecaruia. Asigurati-va ca parametrul introdus nu este CASE-SENSITIVE.
+
+Afisati coloanele semnificative ptr. inregistrarile modificate (DOAR ACESTEA !!). 
+Reveniti la datele initiale. Afisati si acum pentru verificare.
+
+Pentru claritatea afisarii puteti folosi comanda: SET VERIFY OFF.

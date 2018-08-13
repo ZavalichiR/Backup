@@ -1,0 +1,63 @@
+CREATE TABLE [dbo].[Login] (
+    [Id]       INT          IDENTITY (1, 1) NOT NULL,
+    [Name]     VARCHAR (50) NULL,
+    [Password] VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+CREATE TABLE [dbo].[Nutritional] (
+    [Id]         INT           IDENTITY (1, 1) NOT NULL,
+    [Min]        FLOAT (53)    NULL,
+    [Max]        FLOAT (53)    NULL,
+    [Result]     VARCHAR (50)  NULL,
+    [Conclusion] VARCHAR (MAX) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+CREATE TABLE [dbo].[Patients] (
+    [Id]        INT          IDENTITY (1, 1) NOT NULL,
+    [FirstName] VARCHAR (50) NULL,
+    [LastName]  VARCHAR (50) NULL,
+    [Gender]    VARCHAR (50) NULL,
+    [Phone]     VARCHAR (50) NULL,
+    [Weight]    FLOAT (53)   NULL,
+    [Height]    FLOAT (53)   NULL,
+    [Age]       INT          NULL,
+    [Email]     VARCHAR (50) NULL,
+    [NId_fk]    INT          NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Nutritional_Patient] FOREIGN KEY ([NId_fk]) REFERENCES [dbo].[Nutritional] ([Id])
+);
+
+
+
+CREATE TABLE [dbo].[Observations] (
+    [Id]              INT           IDENTITY (1, 1) NOT NULL,
+    [PId_fk]          INT           NULL,
+    [Nutritional_Obs] VARCHAR (MAX) NULL,
+    [Medical_Obs]     VARCHAR (MAX) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    UNIQUE NONCLUSTERED ([PId_fk] ASC),
+    CONSTRAINT [FK_Obs_Patient] FOREIGN KEY ([PId_fk]) REFERENCES [dbo].[Patients] ([Id])
+);
+
+
+CREATE TABLE [dbo].[Diseases] (
+    [Id]         INT           IDENTITY (1, 1) NOT NULL,
+    [Disease]    VARCHAR (MAX) NULL,
+    [Conclusion] VARCHAR (MAX) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+CREATE TABLE [dbo].[Patients_Diseases] (
+    [Id]     INT IDENTITY (1, 1) NOT NULL,
+    [PId_fk] INT NULL,
+    [DId_fk] INT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+	UNIQUE(PId_fk,DId_fk),
+    CONSTRAINT [FK_PD_Diseases] FOREIGN KEY ([DId_fk]) REFERENCES [dbo].[Diseases] ([Id]),
+    CONSTRAINT [FK_PD_Patient] FOREIGN KEY ([PId_fk]) REFERENCES [dbo].[Patients] ([Id])
+);
+
+

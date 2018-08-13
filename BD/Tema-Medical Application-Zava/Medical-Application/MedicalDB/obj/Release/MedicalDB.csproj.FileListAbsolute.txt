@@ -1,0 +1,11 @@
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\bin\Release\MedicalDB.exe.config
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Release\MedicalDB.addnewemp.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Release\MedicalDB.Patient.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Release\MedicalDB.Window.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Release\MedicalDB.Home.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Release\MedicalDB.Loginsys.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Release\MedicalDB.messagebox.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Release\MedicalDB.MessageBoxsave.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Release\MedicalDB.Properties.Resources.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Release\MedicalDB.Welcom_from_sys.resources
+C:\Users\zzava\Documents\GitHub\Medical-Application\Medical-Application\MedicalDB\obj\Release\MedicalDB.csproj.GenerateResource.Cache
