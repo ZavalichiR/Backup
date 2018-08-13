@@ -1,0 +1,25 @@
+package tema5;
+
+public class MyThread extends Thread{
+	private int stop;
+	private int suma;
+	static Object o=new Object();
+	MyThread(int sto){
+		stop=sto;
+	}
+	public void run(){
+		for(int i=0;i<=stop;++i)
+		{
+			//synchronized(o){
+				//suma+=i;
+				//System.out.println("\n"+suma);}
+			
+			this.suma+=i;
+			//System.out.println("\n"+suma);
+		}
+		System.out.println("\n Suma : "+suma);
+	}
+	public int GetSuma(){
+		return this.suma;
+	}
+}

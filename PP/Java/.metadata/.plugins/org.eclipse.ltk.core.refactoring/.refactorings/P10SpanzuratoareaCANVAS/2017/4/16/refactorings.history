@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;canvas.Fereastra&apos; to &apos;Joc&apos;&#x0D;&#x0A;- Original project: &apos;P10SpanzuratoareaCANVAS&apos;&#x0D;&#x0A;- Original element: &apos;canvas.Fereastra&apos;&#x0D;&#x0A;- Renamed element: &apos;canvas.Joc&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Fereastra&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;canvas{Fereastra.java[Fereastra" matchStrategy="1" name="Joc" qualified="false" references="true" similarDeclarations="false" stamp="1492582291484" textual="false" version="1.0"/>
+</session>

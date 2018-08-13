@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;jpanel.Desen&apos; to &apos;Draw&apos;&#x0D;&#x0A;- Original project: &apos;P10SpanzuratoareaJPanel&apos;&#x0D;&#x0A;- Original element: &apos;jpanel.Desen&apos;&#x0D;&#x0A;- Renamed element: &apos;jpanel.Draw&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Desen&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;jpanel{Desen.java[Desen" matchStrategy="1" name="Draw" qualified="false" references="true" similarDeclarations="false" stamp="1492584096841" textual="false" version="1.0"/>
+</session>

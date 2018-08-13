@@ -1,0 +1,8 @@
+﻿  main.cpp
+  functii.cpp
+e:\materiale facultate\an ii\semestrul ii\pp\laboratoare\probleme\l1-paint\t6\functii.cpp(7): warning C4473: 'sscanf_s' : not enough arguments passed for format string
+  e:\materiale facultate\an ii\semestrul ii\pp\laboratoare\probleme\l1-paint\t6\functii.cpp(7): note: placeholders and their parameters expect 4 variadic arguments, but 3 were provided
+  e:\materiale facultate\an ii\semestrul ii\pp\laboratoare\probleme\l1-paint\t6\functii.cpp(7): note: the missing variadic argument 4 is required by format string '%d'
+  Generating Code...
+  T6.vcxproj -> E:\Materiale Facultate\AN II\Semestrul II\PP\Laboratoare\Probleme\L1-paint\Debug\T6.exe
+  T6.vcxproj -> E:\Materiale Facultate\AN II\Semestrul II\PP\Laboratoare\Probleme\L1-paint\Debug\T6.pdb (Full PDB)

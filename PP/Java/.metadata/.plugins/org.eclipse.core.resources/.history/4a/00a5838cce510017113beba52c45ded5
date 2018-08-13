@@ -1,0 +1,5 @@
+
+public class Afisare extends Thread{
+	Vector<Integer> v=new Vector<Integer>();
+	
+}

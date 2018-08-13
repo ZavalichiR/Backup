@@ -1,0 +1,23 @@
+package tema4;
+
+public class MyThread extends Thread{
+	private int start;
+	private int stop;
+	static int suma;
+	static Object o=new Object();
+	MyThread(int sta,int sto){
+		start=sta;
+		stop=sto;
+	}
+	public void run(){
+		for(int i=start;i<=stop;++i)
+		{
+			//synchronized(o){
+				//suma+=i;
+				//System.out.println("\n"+suma);}
+			
+			suma+=i;
+			System.out.println("\n"+suma);
+		}
+	}
+}

@@ -1,0 +1,39 @@
+package lista;
+
+public class Lista implements InterfaceLista{
+
+	private Nod Head;
+	
+	public Lista(){
+		Head=null;
+	}
+	public void insereaza(int val) {
+		Nod p=new Nod(val);
+		p.succ=Head;
+		Head=p;
+		
+	}
+
+	public void afiseaza() {
+		Nod p=Head;
+		while(p.succ!=null)
+		{
+			System.out.print(p.data+" ");
+			p=p.succ;
+		}
+		System.out.print(p.data+".\n");
+		
+	}
+
+	@Override
+	public int remove() {
+		if(Head!=null)
+		{
+			Nod p=Head;
+			Head=Head.succ;
+			return p.data;
+		}
+		return 0;
+	}
+
+}
