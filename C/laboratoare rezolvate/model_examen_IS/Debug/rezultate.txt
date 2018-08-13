@@ -1,0 +1,8 @@
+Matricea citita de la tastatura are 4 elemente:
+0005 0056 
+0675 0003 
+Media elementelor este: 30.500
+Matricea citita din fisier are 6 elemente:
+  +6.00   +7.50 +876.21 
+ +77.04 -123.75   +0.60 
+Media elementelor este: 296.57

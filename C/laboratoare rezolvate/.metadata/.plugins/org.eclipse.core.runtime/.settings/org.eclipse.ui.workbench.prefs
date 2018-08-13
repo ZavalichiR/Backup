@@ -1,0 +1,4 @@
+ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.cdt.ui.presentation\tTorg.eclipse.cdt.ui.CEditor.presentation
+ColorsAndFontsPreferencePage.selectedElement=Forg.eclipse.cdt.ui.editors.textfont
+eclipse.preferences.version=1
+org.eclipse.cdt.ui.editors.textfont=1|Monospace|13.0|0|GTK|1|;

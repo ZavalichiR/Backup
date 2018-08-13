@@ -1,0 +1,1909 @@
+12:13:59 **** Clean-only build of configuration Debug for project L10_T1_1 ****
+make clean 
+rm -rf  ./src/main.o ./src/matrici.o  ./src/main.d ./src/matrici.d  L10_T1_1
+ 
+12:13:59 **** Build of configuration Debug for project L10_T1_1 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/matrici.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/matrici.d" -MT"src/matrici.d" -o "src/matrici.o" "../src/matrici.c"
+Finished building: ../src/matrici.c
+ 
+Building target: L10_T1_1
+Invoking: GCC C Linker
+gcc  -o "L10_T1_1"  ./src/main.o ./src/matrici.o   
+Finished building target: L10_T1_1
+ 
+12:14:01 **** Clean-only build of configuration Debug for project L10_T1_2 ****
+make clean 
+rm -rf  ./src/data.o ./src/main.o  ./src/data.d ./src/main.d  L10_T1_2
+ 
+12:14:01 **** Build of configuration Debug for project L10_T1_2 ****
+make all 
+Building file: ../src/data.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/data.d" -MT"src/data.d" -o "src/data.o" "../src/data.c"
+Finished building: ../src/data.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L10_T1_2
+Invoking: GCC C Linker
+gcc  -o "L10_T1_2"  ./src/data.o ./src/main.o   
+Finished building target: L10_T1_2
+ 
+12:14:01 **** Clean-only build of configuration Debug for project L10_T1_3 ****
+make clean 
+rm -rf  ./src/main.o ./src/ordonare_matrice.o  ./src/main.d ./src/ordonare_matrice.d  L10_T1_3
+ 
+12:14:01 **** Build of configuration Debug for project L10_T1_3 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/ordonare_matrice.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ordonare_matrice.d" -MT"src/ordonare_matrice.d" -o "src/ordonare_matrice.o" "../src/ordonare_matrice.c"
+Finished building: ../src/ordonare_matrice.c
+ 
+Building target: L10_T1_3
+Invoking: GCC C Linker
+gcc  -o "L10_T1_3"  ./src/main.o ./src/ordonare_matrice.o   
+Finished building target: L10_T1_3
+ 
+12:14:01 **** Clean-only build of configuration Debug for project L10_T2_1 ****
+make clean 
+rm -rf  ./src/main.o ./src/matrice.o  ./src/main.d ./src/matrice.d  L10_T2_1
+ 
+12:14:01 **** Build of configuration Debug for project L10_T2_1 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/matrice.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/matrice.d" -MT"src/matrice.d" -o "src/matrice.o" "../src/matrice.c"
+Finished building: ../src/matrice.c
+ 
+Building target: L10_T2_1
+Invoking: GCC C Linker
+gcc  -o "L10_T2_1"  ./src/main.o ./src/matrice.o   
+Finished building target: L10_T2_1
+ 
+12:14:01 **** Clean-only build of configuration Debug for project L11_P1 ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  L11_P1
+ 
+12:14:01 **** Build of configuration Debug for project L11_P1 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L11_P1
+Invoking: GCC C Linker
+gcc -lm  -o "L11_P1"  ./src/main.o   
+Finished building target: L11_P1
+ 
+12:14:02 **** Clean-only build of configuration Debug for project L11_P2 ****
+make clean 
+rm -rf  ./src/integrale.o ./src/main.o  ./src/integrale.d ./src/main.d  L11_P2
+ 
+12:14:02 **** Build of configuration Debug for project L11_P2 ****
+make all 
+Building file: ../src/integrale.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/integrale.d" -MT"src/integrale.d" -o "src/integrale.o" "../src/integrale.c"
+Finished building: ../src/integrale.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L11_P2
+Invoking: GCC C Linker
+gcc -lm  -o "L11_P2"  ./src/integrale.o ./src/main.o   
+Finished building target: L11_P2
+ 
+12:14:02 **** Clean-only build of configuration Debug for project L11_P3 ****
+make clean 
+rm -rf  ./src/main.o ./src/norme.o  ./src/main.d ./src/norme.d  L11_P3
+ 
+12:14:02 **** Build of configuration Debug for project L11_P3 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/norme.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/norme.d" -MT"src/norme.d" -o "src/norme.o" "../src/norme.c"
+Finished building: ../src/norme.c
+ 
+Building target: L11_P3
+Invoking: GCC C Linker
+gcc -lm  -o "L11_P3"  ./src/main.o ./src/norme.o   
+Finished building target: L11_P3
+ 
+12:14:02 **** Clean-only build of configuration Debug for project L12_P1 ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  L12_P1
+ 
+12:14:02 **** Build of configuration Debug for project L12_P1 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L12_P1
+Invoking: GCC C Linker
+gcc  -o "L12_P1"  ./src/main.o   
+Finished building target: L12_P1
+ 
+12:14:02 **** Clean-only build of configuration Debug for project L12_P2 ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  L12_P2
+ 
+12:14:02 **** Build of configuration Debug for project L12_P2 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L12_P2
+Invoking: GCC C Linker
+gcc  -o "L12_P2"  ./src/main.o   
+Finished building target: L12_P2
+ 
+12:14:03 **** Clean-only build of configuration Debug for project L12_P3 ****
+make clean 
+rm -rf  ./src/linii.o ./src/main.o  ./src/linii.d ./src/main.d  L12_P3
+ 
+12:14:03 **** Build of configuration Debug for project L12_P3 ****
+make all 
+Building file: ../src/linii.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/linii.d" -MT"src/linii.d" -o "src/linii.o" "../src/linii.c"
+Finished building: ../src/linii.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L12_P3
+Invoking: GCC C Linker
+gcc -lm  -o "L12_P3"  ./src/linii.o ./src/main.o   
+Finished building target: L12_P3
+ 
+12:14:03 **** Clean-only build of configuration Debug for project L12_P4 ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  L12_P4
+ 
+12:14:03 **** Build of configuration Debug for project L12_P4 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L12_P4
+Invoking: GCC C Linker
+gcc  -o "L12_P4"  ./src/main.o   
+Finished building target: L12_P4
+ 
+12:14:03 **** Clean-only build of configuration Debug for project L1_A1 ****
+make clean 
+rm -rf  ./L1_A1.o ./arie.o  ./L1_A1.d ./arie.d  L1_A1
+ 
+12:14:03 **** Build of configuration Debug for project L1_A1 ****
+make all 
+Building file: ../L1_A1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"L1_A1.d" -MT"L1_A1.d" -o "L1_A1.o" "../L1_A1.c"
+Finished building: ../L1_A1.c
+ 
+Building file: ../arie.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"arie.d" -MT"arie.d" -o "arie.o" "../arie.c"
+Finished building: ../arie.c
+ 
+Building target: L1_A1
+Invoking: GCC C Linker
+gcc -lm  -o "L1_A1"  ./L1_A1.o ./arie.o   
+Finished building target: L1_A1
+ 
+12:14:03 **** Clean-only build of configuration Debug for project L1_A2 ****
+make clean 
+rm -rf  ./L1_A2.o ./cat.o  ./L1_A2.d ./cat.d  L1_A2
+ 
+12:14:03 **** Build of configuration Debug for project L1_A2 ****
+make all 
+Building file: ../L1_A2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"L1_A2.d" -MT"L1_A2.d" -o "L1_A2.o" "../L1_A2.c"
+Finished building: ../L1_A2.c
+ 
+Building file: ../cat.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"cat.d" -MT"cat.d" -o "cat.o" "../cat.c"
+Finished building: ../cat.c
+ 
+Building target: L1_A2
+Invoking: GCC C Linker
+gcc  -o "L1_A2"  ./L1_A2.o ./cat.o   
+Finished building target: L1_A2
+ 
+12:14:03 **** Clean-only build of configuration Debug for project L1_A3 ****
+make clean 
+rm -rf  ./L1_A3.o  ./L1_A3.d  L1_A3
+ 
+12:14:04 **** Build of configuration Debug for project L1_A3 ****
+make all 
+Building file: ../L1_A3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"L1_A3.d" -MT"L1_A3.d" -o "L1_A3.o" "../L1_A3.c"
+Finished building: ../L1_A3.c
+ 
+Building target: L1_A3
+Invoking: GCC C Linker
+gcc -lm  -o "L1_A3"  ./L1_A3.o   
+Finished building target: L1_A3
+ 
+12:14:04 **** Clean-only build of configuration Debug for project L1_A4 ****
+make clean 
+rm -rf  ./L1_A4.o  ./L1_A4.d  L1_A4
+ 
+12:14:04 **** Build of configuration Debug for project L1_A4 ****
+make all 
+Building file: ../L1_A4.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"L1_A4.d" -MT"L1_A4.d" -o "L1_A4.o" "../L1_A4.c"
+Finished building: ../L1_A4.c
+ 
+Building target: L1_A4
+Invoking: GCC C Linker
+gcc  -o "L1_A4"  ./L1_A4.o   
+Finished building target: L1_A4
+ 
+12:14:04 **** Clean-only build of configuration Debug for project L1_A5 ****
+make clean 
+rm -rf  ./L1_A5.o  ./L1_A5.d  L1_A5
+ 
+12:14:04 **** Build of configuration Debug for project L1_A5 ****
+make all 
+Building file: ../L1_A5.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"L1_A5.d" -MT"L1_A5.d" -o "L1_A5.o" "../L1_A5.c"
+Finished building: ../L1_A5.c
+ 
+Building target: L1_A5
+Invoking: GCC C Linker
+gcc  -o "L1_A5"  ./L1_A5.o   
+Finished building target: L1_A5
+ 
+12:14:04 **** Clean-only build of configuration Debug for project L1_A6 ****
+make clean 
+rm -rf  ./L1_A6.o  ./L1_A6.d  L1_A6
+ 
+12:14:04 **** Build of configuration Debug for project L1_A6 ****
+make all 
+Building file: ../L1_A6.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"L1_A6.d" -MT"L1_A6.d" -o "L1_A6.o" "../L1_A6.c"
+Finished building: ../L1_A6.c
+ 
+Building target: L1_A6
+Invoking: GCC C Linker
+gcc  -o "L1_A6"  ./L1_A6.o   
+Finished building target: L1_A6
+ 
+12:14:04 **** Clean-only build of configuration Debug for project L1_A7 ****
+make clean 
+rm -rf  ./L1_A7.o ./triunghi.o  ./L1_A7.d ./triunghi.d  L1_A7
+ 
+12:14:04 **** Build of configuration Debug for project L1_A7 ****
+make all 
+Building file: ../L1_A7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"L1_A7.d" -MT"L1_A7.d" -o "L1_A7.o" "../L1_A7.c"
+Finished building: ../L1_A7.c
+ 
+Building file: ../triunghi.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"triunghi.d" -MT"triunghi.d" -o "triunghi.o" "../triunghi.c"
+Finished building: ../triunghi.c
+ 
+Building target: L1_A7
+Invoking: GCC C Linker
+gcc  -o "L1_A7"  ./L1_A7.o ./triunghi.o   
+Finished building target: L1_A7
+ 
+12:14:05 **** Clean-only build of configuration Debug for project L1_A8 ****
+make clean 
+rm -rf  ./L1_A8.o  ./L1_A8.d  L1_A8
+ 
+12:14:05 **** Build of configuration Debug for project L1_A8 ****
+make all 
+Building file: ../L1_A8.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"L1_A8.d" -MT"L1_A8.d" -o "L1_A8.o" "../L1_A8.c"
+Finished building: ../L1_A8.c
+ 
+Building target: L1_A8
+Invoking: GCC C Linker
+gcc -lm  -o "L1_A8"  ./L1_A8.o   
+Finished building target: L1_A8
+ 
+12:14:05 **** Clean-only build of configuration Debug for project L1_B1_a ****
+make clean 
+rm -rf  ./L1_B1_a.o  ./L1_B1_a.d  L1_B1_a
+ 
+12:14:05 **** Build of configuration Debug for project L1_B1_a ****
+make all 
+Building file: ../L1_B1_a.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"L1_B1_a.d" -MT"L1_B1_a.d" -o "L1_B1_a.o" "../L1_B1_a.c"
+Finished building: ../L1_B1_a.c
+ 
+Building target: L1_B1_a
+Invoking: GCC C Linker
+gcc  -o "L1_B1_a"  ./L1_B1_a.o   
+Finished building target: L1_B1_a
+ 
+12:14:05 **** Clean-only build of configuration Debug for project L1_B1_b ****
+make clean 
+rm -rf  ./L1_B1_b.o  ./L1_B1_b.d  L1_B1_b
+ 
+12:14:05 **** Build of configuration Debug for project L1_B1_b ****
+make all 
+Building file: ../L1_B1_b.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"L1_B1_b.d" -MT"L1_B1_b.d" -o "L1_B1_b.o" "../L1_B1_b.c"
+Finished building: ../L1_B1_b.c
+ 
+Building target: L1_B1_b
+Invoking: GCC C Linker
+gcc  -o "L1_B1_b"  ./L1_B1_b.o   
+Finished building target: L1_B1_b
+ 
+12:14:05 **** Clean-only build of configuration Debug for project L1_B2 ****
+make clean 
+rm -rf  ./L1_B2.o  ./L1_B2.d  L1_B2
+ 
+12:14:05 **** Build of configuration Debug for project L1_B2 ****
+make all 
+Building file: ../L1_B2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"L1_B2.d" -MT"L1_B2.d" -o "L1_B2.o" "../L1_B2.c"
+Finished building: ../L1_B2.c
+ 
+Building target: L1_B2
+Invoking: GCC C Linker
+gcc -lm  -o "L1_B2"  ./L1_B2.o   
+Finished building target: L1_B2
+ 
+12:14:05 **** Clean-only build of configuration Debug for project L1_B3 ****
+make clean 
+rm -rf  ./L1_B3.o  ./L1_B3.d  L1_B3
+ 
+12:14:05 **** Build of configuration Debug for project L1_B3 ****
+make all 
+Building file: ../L1_B3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"L1_B3.d" -MT"L1_B3.d" -o "L1_B3.o" "../L1_B3.c"
+Finished building: ../L1_B3.c
+ 
+Building target: L1_B3
+Invoking: GCC C Linker
+gcc -lm  -o "L1_B3"  ./L1_B3.o   
+Finished building target: L1_B3
+ 
+12:14:06 **** Clean-only build of configuration Debug for project L1_B4 ****
+make clean 
+rm -rf  ./main.o ./recurenta.o  ./main.d ./recurenta.d  L1_B4
+ 
+12:14:06 **** Build of configuration Debug for project L1_B4 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../recurenta.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"recurenta.d" -MT"recurenta.d" -o "recurenta.o" "../recurenta.c"
+Finished building: ../recurenta.c
+ 
+Building target: L1_B4
+Invoking: GCC C Linker
+gcc -lm  -o "L1_B4"  ./main.o ./recurenta.o   
+Finished building target: L1_B4
+ 
+12:14:06 **** Clean-only build of configuration Debug for project L1_B5 ****
+make clean 
+rm -rf  ./main.o ./suma.o  ./main.d ./suma.d  L1_B5
+ 
+12:14:06 **** Build of configuration Debug for project L1_B5 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../suma.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"suma.d" -MT"suma.d" -o "suma.o" "../suma.c"
+Finished building: ../suma.c
+ 
+Building target: L1_B5
+Invoking: GCC C Linker
+gcc -lm  -o "L1_B5"  ./main.o ./suma.o   
+Finished building target: L1_B5
+ 
+12:14:06 **** Clean-only build of configuration Debug for project L1_B6 ****
+make clean 
+rm -rf  ./functie.o ./main.o  ./functie.d ./main.d  L1_B6
+ 
+12:14:06 **** Build of configuration Debug for project L1_B6 ****
+make all 
+Building file: ../functie.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"functie.d" -MT"functie.d" -o "functie.o" "../functie.c"
+Finished building: ../functie.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: L1_B6
+Invoking: GCC C Linker
+gcc -lm  -o "L1_B6"  ./functie.o ./main.o   
+Finished building target: L1_B6
+ 
+12:14:06 **** Clean-only build of configuration Debug for project L1_B7 ****
+make clean 
+rm -rf  ./L1_B7.o  ./L1_B7.d  L1_B7
+ 
+12:14:06 **** Build of configuration Debug for project L1_B7 ****
+make all 
+Building file: ../L1_B7.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"L1_B7.d" -MT"L1_B7.d" -o "L1_B7.o" "../L1_B7.c"
+Finished building: ../L1_B7.c
+ 
+Building target: L1_B7
+Invoking: GCC C Linker
+gcc -lm  -o "L1_B7"  ./L1_B7.o   
+Finished building target: L1_B7
+ 
+12:14:06 **** Clean-only build of configuration Debug for project L1_B8 ****
+make clean 
+rm -rf  ./main.o ./recurenta.o  ./main.d ./recurenta.d  L1_B8
+ 
+12:14:06 **** Build of configuration Debug for project L1_B8 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../recurenta.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"recurenta.d" -MT"recurenta.d" -o "recurenta.o" "../recurenta.c"
+Finished building: ../recurenta.c
+ 
+Building target: L1_B8
+Invoking: GCC C Linker
+gcc  -o "L1_B8"  ./main.o ./recurenta.o   
+Finished building target: L1_B8
+ 
+12:14:07 **** Clean-only build of configuration Debug for project L2_T1_1 ****
+make clean 
+rm -rf  ./src/main.o ./src/max.o  ./src/main.d ./src/max.d  L2_T1_1
+ 
+12:14:07 **** Build of configuration Debug for project L2_T1_1 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/max.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/max.d" -MT"src/max.d" -o "src/max.o" "../src/max.c"
+Finished building: ../src/max.c
+ 
+Building target: L2_T1_1
+Invoking: GCC C Linker
+gcc  -o "L2_T1_1"  ./src/main.o ./src/max.o   
+Finished building target: L2_T1_1
+ 
+12:14:07 **** Clean-only build of configuration Debug for project L2_T1_2 ****
+make clean 
+rm -rf  ./src/ma.o ./src/main.o  ./src/ma.d ./src/main.d  L2_T1_2
+ 
+12:14:07 **** Build of configuration Debug for project L2_T1_2 ****
+make all 
+Building file: ../src/ma.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ma.d" -MT"src/ma.d" -o "src/ma.o" "../src/ma.c"
+Finished building: ../src/ma.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L2_T1_2
+Invoking: GCC C Linker
+gcc  -o "L2_T1_2"  ./src/ma.o ./src/main.o   
+Finished building target: L2_T1_2
+ 
+12:14:07 **** Clean-only build of configuration Debug for project L2_T1_3 ****
+make clean 
+rm -rf  ./src/functie.o ./src/main.o  ./src/functie.d ./src/main.d  L2_T1_3
+ 
+12:14:07 **** Build of configuration Debug for project L2_T1_3 ****
+make all 
+Building file: ../src/functie.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/functie.d" -MT"src/functie.d" -o "src/functie.o" "../src/functie.c"
+Finished building: ../src/functie.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L2_T1_3
+Invoking: GCC C Linker
+gcc -lm  -o "L2_T1_3"  ./src/functie.o ./src/main.o   
+Finished building target: L2_T1_3
+ 
+12:14:07 **** Clean-only build of configuration Debug for project L2_T1_4 ****
+make clean 
+rm -rf  ./src/heron.o ./src/main.o  ./src/heron.d ./src/main.d  L2_T1_4
+ 
+12:14:07 **** Build of configuration Debug for project L2_T1_4 ****
+make all 
+Building file: ../src/heron.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/heron.d" -MT"src/heron.d" -o "src/heron.o" "../src/heron.c"
+Finished building: ../src/heron.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L2_T1_4
+Invoking: GCC C Linker
+gcc -lm  -o "L2_T1_4"  ./src/heron.o ./src/main.o   
+Finished building target: L2_T1_4
+ 
+12:14:07 **** Clean-only build of configuration Debug for project L2_T1_5 ****
+make clean 
+rm -rf  ./src/cmmdc.o ./src/main.o  ./src/cmmdc.d ./src/main.d  L2_T1_5
+ 
+12:14:07 **** Build of configuration Debug for project L2_T1_5 ****
+make all 
+Building file: ../src/cmmdc.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cmmdc.d" -MT"src/cmmdc.d" -o "src/cmmdc.o" "../src/cmmdc.c"
+Finished building: ../src/cmmdc.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L2_T1_5
+Invoking: GCC C Linker
+gcc  -o "L2_T1_5"  ./src/cmmdc.o ./src/main.o   
+Finished building target: L2_T1_5
+ 
+12:14:08 **** Clean-only build of configuration Debug for project L2_T1_6 ****
+make clean 
+rm -rf  ./src/main.o ./src/triunghi.o  ./src/main.d ./src/triunghi.d  L2_T1_6
+ 
+12:14:08 **** Build of configuration Debug for project L2_T1_6 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/triunghi.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/triunghi.d" -MT"src/triunghi.d" -o "src/triunghi.o" "../src/triunghi.c"
+Finished building: ../src/triunghi.c
+ 
+Building target: L2_T1_6
+Invoking: GCC C Linker
+gcc  -o "L2_T1_6"  ./src/main.o ./src/triunghi.o   
+Finished building target: L2_T1_6
+ 
+12:14:08 **** Clean-only build of configuration Debug for project L2_T2_1 ****
+make clean 
+rm -rf  ./src/ecuatie.o ./src/main.o  ./src/ecuatie.d ./src/main.d  L2_T2_1
+ 
+12:14:08 **** Build of configuration Debug for project L2_T2_1 ****
+make all 
+Building file: ../src/ecuatie.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ecuatie.d" -MT"src/ecuatie.d" -o "src/ecuatie.o" "../src/ecuatie.c"
+Finished building: ../src/ecuatie.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L2_T2_1
+Invoking: GCC C Linker
+gcc -lm  -o "L2_T2_1"  ./src/ecuatie.o ./src/main.o   
+Finished building target: L2_T2_1
+ 
+12:14:08 **** Clean-only build of configuration Debug for project L2_T2_2 ****
+make clean 
+rm -rf  ./src/main.o ./src/punct.o  ./src/main.d ./src/punct.d  L2_T2_2
+ 
+12:14:08 **** Build of configuration Debug for project L2_T2_2 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/punct.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/punct.d" -MT"src/punct.d" -o "src/punct.o" "../src/punct.c"
+Finished building: ../src/punct.c
+ 
+Building target: L2_T2_2
+Invoking: GCC C Linker
+gcc  -o "L2_T2_2"  ./src/main.o ./src/punct.o   
+Finished building target: L2_T2_2
+ 
+12:14:08 **** Clean-only build of configuration Debug for project L2_T2_3 ****
+make clean 
+rm -rf  ./src/conexiune.o ./src/main.o  ./src/conexiune.d ./src/main.d  L2_T2_3
+ 
+12:14:08 **** Build of configuration Debug for project L2_T2_3 ****
+make all 
+Building file: ../src/conexiune.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/conexiune.d" -MT"src/conexiune.d" -o "src/conexiune.o" "../src/conexiune.c"
+Finished building: ../src/conexiune.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L2_T2_3
+Invoking: GCC C Linker
+gcc  -o "L2_T2_3"  ./src/conexiune.o ./src/main.o   
+Finished building target: L2_T2_3
+ 
+12:14:08 **** Clean-only build of configuration Debug for project L2_T2_4 ****
+make clean 
+rm -rf  ./src/conexiune.o ./src/main.o  ./src/conexiune.d ./src/main.d  L2_T2_4
+ 
+12:14:08 **** Build of configuration Debug for project L2_T2_4 ****
+make all 
+Building file: ../src/conexiune.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/conexiune.d" -MT"src/conexiune.d" -o "src/conexiune.o" "../src/conexiune.c"
+Finished building: ../src/conexiune.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L2_T2_4
+Invoking: GCC C Linker
+gcc  -o "L2_T2_4"  ./src/conexiune.o ./src/main.o   
+Finished building target: L2_T2_4
+ 
+12:14:08 **** Clean-only build of configuration Debug for project L2_T3_1 ****
+make clean 
+rm -rf  ./src/main.o ./src/prietene.o  ./src/main.d ./src/prietene.d  L2_T3_1
+ 
+12:14:08 **** Build of configuration Debug for project L2_T3_1 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/prietene.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/prietene.d" -MT"src/prietene.d" -o "src/prietene.o" "../src/prietene.c"
+Finished building: ../src/prietene.c
+ 
+Building target: L2_T3_1
+Invoking: GCC C Linker
+gcc  -o "L2_T3_1"  ./src/main.o ./src/prietene.o   
+Finished building target: L2_T3_1
+ 
+12:14:09 **** Clean-only build of configuration Debug for project L2_T3_2 ****
+make clean 
+rm -rf  ./src/main.o ./src/numere.o  ./src/main.d ./src/numere.d  L2_T3_2
+ 
+12:14:09 **** Build of configuration Debug for project L2_T3_2 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/numere.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/numere.d" -MT"src/numere.d" -o "src/numere.o" "../src/numere.c"
+Finished building: ../src/numere.c
+ 
+Building target: L2_T3_2
+Invoking: GCC C Linker
+gcc  -o "L2_T3_2"  ./src/main.o ./src/numere.o   
+Finished building target: L2_T3_2
+ 
+12:14:09 **** Clean-only build of configuration Debug for project L2_T3_3 ****
+make clean 
+rm -rf  ./src/main.o ./src/sir.o  ./src/main.d ./src/sir.d  L2_T3_3
+ 
+12:14:09 **** Build of configuration Debug for project L2_T3_3 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/sir.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sir.d" -MT"src/sir.d" -o "src/sir.o" "../src/sir.c"
+Finished building: ../src/sir.c
+ 
+Building target: L2_T3_3
+Invoking: GCC C Linker
+gcc  -o "L2_T3_3"  ./src/main.o ./src/sir.o   
+Finished building target: L2_T3_3
+ 
+12:14:09 **** Clean-only build of configuration Debug for project L3_T1_1 ****
+make clean 
+rm -rf  ./src/main.o ./src/meteo.o  ./src/main.d ./src/meteo.d  L3_T1_1
+ 
+12:14:09 **** Build of configuration Debug for project L3_T1_1 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/meteo.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/meteo.d" -MT"src/meteo.d" -o "src/meteo.o" "../src/meteo.c"
+Finished building: ../src/meteo.c
+ 
+Building target: L3_T1_1
+Invoking: GCC C Linker
+gcc -lm  -o "L3_T1_1"  ./src/main.o ./src/meteo.o   
+Finished building target: L3_T1_1
+ 
+12:14:09 **** Clean-only build of configuration Debug for project L3_T1_2 ****
+make clean 
+rm -rf  ./src/main.o ./src/trioda.o  ./src/main.d ./src/trioda.d  L3_T1_2
+ 
+12:14:09 **** Build of configuration Debug for project L3_T1_2 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/trioda.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/trioda.d" -MT"src/trioda.d" -o "src/trioda.o" "../src/trioda.c"
+Finished building: ../src/trioda.c
+ 
+Building target: L3_T1_2
+Invoking: GCC C Linker
+gcc  -o "L3_T1_2"  ./src/main.o ./src/trioda.o   
+Finished building target: L3_T1_2
+ 
+12:14:09 **** Clean-only build of configuration Debug for project L3_T1_3 ****
+make clean 
+rm -rf  ./src/bubblesort.o ./src/main.o  ./src/bubblesort.d ./src/main.d  L3_T1_3
+ 
+12:14:09 **** Build of configuration Debug for project L3_T1_3 ****
+make all 
+Building file: ../src/bubblesort.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bubblesort.d" -MT"src/bubblesort.d" -o "src/bubblesort.o" "../src/bubblesort.c"
+Finished building: ../src/bubblesort.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L3_T1_3
+Invoking: GCC C Linker
+gcc  -o "L3_T1_3"  ./src/bubblesort.o ./src/main.o   
+Finished building target: L3_T1_3
+ 
+12:14:09 **** Clean-only build of configuration Debug for project L3_T2_1 ****
+make clean 
+rm -rf  ./src/experiment.o ./src/main.o  ./src/experiment.d ./src/main.d  L3_T2_1
+ 
+12:14:10 **** Build of configuration Debug for project L3_T2_1 ****
+make all 
+Building file: ../src/experiment.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/experiment.d" -MT"src/experiment.d" -o "src/experiment.o" "../src/experiment.c"
+Finished building: ../src/experiment.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L3_T2_1
+Invoking: GCC C Linker
+gcc -lm  -o "L3_T2_1"  ./src/experiment.o ./src/main.o   
+Finished building target: L3_T2_1
+ 
+12:14:10 **** Clean-only build of configuration Debug for project L3_T2_2 ****
+make clean 
+rm -rf  ./src/main.o ./src/numere.o  ./src/main.d ./src/numere.d  L3_T2_2
+ 
+12:14:10 **** Build of configuration Debug for project L3_T2_2 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/numere.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/numere.d" -MT"src/numere.d" -o "src/numere.o" "../src/numere.c"
+Finished building: ../src/numere.c
+ 
+Building target: L3_T2_2
+Invoking: GCC C Linker
+gcc  -o "L3_T2_2"  ./src/main.o ./src/numere.o   
+Finished building target: L3_T2_2
+ 
+12:14:10 **** Clean-only build of configuration Debug for project L3_T2_3 ****
+make clean 
+rm -rf  ./src/laborator.o ./src/main.o  ./src/laborator.d ./src/main.d  L3_T2_3
+ 
+12:14:10 **** Build of configuration Debug for project L3_T2_3 ****
+make all 
+Building file: ../src/laborator.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/laborator.d" -MT"src/laborator.d" -o "src/laborator.o" "../src/laborator.c"
+Finished building: ../src/laborator.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L3_T2_3
+Invoking: GCC C Linker
+gcc  -o "L3_T2_3"  ./src/laborator.o ./src/main.o   
+Finished building target: L3_T2_3
+ 
+12:14:10 **** Clean-only build of configuration Debug for project L4_T1_1 ****
+make clean 
+rm -rf  ./src/main.o ./src/matrice.o  ./src/main.d ./src/matrice.d  L4_T1_1
+ 
+12:14:10 **** Build of configuration Debug for project L4_T1_1 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/matrice.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/matrice.d" -MT"src/matrice.d" -o "src/matrice.o" "../src/matrice.c"
+Finished building: ../src/matrice.c
+ 
+Building target: L4_T1_1
+Invoking: GCC C Linker
+gcc  -o "L4_T1_1"  ./src/main.o ./src/matrice.o   
+Finished building target: L4_T1_1
+ 
+12:14:10 **** Clean-only build of configuration Debug for project L4_T1_2 ****
+make clean 
+rm -rf  ./src/main.o ./src/transpusa.o  ./src/main.d ./src/transpusa.d  L4_T1_2
+ 
+12:14:10 **** Build of configuration Debug for project L4_T1_2 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/transpusa.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transpusa.d" -MT"src/transpusa.d" -o "src/transpusa.o" "../src/transpusa.c"
+Finished building: ../src/transpusa.c
+ 
+Building target: L4_T1_2
+Invoking: GCC C Linker
+gcc  -o "L4_T1_2"  ./src/main.o ./src/transpusa.o   
+Finished building target: L4_T1_2
+ 
+12:14:10 **** Clean-only build of configuration Debug for project L4_T1_3 ****
+make clean 
+rm -rf  ./src/main.o ./src/pitici.o  ./src/main.d ./src/pitici.d  L4_T1_3
+ 
+12:14:10 **** Build of configuration Debug for project L4_T1_3 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/pitici.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/pitici.d" -MT"src/pitici.d" -o "src/pitici.o" "../src/pitici.c"
+Finished building: ../src/pitici.c
+ 
+Building target: L4_T1_3
+Invoking: GCC C Linker
+gcc -lm  -o "L4_T1_3"  ./src/main.o ./src/pitici.o   
+Finished building target: L4_T1_3
+ 
+12:14:11 **** Clean-only build of configuration Debug for project L5_T1_1 ****
+make clean 
+rm -rf  ./src/caracter.o ./src/main.o  ./src/caracter.d ./src/main.d  L5_T1_1
+ 
+12:14:11 **** Build of configuration Debug for project L5_T1_1 ****
+make all 
+Building file: ../src/caracter.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/caracter.d" -MT"src/caracter.d" -o "src/caracter.o" "../src/caracter.c"
+Finished building: ../src/caracter.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L5_T1_1
+Invoking: GCC C Linker
+gcc  -o "L5_T1_1"  ./src/caracter.o ./src/main.o   
+Finished building target: L5_T1_1
+ 
+12:14:11 **** Clean-only build of configuration Debug for project L5_T1_2 ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  L5_T1_2
+ 
+12:14:11 **** Build of configuration Debug for project L5_T1_2 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L5_T1_2
+Invoking: GCC C Linker
+gcc  -o "L5_T1_2"  ./src/main.o   
+Finished building target: L5_T1_2
+ 
+12:14:11 **** Clean-only build of configuration Debug for project L5_T1_3 ****
+make clean 
+rm -rf  ./src/conversie.o ./src/main.o  ./src/conversie.d ./src/main.d  L5_T1_3
+ 
+12:14:11 **** Build of configuration Debug for project L5_T1_3 ****
+make all 
+Building file: ../src/conversie.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/conversie.d" -MT"src/conversie.d" -o "src/conversie.o" "../src/conversie.c"
+Finished building: ../src/conversie.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L5_T1_3
+Invoking: GCC C Linker
+gcc  -o "L5_T1_3"  ./src/conversie.o ./src/main.o   
+Finished building target: L5_T1_3
+ 
+12:14:11 **** Clean-only build of configuration Debug for project L5_T1_4 ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  L5_T1_4
+ 
+12:14:11 **** Build of configuration Debug for project L5_T1_4 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L5_T1_4
+Invoking: GCC C Linker
+gcc  -o "L5_T1_4"  ./src/main.o   
+Finished building target: L5_T1_4
+ 
+12:14:11 **** Clean-only build of configuration Debug for project L5_T2_1 ****
+make clean 
+rm -rf  ./src/conversie.o ./src/main.o  ./src/conversie.d ./src/main.d  L5_T2_1
+ 
+12:14:11 **** Build of configuration Debug for project L5_T2_1 ****
+make all 
+Building file: ../src/conversie.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/conversie.d" -MT"src/conversie.d" -o "src/conversie.o" "../src/conversie.c"
+Finished building: ../src/conversie.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L5_T2_1
+Invoking: GCC C Linker
+gcc  -o "L5_T2_1"  ./src/conversie.o ./src/main.o   
+Finished building target: L5_T2_1
+ 
+12:14:11 **** Clean-only build of configuration Debug for project L5_T2_2 ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  L5_T2_2
+ 
+12:14:11 **** Build of configuration Debug for project L5_T2_2 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L5_T2_2
+Invoking: GCC C Linker
+gcc  -o "L5_T2_2"  ./src/main.o   
+Finished building target: L5_T2_2
+ 
+12:14:12 **** Clean-only build of configuration Debug for project L5_T2_3 ****
+make clean 
+rm -rf  ./src/hexazecimal.o ./src/main.o  ./src/hexazecimal.d ./src/main.d  L5_T2_3
+ 
+12:14:12 **** Build of configuration Debug for project L5_T2_3 ****
+make all 
+Building file: ../src/hexazecimal.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/hexazecimal.d" -MT"src/hexazecimal.d" -o "src/hexazecimal.o" "../src/hexazecimal.c"
+Finished building: ../src/hexazecimal.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L5_T2_3
+Invoking: GCC C Linker
+gcc  -o "L5_T2_3"  ./src/hexazecimal.o ./src/main.o   
+Finished building target: L5_T2_3
+ 
+12:14:12 **** Clean-only build of configuration Debug for project L6_T1_1 ****
+make clean 
+rm -rf  ./src/impachetare.o ./src/main.o  ./src/impachetare.d ./src/main.d  L6_T1_1
+ 
+12:14:12 **** Build of configuration Debug for project L6_T1_1 ****
+make all 
+Building file: ../src/impachetare.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/impachetare.d" -MT"src/impachetare.d" -o "src/impachetare.o" "../src/impachetare.c"
+Finished building: ../src/impachetare.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L6_T1_1
+Invoking: GCC C Linker
+gcc  -o "L6_T1_1"  ./src/impachetare.o ./src/main.o   
+Finished building target: L6_T1_1
+ 
+12:14:12 **** Clean-only build of configuration Debug for project L6_T1_2 ****
+make clean 
+rm -rf  ./src/header.o ./src/main.o  ./src/header.d ./src/main.d  L6_T1_2
+ 
+12:14:12 **** Build of configuration Debug for project L6_T1_2 ****
+make all 
+Building file: ../src/header.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/header.d" -MT"src/header.d" -o "src/header.o" "../src/header.c"
+Finished building: ../src/header.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L6_T1_2
+Invoking: GCC C Linker
+gcc  -o "L6_T1_2"  ./src/header.o ./src/main.o   
+Finished building target: L6_T1_2
+ 
+12:14:12 **** Clean-only build of configuration Debug for project L6_T1_3 ****
+make clean 
+rm -rf  ./src/main.o ./src/rotire.o  ./src/main.d ./src/rotire.d  L6_T1_3
+ 
+12:14:12 **** Build of configuration Debug for project L6_T1_3 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/rotire.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rotire.d" -MT"src/rotire.d" -o "src/rotire.o" "../src/rotire.c"
+Finished building: ../src/rotire.c
+ 
+Building target: L6_T1_3
+Invoking: GCC C Linker
+gcc  -o "L6_T1_3"  ./src/main.o ./src/rotire.o   
+Finished building target: L6_T1_3
+ 
+12:14:12 **** Clean-only build of configuration Debug for project L6_T1_4 ****
+make clean 
+rm -rf  ./src/main.o ./src/paritate.o  ./src/main.d ./src/paritate.d  L6_T1_4
+ 
+12:14:12 **** Build of configuration Debug for project L6_T1_4 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/paritate.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/paritate.d" -MT"src/paritate.d" -o "src/paritate.o" "../src/paritate.c"
+Finished building: ../src/paritate.c
+ 
+Building target: L6_T1_4
+Invoking: GCC C Linker
+gcc  -o "L6_T1_4"  ./src/main.o ./src/paritate.o   
+Finished building target: L6_T1_4
+ 
+12:14:12 **** Clean-only build of configuration Debug for project L7_P1 ****
+make clean 
+rm -rf  ./src/main.o ./src/punct.o  ./src/main.d ./src/punct.d  L7_P1
+ 
+12:14:12 **** Build of configuration Debug for project L7_P1 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/punct.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/punct.d" -MT"src/punct.d" -o "src/punct.o" "../src/punct.c"
+Finished building: ../src/punct.c
+ 
+Building target: L7_P1
+Invoking: GCC C Linker
+gcc -lm  -o "L7_P1"  ./src/main.o ./src/punct.o   
+Finished building target: L7_P1
+ 
+12:14:13 **** Clean-only build of configuration Debug for project L7_P2 ****
+make clean 
+rm -rf  ./src/main.o ./src/pitici.o  ./src/main.d ./src/pitici.d  L7_P2
+ 
+12:14:13 **** Build of configuration Debug for project L7_P2 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/pitici.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/pitici.d" -MT"src/pitici.d" -o "src/pitici.o" "../src/pitici.c"
+Finished building: ../src/pitici.c
+ 
+Building target: L7_P2
+Invoking: GCC C Linker
+gcc  -o "L7_P2"  ./src/main.o ./src/pitici.o   
+Finished building target: L7_P2
+ 
+12:14:13 **** Clean-only build of configuration Debug for project L8_P1 ****
+make clean 
+rm -rf  ./src/main.o ./src/vectori.o  ./src/main.d ./src/vectori.d  L8_P1
+ 
+12:14:13 **** Build of configuration Debug for project L8_P1 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/vectori.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/vectori.d" -MT"src/vectori.d" -o "src/vectori.o" "../src/vectori.c"
+Finished building: ../src/vectori.c
+ 
+Building target: L8_P1
+Invoking: GCC C Linker
+gcc  -o "L8_P1"  ./src/main.o ./src/vectori.o   
+Finished building target: L8_P1
+ 
+12:14:13 **** Clean-only build of configuration Debug for project L8_P2 ****
+make clean 
+rm -rf  ./src/main.o ./src/vector.o  ./src/main.d ./src/vector.d  L8_P2
+ 
+12:14:13 **** Build of configuration Debug for project L8_P2 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/vector.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/vector.d" -MT"src/vector.d" -o "src/vector.o" "../src/vector.c"
+Finished building: ../src/vector.c
+ 
+Building target: L8_P2
+Invoking: GCC C Linker
+gcc  -o "L8_P2"  ./src/main.o ./src/vector.o   
+Finished building target: L8_P2
+ 
+12:14:13 **** Clean-only build of configuration Debug for project L8_P3 ****
+make clean 
+rm -rf  ./src/main.o ./src/multimi.o  ./src/main.d ./src/multimi.d  L8_P3
+ 
+12:14:13 **** Build of configuration Debug for project L8_P3 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/multimi.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/multimi.d" -MT"src/multimi.d" -o "src/multimi.o" "../src/multimi.c"
+Finished building: ../src/multimi.c
+ 
+Building target: L8_P3
+Invoking: GCC C Linker
+gcc  -o "L8_P3"  ./src/main.o ./src/multimi.o   
+Finished building target: L8_P3
+ 
+12:14:13 **** Clean-only build of configuration Debug for project L8_P4 ****
+make clean 
+rm -rf  ./src/main.o ./src/transformare.o  ./src/main.d ./src/transformare.d  L8_P4
+ 
+12:14:13 **** Build of configuration Debug for project L8_P4 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/transformare.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/transformare.d" -MT"src/transformare.d" -o "src/transformare.o" "../src/transformare.c"
+Finished building: ../src/transformare.c
+ 
+Building target: L8_P4
+Invoking: GCC C Linker
+gcc -lm  -o "L8_P4"  ./src/main.o ./src/transformare.o   
+Finished building target: L8_P4
+ 
+12:14:13 **** Clean-only build of configuration Debug for project L9_P1 ****
+make clean 
+rm -rf  ./src/main.o ./src/ordonare.o  ./src/main.d ./src/ordonare.d  L9_P1
+ 
+12:14:14 **** Build of configuration Debug for project L9_P1 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/ordonare.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ordonare.d" -MT"src/ordonare.d" -o "src/ordonare.o" "../src/ordonare.c"
+../src/ordonare.c: In function ‘citireText’:
+../src/ordonare.c:27:6: warning: variable ‘lungime’ set but not used [-Wunused-but-set-variable]
+  int lungime;
+      ^
+Finished building: ../src/ordonare.c
+ 
+Building target: L9_P1
+Invoking: GCC C Linker
+gcc  -o "L9_P1"  ./src/main.o ./src/ordonare.o   
+Finished building target: L9_P1
+ 
+12:14:14 **** Clean-only build of configuration Debug for project L9_P2 ****
+make clean 
+rm -rf  ./src/cuvinte.o ./src/main.o  ./src/cuvinte.d ./src/main.d  L9_P2
+ 
+12:14:14 **** Build of configuration Debug for project L9_P2 ****
+make all 
+Building file: ../src/cuvinte.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/cuvinte.d" -MT"src/cuvinte.d" -o "src/cuvinte.o" "../src/cuvinte.c"
+Finished building: ../src/cuvinte.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L9_P2
+Invoking: GCC C Linker
+gcc  -o "L9_P2"  ./src/cuvinte.o ./src/main.o   
+Finished building target: L9_P2
+ 
+12:14:14 **** Clean-only build of configuration Debug for project L9_P3 ****
+make clean 
+rm -rf  ./src/main.o ./src/subsir.o  ./src/main.d ./src/subsir.d  L9_P3
+ 
+12:14:14 **** Build of configuration Debug for project L9_P3 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/subsir.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/subsir.d" -MT"src/subsir.d" -o "src/subsir.o" "../src/subsir.c"
+Finished building: ../src/subsir.c
+ 
+Building target: L9_P3
+Invoking: GCC C Linker
+gcc  -o "L9_P3"  ./src/main.o ./src/subsir.o   
+Finished building target: L9_P3
+ 
+12:14:14 **** Clean-only build of configuration Debug for project L9_P4 ****
+make clean 
+rm -rf  ./src/conversie.o ./src/main.o  ./src/conversie.d ./src/main.d  L9_P4
+ 
+12:14:14 **** Build of configuration Debug for project L9_P4 ****
+make all 
+Building file: ../src/conversie.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/conversie.d" -MT"src/conversie.d" -o "src/conversie.o" "../src/conversie.c"
+Finished building: ../src/conversie.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L9_P4
+Invoking: GCC C Linker
+gcc -lm  -o "L9_P4"  ./src/conversie.o ./src/main.o   
+Finished building target: L9_P4
+ 
+12:14:14 **** Clean-only build of configuration Debug for project L9_P5 ****
+make clean 
+rm -rf  ./src/main.o ./src/sir.o  ./src/main.d ./src/sir.d  L9_P5
+ 
+12:14:14 **** Build of configuration Debug for project L9_P5 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:47:2: warning: implicit declaration of function ‘free’ [-Wimplicit-function-declaration]
+  free(sir);
+  ^
+../src/main.c:47:2: warning: incompatible implicit declaration of built-in function ‘free’
+Finished building: ../src/main.c
+ 
+Building file: ../src/sir.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/sir.d" -MT"src/sir.d" -o "src/sir.o" "../src/sir.c"
+Finished building: ../src/sir.c
+ 
+Building target: L9_P5
+Invoking: GCC C Linker
+gcc -lm  -o "L9_P5"  ./src/main.o ./src/sir.o   
+Finished building target: L9_P5
+ 
+12:14:14 **** Clean-only build of configuration Debug for project L9_P6 ****
+make clean 
+rm -rf  ./src/main.o ./src/subsiruri.o  ./src/main.d ./src/subsiruri.d  L9_P6
+ 
+12:14:14 **** Build of configuration Debug for project L9_P6 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/subsiruri.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/subsiruri.d" -MT"src/subsiruri.d" -o "src/subsiruri.o" "../src/subsiruri.c"
+Finished building: ../src/subsiruri.c
+ 
+Building target: L9_P6
+Invoking: GCC C Linker
+gcc  -o "L9_P6"  ./src/main.o ./src/subsiruri.o   
+Finished building target: L9_P6
+ 
+12:14:15 **** Clean-only build of configuration Debug for project L9_P8 ****
+make clean 
+rm -rf  ./src/aparitii.o ./src/main.o  ./src/aparitii.d ./src/main.d  L9_P8
+ 
+12:14:15 **** Build of configuration Debug for project L9_P8 ****
+make all 
+Building file: ../src/aparitii.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/aparitii.d" -MT"src/aparitii.d" -o "src/aparitii.o" "../src/aparitii.c"
+Finished building: ../src/aparitii.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L9_P8
+Invoking: GCC C Linker
+gcc  -o "L9_P8"  ./src/aparitii.o ./src/main.o   
+Finished building target: L9_P8
+ 
+12:14:15 **** Clean-only build of configuration Debug for project model_examen ****
+make clean 
+rm -rf  ./src/magazine.o ./src/main.o  ./src/magazine.d ./src/main.d  model_examen
+ 
+12:14:15 **** Build of configuration Debug for project model_examen ****
+make all 
+Building file: ../src/magazine.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/magazine.d" -MT"src/magazine.d" -o "src/magazine.o" "../src/magazine.c"
+Finished building: ../src/magazine.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: model_examen
+Invoking: GCC C Linker
+gcc  -o "model_examen"  ./src/magazine.o ./src/main.o   
+Finished building target: model_examen
+ 
+12:14:15 **** Clean-only build of configuration Debug for project model_examen_IS ****
+make clean 
+rm -rf  ./src/header.o ./src/main.o  ./src/header.d ./src/main.d  model_examen_IS
+ 
+12:14:15 **** Build of configuration Debug for project model_examen_IS ****
+make all 
+Building file: ../src/header.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/header.d" -MT"src/header.d" -o "src/header.o" "../src/header.c"
+Finished building: ../src/header.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: model_examen_IS
+Invoking: GCC C Linker
+gcc  -o "model_examen_IS"  ./src/header.o ./src/main.o   
+Finished building target: model_examen_IS
+ 
+12:14:15 **** Clean-only build of configuration Debug for project model_partial1 ****
+make clean 
+rm -rf  ./src/main.o ./src/masini.o  ./src/main.d ./src/masini.d  model_partial1
+ 
+12:14:15 **** Build of configuration Debug for project model_partial1 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/masini.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/masini.d" -MT"src/masini.d" -o "src/masini.o" "../src/masini.c"
+Finished building: ../src/masini.c
+ 
+Building target: model_partial1
+Invoking: GCC C Linker
+gcc -lm  -o "model_partial1"  ./src/main.o ./src/masini.o   
+Finished building target: model_partial1
+ 
+12:14:15 **** Clean-only build of configuration Debug for project model_partial2 ****
+make clean 
+rm -rf  ./src/autovehicule.o ./src/main.o  ./src/autovehicule.d ./src/main.d  model_partial2
+ 
+12:14:15 **** Build of configuration Debug for project model_partial2 ****
+make all 
+Building file: ../src/autovehicule.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/autovehicule.d" -MT"src/autovehicule.d" -o "src/autovehicule.o" "../src/autovehicule.c"
+Finished building: ../src/autovehicule.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: model_partial2
+Invoking: GCC C Linker
+gcc  -o "model_partial2"  ./src/autovehicule.o ./src/main.o   
+Finished building target: model_partial2
+ 
+12:14:15 **** Clean-only build of configuration Debug for project pointeri ****
+make clean 
+rm -rf  ./src/main.o ./src/pointeri.o  ./src/main.d ./src/pointeri.d  pointeri
+ 
+12:14:16 **** Build of configuration Debug for project pointeri ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/pointeri.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/pointeri.d" -MT"src/pointeri.d" -o "src/pointeri.o" "../src/pointeri.c"
+Finished building: ../src/pointeri.c
+ 
+Building target: pointeri
+Invoking: GCC C Linker
+gcc  -o "pointeri"  ./src/main.o ./src/pointeri.o   
+Finished building target: pointeri
+ 
+12:14:16 **** Clean-only build of configuration Debug for project transformare ****
+make clean 
+rm -rf  ./main.o  ./main.d  transformare
+ 
+12:14:16 **** Build of configuration Debug for project transformare ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: transformare
+Invoking: GCC C Linker
+gcc  -o "transformare"  ./main.o   
+Finished building target: transformare
+ 
+12:14:16 **** Clean-only build of configuration Debug for project wordcount ****
+make clean 
+rm -rf  ./src/main.o ./src/nrcuvinte.o  ./src/main.d ./src/nrcuvinte.d  wordcount
+ 
+12:14:16 **** Build of configuration Debug for project wordcount ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/nrcuvinte.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/nrcuvinte.d" -MT"src/nrcuvinte.d" -o "src/nrcuvinte.o" "../src/nrcuvinte.c"
+Finished building: ../src/nrcuvinte.c
+ 
+Building target: wordcount
+Invoking: GCC C Linker
+gcc  -o "wordcount"  ./src/main.o ./src/nrcuvinte.o   
+Finished building target: wordcount
+ 
+12:15:00 **** Incremental Build of configuration Debug for project L10_T1_1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:00 **** Incremental Build of configuration Debug for project L10_T1_2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:00 **** Incremental Build of configuration Debug for project L10_T1_3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:00 **** Incremental Build of configuration Debug for project L10_T2_1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:00 **** Incremental Build of configuration Debug for project L11_P1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:00 **** Incremental Build of configuration Debug for project L11_P2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:00 **** Incremental Build of configuration Debug for project L11_P3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:00 **** Incremental Build of configuration Debug for project L12_P1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:00 **** Incremental Build of configuration Debug for project L12_P2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:01 **** Incremental Build of configuration Debug for project L12_P3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:01 **** Incremental Build of configuration Debug for project L12_P4 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:01 **** Incremental Build of configuration Debug for project L1_A1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:01 **** Incremental Build of configuration Debug for project L1_A2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:01 **** Incremental Build of configuration Debug for project L1_A3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:01 **** Incremental Build of configuration Debug for project L1_A4 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:01 **** Incremental Build of configuration Debug for project L1_A5 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:01 **** Incremental Build of configuration Debug for project L1_A6 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:01 **** Incremental Build of configuration Debug for project L1_A7 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:01 **** Incremental Build of configuration Debug for project L1_A8 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:01 **** Incremental Build of configuration Debug for project L1_B1_a ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:01 **** Incremental Build of configuration Debug for project L1_B1_b ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:02 **** Incremental Build of configuration Debug for project L1_B2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:02 **** Incremental Build of configuration Debug for project L1_B3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:02 **** Incremental Build of configuration Debug for project L1_B4 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:02 **** Incremental Build of configuration Debug for project L1_B5 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:02 **** Incremental Build of configuration Debug for project L1_B6 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:02 **** Incremental Build of configuration Debug for project L1_B7 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:02 **** Incremental Build of configuration Debug for project L1_B8 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:02 **** Incremental Build of configuration Debug for project L2_T1_1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:02 **** Incremental Build of configuration Debug for project L2_T1_2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:02 **** Incremental Build of configuration Debug for project L2_T1_3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:02 **** Incremental Build of configuration Debug for project L2_T1_4 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:02 **** Incremental Build of configuration Debug for project L2_T1_5 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:03 **** Incremental Build of configuration Debug for project L2_T1_6 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:03 **** Incremental Build of configuration Debug for project L2_T2_1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:03 **** Incremental Build of configuration Debug for project L2_T2_2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:03 **** Incremental Build of configuration Debug for project L2_T2_3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:03 **** Incremental Build of configuration Debug for project L2_T2_4 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:03 **** Incremental Build of configuration Debug for project L2_T3_1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:03 **** Incremental Build of configuration Debug for project L2_T3_2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:03 **** Incremental Build of configuration Debug for project L2_T3_3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:03 **** Incremental Build of configuration Debug for project L3_T1_1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:03 **** Incremental Build of configuration Debug for project L3_T1_2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:03 **** Incremental Build of configuration Debug for project L3_T1_3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:03 **** Incremental Build of configuration Debug for project L3_T2_1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:04 **** Incremental Build of configuration Debug for project L3_T2_2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:04 **** Incremental Build of configuration Debug for project L3_T2_3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:04 **** Incremental Build of configuration Debug for project L4_T1_1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:04 **** Incremental Build of configuration Debug for project L4_T1_2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:04 **** Incremental Build of configuration Debug for project L4_T1_3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:04 **** Incremental Build of configuration Debug for project L5_T1_1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:04 **** Incremental Build of configuration Debug for project L5_T1_2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:04 **** Incremental Build of configuration Debug for project L5_T1_3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:04 **** Incremental Build of configuration Debug for project L5_T1_4 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:04 **** Incremental Build of configuration Debug for project L5_T2_1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:04 **** Incremental Build of configuration Debug for project L5_T2_2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:05 **** Incremental Build of configuration Debug for project L5_T2_3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:05 **** Incremental Build of configuration Debug for project L6_T1_1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:05 **** Incremental Build of configuration Debug for project L6_T1_2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:05 **** Incremental Build of configuration Debug for project L6_T1_3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:05 **** Incremental Build of configuration Debug for project L6_T1_4 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:05 **** Incremental Build of configuration Debug for project L7_P1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:05 **** Incremental Build of configuration Debug for project L7_P2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:05 **** Incremental Build of configuration Debug for project L8_P1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:05 **** Incremental Build of configuration Debug for project L8_P2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:05 **** Incremental Build of configuration Debug for project L8_P3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:05 **** Incremental Build of configuration Debug for project L8_P4 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:05 **** Incremental Build of configuration Debug for project L9_P1 ****
+make all 
+Building file: ../src/ordonare.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ordonare.d" -MT"src/ordonare.d" -o "src/ordonare.o" "../src/ordonare.c"
+../src/ordonare.c: In function ‘citireText’:
+../src/ordonare.c:27:6: warning: variable ‘lungime’ set but not used [-Wunused-but-set-variable]
+  int lungime;
+      ^
+Finished building: ../src/ordonare.c
+ 
+Building target: L9_P1
+Invoking: GCC C Linker
+gcc  -o "L9_P1"  ./src/main.o ./src/ordonare.o   
+Finished building target: L9_P1
+ 
+12:15:06 **** Incremental Build of configuration Debug for project L9_P2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:06 **** Incremental Build of configuration Debug for project L9_P3 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:06 **** Incremental Build of configuration Debug for project L9_P4 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:06 **** Incremental Build of configuration Debug for project L9_P5 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: L9_P5
+Invoking: GCC C Linker
+gcc -lm  -o "L9_P5"  ./src/main.o ./src/sir.o   
+Finished building target: L9_P5
+ 
+12:15:06 **** Incremental Build of configuration Debug for project L9_P6 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:06 **** Incremental Build of configuration Debug for project L9_P8 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:06 **** Incremental Build of configuration Debug for project model_examen ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:06 **** Incremental Build of configuration Debug for project model_examen_IS ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:06 **** Incremental Build of configuration Debug for project model_partial1 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:06 **** Incremental Build of configuration Debug for project model_partial2 ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:07 **** Incremental Build of configuration Debug for project pointeri ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:07 **** Incremental Build of configuration Debug for project transformare ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:07 **** Incremental Build of configuration Debug for project wordcount ****
+make all 
+make: Nothing to be done for 'all'.
+12:15:15 **** Incremental Build of configuration Debug for project L9_P1 ****
+make all 
+Building file: ../src/ordonare.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ordonare.d" -MT"src/ordonare.d" -o "src/ordonare.o" "../src/ordonare.c"
+../src/ordonare.c: In function ‘citireText’:
+../src/ordonare.c:29:3: error: ‘lungime’ undeclared (first use in this function)
+   lungime=strlen(temp);
+   ^
+../src/ordonare.c:29:3: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:21: recipe for target 'src/ordonare.o' failed
+make: *** [src/ordonare.o] Error 1
+12:15:25 **** Incremental Build of configuration Debug for project L9_P1 ****
+make all 
+Building file: ../src/ordonare.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ordonare.d" -MT"src/ordonare.d" -o "src/ordonare.o" "../src/ordonare.c"
+Finished building: ../src/ordonare.c
+ 
+Building target: L9_P1
+Invoking: GCC C Linker
+gcc  -o "L9_P1"  ./src/main.o ./src/ordonare.o   
+Finished building target: L9_P1
+ 
