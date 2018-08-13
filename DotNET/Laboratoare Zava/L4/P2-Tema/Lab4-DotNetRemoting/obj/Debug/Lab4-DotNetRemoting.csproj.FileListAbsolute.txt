@@ -1,0 +1,1 @@
+F:\SD-Lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.exe.config

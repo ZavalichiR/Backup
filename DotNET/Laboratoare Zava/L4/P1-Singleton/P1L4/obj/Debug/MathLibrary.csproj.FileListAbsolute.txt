@@ -1,0 +1,9 @@
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\P1L4\bin\Debug\P1L4.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\P1L4\bin\Debug\P1L4.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\P1L4\obj\Debug\P1L4.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\P1L4\obj\Debug\P1L4.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\P1L4\bin\Debug\P1L4.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\P1L4\bin\Debug\P1L4.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\P1L4\obj\Debug\MathLibrary.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\P1L4\obj\Debug\P1L4.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\P1L4\obj\Debug\P1L4.pdb

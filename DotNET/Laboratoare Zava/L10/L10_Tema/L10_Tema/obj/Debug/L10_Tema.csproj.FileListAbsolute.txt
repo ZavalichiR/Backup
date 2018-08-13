@@ -1,0 +1,27 @@
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_Tema\L10_Tema\bin\Debug\L10_Tema.exe.config
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_Tema\L10_Tema\bin\Debug\L10_Tema.exe
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_Tema\L10_Tema\bin\Debug\L10_Tema.pdb
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_Tema\L10_Tema\obj\Debug\L10_Tema.csprojResolveAssemblyReference.cache
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_Tema\L10_Tema\obj\Debug\L10_Tema.Form1.resources
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_Tema\L10_Tema\obj\Debug\L10_Tema.Properties.Resources.resources
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_Tema\L10_Tema\obj\Debug\L10_Tema.csproj.GenerateResource.Cache
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_Tema\L10_Tema\obj\Debug\L10_Tema.exe
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_Tema\L10_Tema\obj\Debug\L10_Tema.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_Tema\L10_Tema\bin\Debug\L10_Tema.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_Tema\L10_Tema\obj\Debug\L10_Tema.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_Tema\L10_Tema\obj\Debug\L10_Tema.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_Tema\L10_Tema\bin\Debug\L10_Tema.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_Tema\L10_Tema\bin\Debug\L10_Tema.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_Tema\L10_Tema\obj\Debug\L10_Tema.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_Tema\L10_Tema\obj\Debug\L10_Tema.Form1.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_Tema\L10_Tema\obj\Debug\L10_Tema.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_Tema\L10_Tema\obj\Debug\L10_Tema.csproj.GenerateResource.Cache
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L10\L10_Tema\L10_Tema\bin\Debug\L10_Tema.exe.config
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L10\L10_Tema\L10_Tema\obj\Debug\L10_Tema.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L10\L10_Tema\L10_Tema\obj\Debug\L10_Tema.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L10\L10_Tema\L10_Tema\bin\Debug\L10_Tema.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L10\L10_Tema\L10_Tema\bin\Debug\L10_Tema.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L10\L10_Tema\L10_Tema\obj\Debug\L10_Tema.csprojResolveAssemblyReference.cache
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L10\L10_Tema\L10_Tema\obj\Debug\L10_Tema.Form1.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L10\L10_Tema\L10_Tema\obj\Debug\L10_Tema.Properties.Resources.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L10\L10_Tema\L10_Tema\obj\Debug\L10_Tema.csproj.GenerateResource.Cache

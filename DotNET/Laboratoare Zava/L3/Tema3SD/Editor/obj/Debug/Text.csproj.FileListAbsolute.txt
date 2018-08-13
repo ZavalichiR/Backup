@@ -1,0 +1,11 @@
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\obj\Debug\Text.csprojResolveAssemblyReference.cache
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\obj\Debug\Editor.Properties.Resources.resources
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\obj\Debug\Text.csproj.GenerateResource.Cache
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\obj\Debug\Editor.exe
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\bin\Debug\Editor.exe.config
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\bin\Debug\Editor.exe
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\bin\Debug\Editor.pdb
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\bin\Debug\Server.exe
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\bin\Debug\Server.pdb
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\obj\Debug\Editor.Editor.resources
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\obj\Debug\Editor.pdb

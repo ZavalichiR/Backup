@@ -1,0 +1,8 @@
+C:\Users\zzava\Desktop\Semestrul II\SD\L2\Lab_SD_2\Syncron\SocketClient\bin\Debug\SocketClient.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L2\Lab_SD_2\Syncron\SocketClient\bin\Debug\SocketClient.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L2\Lab_SD_2\Syncron\SocketClient\bin\Debug\SocketClient.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L2\Lab_SD_2\Syncron\SocketClient\obj\Debug\SocketClient.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L2\Lab_SD_2\Syncron\SocketClient\obj\Debug\Project01.Form1.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L2\Lab_SD_2\Syncron\SocketClient\obj\Debug\SocketClient.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L2\Lab_SD_2\Syncron\SocketClient\obj\Debug\SocketClient.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L2\Lab_SD_2\Syncron\SocketClient\obj\Debug\SocketClient.pdb

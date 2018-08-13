@@ -1,0 +1,25 @@
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\Excel\Excel\bin\Debug\Excel.exe.config
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\Excel\Excel\bin\Debug\Excel.exe
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\Excel\Excel\bin\Debug\Excel.pdb
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\Excel\Excel\obj\Debug\Excel.csprojResolveAssemblyReference.cache
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\Excel\Excel\obj\Debug\Excel.Form1.resources
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\Excel\Excel\obj\Debug\Excel.Properties.Resources.resources
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\Excel\Excel\obj\Debug\Excel.csproj.GenerateResource.Cache
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\Excel\Excel\obj\Debug\Excel.exe
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\Excel\Excel\obj\Debug\Excel.pdb
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\Excel\Excel\bin\Debug\Database.mdf
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\Excel\Excel\bin\Debug\Database_log.ldf
+C:\Users\zzava\Desktop\Semestrul II\SD\L9\Excel\Excel\bin\Debug\Excel.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L9\Excel\Excel\obj\Debug\Excel.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L9\Excel\Excel\obj\Debug\Excel.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L9\Excel\Excel\bin\Debug\Database.mdf
+C:\Users\zzava\Desktop\Semestrul II\SD\L9\Excel\Excel\bin\Debug\Database_log.ldf
+C:\Users\zzava\Desktop\Semestrul II\SD\L9\Excel\Excel\bin\Debug\Excel.mdf
+C:\Users\zzava\Desktop\Semestrul II\SD\L9\Excel\Excel\bin\Debug\Excel_log.ldf
+C:\Users\zzava\Desktop\Semestrul II\SD\L9\Excel\Excel\bin\Debug\Excel.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L9\Excel\Excel\bin\Debug\Excel.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L9\Excel\Excel\obj\Debug\Excel.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L9\Excel\Excel\obj\Debug\Excel.Form1.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L9\Excel\Excel\obj\Debug\Excel.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L9\Excel\Excel\obj\Debug\Excel.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L9\Excel\Excel\obj\Debug\Excel.DataGrid.resources

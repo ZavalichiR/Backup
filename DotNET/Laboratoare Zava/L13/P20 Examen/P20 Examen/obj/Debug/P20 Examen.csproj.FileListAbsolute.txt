@@ -1,0 +1,9 @@
+C:\Users\zzava\Desktop\Semestrul II\SD\L13\P20 Examen\P20 Examen\bin\Debug\P20 Examen.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L13\P20 Examen\P20 Examen\obj\Debug\P20 Examen.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L13\P20 Examen\P20 Examen\obj\Debug\P20_Examen.Form1.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L13\P20 Examen\P20 Examen\obj\Debug\P20_Examen.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L13\P20 Examen\P20 Examen\obj\Debug\P20 Examen.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L13\P20 Examen\P20 Examen\bin\Debug\P20 Examen.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L13\P20 Examen\P20 Examen\bin\Debug\P20 Examen.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L13\P20 Examen\P20 Examen\obj\Debug\P20 Examen.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L13\P20 Examen\P20 Examen\obj\Debug\P20 Examen.pdb

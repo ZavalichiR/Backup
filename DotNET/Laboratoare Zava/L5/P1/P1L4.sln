@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLibrary", "P1L4\MathLibrary.csproj", "{072874E4-445F-4920-8702-ACACAEFE0038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathServer", "MathServer\MathServer.csproj", "{0CD704D2-25DC-4076-AC73-ED19B8401B80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathClient", "MathClient\MathClient.csproj", "{205A4C7C-5647-42C6-A45C-EF56C45B0940}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{072874E4-445F-4920-8702-ACACAEFE0038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{072874E4-445F-4920-8702-ACACAEFE0038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{072874E4-445F-4920-8702-ACACAEFE0038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{072874E4-445F-4920-8702-ACACAEFE0038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD704D2-25DC-4076-AC73-ED19B8401B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD704D2-25DC-4076-AC73-ED19B8401B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD704D2-25DC-4076-AC73-ED19B8401B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD704D2-25DC-4076-AC73-ED19B8401B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{205A4C7C-5647-42C6-A45C-EF56C45B0940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{205A4C7C-5647-42C6-A45C-EF56C45B0940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{205A4C7C-5647-42C6-A45C-EF56C45B0940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{205A4C7C-5647-42C6-A45C-EF56C45B0940}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

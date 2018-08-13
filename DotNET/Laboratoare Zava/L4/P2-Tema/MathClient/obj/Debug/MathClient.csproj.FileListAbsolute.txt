@@ -1,0 +1,38 @@
+F:\SD-Lab4\Lab4-DotNetRemoting\MathClient\bin\Debug\MathClient.exe.config
+F:\SD-Lab4\Lab4-DotNetRemoting\MathClient\bin\Debug\MathClient.exe
+F:\SD-Lab4\Lab4-DotNetRemoting\MathClient\bin\Debug\MathClient.pdb
+F:\SD-Lab4\Lab4-DotNetRemoting\MathClient\bin\Debug\MathLibrary.dll
+F:\SD-Lab4\Lab4-DotNetRemoting\MathClient\bin\Debug\MathLibrary.pdb
+F:\SD-Lab4\Lab4-DotNetRemoting\MathClient\obj\Debug\MathClient.csprojResolveAssemblyReference.cache
+F:\SD-Lab4\Lab4-DotNetRemoting\MathClient\obj\Debug\MathClient.exe
+F:\SD-Lab4\Lab4-DotNetRemoting\MathClient\obj\Debug\MathClient.pdb
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\bin\Debug\MathClient.exe.config
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\obj\Debug\MathClient.exe
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\obj\Debug\MathClient.pdb
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\bin\Debug\MathClient.exe
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\bin\Debug\MathClient.pdb
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\bin\Debug\MathLibrary.dll
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\bin\Debug\MathLibrary.pdb
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\obj\Debug\MathClient.csprojResolveAssemblyReference.cache
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\bin\Debug\MathClient.exe.config
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\bin\Debug\MathClient.exe
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\bin\Debug\MathClient.pdb
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\bin\Debug\MathLibrary.dll
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\bin\Debug\MathLibrary.pdb
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\obj\Debug\MathClient.csprojResolveAssemblyReference.cache
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\obj\Debug\MathClient.exe
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\MathClient\obj\Debug\MathClient.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\MathClient\bin\Debug\MathClient.exe.config
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\MathClient\bin\Debug\MathClient.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\MathClient\bin\Debug\MathClient.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\MathClient\bin\Debug\MathLibrary.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\MathClient\bin\Debug\MathLibrary.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\MathClient\obj\Debug\MathClient.csprojResolveAssemblyReference.cache
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\MathClient\obj\Debug\MathClient.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\MathClient\obj\Debug\MathClient.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2\MathClient\bin\Debug\MathClient.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2\MathClient\obj\Debug\MathClient.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2\MathClient\obj\Debug\MathClient.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2-Tema\MathClient\bin\Debug\MathClient.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2-Tema\MathClient\obj\Debug\MathClient.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2-Tema\MathClient\obj\Debug\MathClient.pdb

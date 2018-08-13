@@ -1,0 +1,12 @@
+C:\Users\Baba\Desktop\Sisteme Distribuite EXAMEN\Subiecte examen rezolvate\Subiect 9\EmployeeWebService\EmployeeWebService\bin\EmployeeWebService.dll.config
+C:\Users\Baba\Desktop\Sisteme Distribuite EXAMEN\Subiecte examen rezolvate\Subiect 9\EmployeeWebService\EmployeeWebService\bin\EmployeeWebService.dll
+C:\Users\Baba\Desktop\Sisteme Distribuite EXAMEN\Subiecte examen rezolvate\Subiect 9\EmployeeWebService\EmployeeWebService\bin\EmployeeWebService.pdb
+C:\Users\Baba\Desktop\Sisteme Distribuite EXAMEN\Subiecte examen rezolvate\Subiect 9\EmployeeWebService\EmployeeWebService\obj\Debug\EmployeeWebService.csprojResolveAssemblyReference.cache
+C:\Users\Baba\Desktop\Sisteme Distribuite EXAMEN\Subiecte examen rezolvate\Subiect 9\EmployeeWebService\EmployeeWebService\obj\Debug\EmployeeWebService.dll
+C:\Users\Baba\Desktop\Sisteme Distribuite EXAMEN\Subiecte examen rezolvate\Subiect 9\EmployeeWebService\EmployeeWebService\obj\Debug\EmployeeWebService.pdb
+C:\Users\student\Desktop\L6\EmployeeWebService\EmployeeWebService\bin\EmployeeWebService.dll.config
+C:\Users\student\Desktop\L6\EmployeeWebService\EmployeeWebService\bin\EmployeeWebService.dll
+C:\Users\student\Desktop\L6\EmployeeWebService\EmployeeWebService\bin\EmployeeWebService.pdb
+C:\Users\student\Desktop\L6\EmployeeWebService\EmployeeWebService\obj\Debug\EmployeeWebService.csprojResolveAssemblyReference.cache
+C:\Users\student\Desktop\L6\EmployeeWebService\EmployeeWebService\obj\Debug\EmployeeWebService.dll
+C:\Users\student\Desktop\L6\EmployeeWebService\EmployeeWebService\obj\Debug\EmployeeWebService.pdb

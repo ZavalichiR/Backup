@@ -1,0 +1,30 @@
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\L8-Numeric\L8-Numeric\bin\Debug\L8-Numeric.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\L8-Numeric\L8-Numeric\obj\Debug\L8-Numeric.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\L8-Numeric\L8-Numeric\obj\Debug\L8_Numeric.Ceas.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\L8-Numeric\L8-Numeric\obj\Debug\L8_Numeric.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\L8-Numeric\L8-Numeric\obj\Debug\L8-Numeric.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\L8-Numeric\L8-Numeric\bin\Debug\L8-Numeric.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\L8-Numeric\L8-Numeric\bin\Debug\L8-Numeric.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\L8-Numeric\L8-Numeric\obj\Debug\L8-Numeric.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\L8-Numeric\L8-Numeric\obj\Debug\L8-Numeric.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\L8-Numeric\L8-Numeric\obj\Debug\L8_Numeric.Ceas2.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\Tema+Lab\L8-Numeric\bin\Debug\L8-Numeric.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\Tema+Lab\L8-Numeric\obj\Debug\L8-Numeric.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\Tema+Lab\L8-Numeric\obj\Debug\L8-Numeric.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\Tema+Lab\L8-Numeric\bin\Debug\L8-Numeric.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\Tema+Lab\L8-Numeric\bin\Debug\L8-Numeric.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\Tema+Lab\L8-Numeric\obj\Debug\L8-Numeric.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\Tema+Lab\L8-Numeric\obj\Debug\L8_Numeric.Ceas2.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\Tema+Lab\L8-Numeric\obj\Debug\L8_Numeric.Ceas.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\Tema+Lab\L8-Numeric\obj\Debug\L8_Numeric.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L8\Tema+Lab\L8-Numeric\obj\Debug\L8-Numeric.csproj.GenerateResource.Cache
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L8\Tema+Lab\L8-Numeric\bin\Debug\L8-Numeric.exe.config
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L8\Tema+Lab\L8-Numeric\obj\Debug\L8-Numeric.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L8\Tema+Lab\L8-Numeric\obj\Debug\L8-Numeric.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L8\Tema+Lab\L8-Numeric\bin\Debug\L8-Numeric.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L8\Tema+Lab\L8-Numeric\bin\Debug\L8-Numeric.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L8\Tema+Lab\L8-Numeric\obj\Debug\L8-Numeric.csprojResolveAssemblyReference.cache
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L8\Tema+Lab\L8-Numeric\obj\Debug\L8_Numeric.Ceas2.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L8\Tema+Lab\L8-Numeric\obj\Debug\L8_Numeric.Ceas.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L8\Tema+Lab\L8-Numeric\obj\Debug\L8_Numeric.Properties.Resources.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L8\Tema+Lab\L8-Numeric\obj\Debug\L8-Numeric.csproj.GenerateResource.Cache

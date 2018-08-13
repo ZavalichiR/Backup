@@ -1,0 +1,16 @@
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathServer\bin\Debug\MathServer.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathServer\bin\Debug\MathServer.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathServer\bin\Debug\MathServer.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathServer\obj\Debug\MathServer.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathServer\obj\Debug\MathServer.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathServer\obj\Debug\MathServer.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathServer\bin\Debug\P1L4.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathServer\bin\Debug\P1L4.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathServer\bin\Debug\MathServer.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathServer\bin\Debug\MathServer.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathServer\bin\Debug\MathServer.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathServer\bin\Debug\P1L4.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathServer\bin\Debug\P1L4.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathServer\obj\Debug\MathServer.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathServer\obj\Debug\MathServer.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathServer\obj\Debug\MathServer.pdb

@@ -1,0 +1,10 @@
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Client\bin\Debug\Client.exe
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Client\bin\Debug\Client.pdb
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Client\bin\Debug\Operatii.dll
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Client\bin\Debug\Operatii.pdb
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Client\obj\Debug\ClientEditorNamespace.ClientEditor.resources
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Client\obj\Debug\Client.Properties.Resources.resources
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Client\obj\Debug\Client.exe
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Client\obj\Debug\Client.pdb

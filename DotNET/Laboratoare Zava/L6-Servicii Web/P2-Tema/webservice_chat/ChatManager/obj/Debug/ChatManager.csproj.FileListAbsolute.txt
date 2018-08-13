@@ -1,0 +1,9 @@
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\ChatManager\bin\Debug\ChatManager.dll
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\ChatManager\bin\Debug\ChatManager.pdb
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\ChatManager\obj\Debug\ChatManager.dll
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\ChatManager\obj\Debug\ChatManager.pdb
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatManager\bin\Debug\ChatManager.dll
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatManager\bin\Debug\ChatManager.pdb
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatManager\obj\Debug\ChatManager.csprojResolveAssemblyReference.cache
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatManager\obj\Debug\ChatManager.dll
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatManager\obj\Debug\ChatManager.pdb

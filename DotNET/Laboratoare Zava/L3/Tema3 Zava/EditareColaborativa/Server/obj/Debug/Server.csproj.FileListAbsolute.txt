@@ -1,0 +1,7 @@
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Server\bin\Debug\Server.exe
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Server\bin\Debug\Server.pdb
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Server\bin\Debug\Operatii.dll
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Server\bin\Debug\Operatii.pdb
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Server\obj\Debug\Server.exe
+D:\CURSURI_CTI\Anul III\Semestrul II\SD\Tema03\EditareColaborativa\Server\obj\Debug\Server.pdb

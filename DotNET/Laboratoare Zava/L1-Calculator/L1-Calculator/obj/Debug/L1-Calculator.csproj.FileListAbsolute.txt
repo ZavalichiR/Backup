@@ -1,0 +1,17 @@
+C:\Users\zzava\Documents\Visual Studio 2015\Projects\SD\L1-Calculator\L1-Calculator\bin\Debug\L1-Calculator.exe.config
+C:\Users\zzava\Documents\Visual Studio 2015\Projects\SD\L1-Calculator\L1-Calculator\bin\Debug\L1-Calculator.exe
+C:\Users\zzava\Documents\Visual Studio 2015\Projects\SD\L1-Calculator\L1-Calculator\bin\Debug\L1-Calculator.pdb
+C:\Users\zzava\Documents\Visual Studio 2015\Projects\SD\L1-Calculator\L1-Calculator\obj\Debug\L1_Calculator.Form1.resources
+C:\Users\zzava\Documents\Visual Studio 2015\Projects\SD\L1-Calculator\L1-Calculator\obj\Debug\L1_Calculator.Properties.Resources.resources
+C:\Users\zzava\Documents\Visual Studio 2015\Projects\SD\L1-Calculator\L1-Calculator\obj\Debug\L1-Calculator.csproj.GenerateResource.Cache
+C:\Users\zzava\Documents\Visual Studio 2015\Projects\SD\L1-Calculator\L1-Calculator\obj\Debug\L1-Calculator.exe
+C:\Users\zzava\Documents\Visual Studio 2015\Projects\SD\L1-Calculator\L1-Calculator\obj\Debug\L1-Calculator.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L1-Calculator\L1-Calculator\bin\Debug\L1-Calculator.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L1-Calculator\L1-Calculator\obj\Debug\L1-Calculator.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L1-Calculator\L1-Calculator\obj\Debug\L1-Calculator.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L1-Calculator\L1-Calculator\bin\Debug\L1-Calculator.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L1-Calculator\L1-Calculator\bin\Debug\L1-Calculator.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L1-Calculator\L1-Calculator\obj\Debug\L1-Calculator.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L1-Calculator\L1-Calculator\obj\Debug\L1_Calculator.Form1.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L1-Calculator\L1-Calculator\obj\Debug\L1_Calculator.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L1-Calculator\L1-Calculator\obj\Debug\L1-Calculator.csproj.GenerateResource.Cache

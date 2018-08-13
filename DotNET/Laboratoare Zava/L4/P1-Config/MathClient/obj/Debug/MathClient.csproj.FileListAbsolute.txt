@@ -1,0 +1,16 @@
+D:\1309a\lab4\MathLibrary\MathClient\bin\Debug\MathClient.exe
+D:\1309a\lab4\MathLibrary\MathClient\bin\Debug\MathClient.pdb
+D:\1309a\lab4\MathLibrary\MathClient\bin\Debug\MathLibrary.dll
+D:\1309a\lab4\MathLibrary\MathClient\bin\Debug\MathLibrary.pdb
+D:\1309a\lab4\MathLibrary\MathClient\obj\Debug\MathClient.exe
+D:\1309a\lab4\MathLibrary\MathClient\obj\Debug\MathClient.pdb
+D:\1309a\lab4\MathLibrary\MathClient\obj\Debug\MathClient.csprojResolveAssemblyReference.cache
+D:\1309a\lab4\MathLibrary\MathClient\bin\Debug\MathClient.exe.config
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathClient\bin\Debug\MathClient.exe.config
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathClient\bin\Debug\MathClient.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathClient\bin\Debug\MathClient.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathClient\bin\Debug\MathLibrary.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathClient\bin\Debug\MathLibrary.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathClient\obj\Debug\MathClient.csprojResolveAssemblyReference.cache
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathClient\obj\Debug\MathClient.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathClient\obj\Debug\MathClient.pdb

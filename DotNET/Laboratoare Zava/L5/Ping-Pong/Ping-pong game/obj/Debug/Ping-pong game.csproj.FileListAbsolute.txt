@@ -1,0 +1,18 @@
+E:\MihaiBabaWorkspace\Sisteme Distribuite\Laborator 5 - tema(ping-pong)\Ping-pong game\Ping-pong game\bin\Debug\Ping-pong game.exe.config
+E:\MihaiBabaWorkspace\Sisteme Distribuite\Laborator 5 - tema(ping-pong)\Ping-pong game\Ping-pong game\bin\Debug\Ping-pong game.exe
+E:\MihaiBabaWorkspace\Sisteme Distribuite\Laborator 5 - tema(ping-pong)\Ping-pong game\Ping-pong game\bin\Debug\Ping-pong game.pdb
+E:\MihaiBabaWorkspace\Sisteme Distribuite\Laborator 5 - tema(ping-pong)\Ping-pong game\Ping-pong game\obj\Debug\Ping-pong game.csprojResolveAssemblyReference.cache
+E:\MihaiBabaWorkspace\Sisteme Distribuite\Laborator 5 - tema(ping-pong)\Ping-pong game\Ping-pong game\obj\Debug\Ping_pong_game.Properties.Resources.resources
+E:\MihaiBabaWorkspace\Sisteme Distribuite\Laborator 5 - tema(ping-pong)\Ping-pong game\Ping-pong game\obj\Debug\Ping-pong game.csproj.GenerateResource.Cache
+E:\MihaiBabaWorkspace\Sisteme Distribuite\Laborator 5 - tema(ping-pong)\Ping-pong game\Ping-pong game\obj\Debug\Ping-pong game.exe
+E:\MihaiBabaWorkspace\Sisteme Distribuite\Laborator 5 - tema(ping-pong)\Ping-pong game\Ping-pong game\obj\Debug\Ping-pong game.pdb
+E:\MihaiBabaWorkspace\Sisteme Distribuite\Laborator 5 - tema(ping-pong)\Ping-pong game\Ping-pong game\obj\Debug\Ping_pong_game.Form1.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Ping-pong game\bin\Debug\Ping-pong game.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Ping-pong game\bin\Debug\Ping-pong game.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Ping-pong game\bin\Debug\Ping-pong game.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Ping-pong game\obj\Debug\Ping-pong game.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Ping-pong game\obj\Debug\Ping_pong_game.Form1.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Ping-pong game\obj\Debug\Ping_pong_game.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Ping-pong game\obj\Debug\Ping-pong game.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Ping-pong game\obj\Debug\Ping-pong game.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Ping-pong game\obj\Debug\Ping-pong game.pdb

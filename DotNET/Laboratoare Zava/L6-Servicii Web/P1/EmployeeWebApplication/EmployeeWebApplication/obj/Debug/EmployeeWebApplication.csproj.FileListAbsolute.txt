@@ -1,0 +1,15 @@
+C:\Users\Baba\Desktop\Sisteme Distribuite EXAMEN\Subiecte examen rezolvate\Subiect 9\EmployeeWebApplication\EmployeeWebApplication\bin\Debug\EmployeeWebApplication.exe.config
+C:\Users\Baba\Desktop\Sisteme Distribuite EXAMEN\Subiecte examen rezolvate\Subiect 9\EmployeeWebApplication\EmployeeWebApplication\bin\Debug\EmployeeWebApplication.exe
+C:\Users\Baba\Desktop\Sisteme Distribuite EXAMEN\Subiecte examen rezolvate\Subiect 9\EmployeeWebApplication\EmployeeWebApplication\bin\Debug\EmployeeWebApplication.pdb
+C:\Users\Baba\Desktop\Sisteme Distribuite EXAMEN\Subiecte examen rezolvate\Subiect 9\EmployeeWebApplication\EmployeeWebApplication\obj\Debug\EmployeeWebApplication.csprojResolveAssemblyReference.cache
+C:\Users\Baba\Desktop\Sisteme Distribuite EXAMEN\Subiecte examen rezolvate\Subiect 9\EmployeeWebApplication\EmployeeWebApplication\obj\Debug\EmployeeWebApplication.exe
+C:\Users\Baba\Desktop\Sisteme Distribuite EXAMEN\Subiecte examen rezolvate\Subiect 9\EmployeeWebApplication\EmployeeWebApplication\obj\Debug\EmployeeWebApplication.pdb
+C:\Users\student\Desktop\L6\EmployeeWebApplication\EmployeeWebApplication\bin\Debug\EmployeeWebApplication.exe.config
+C:\Users\student\Desktop\L6\EmployeeWebApplication\EmployeeWebApplication\obj\Debug\EmployeeWebApplication.exe
+C:\Users\student\Desktop\L6\EmployeeWebApplication\EmployeeWebApplication\obj\Debug\EmployeeWebApplication.pdb
+C:\Users\student\Desktop\L6\EmployeeWebApplication\EmployeeWebApplication\bin\Debug\EmployeeWebApplication.exe
+C:\Users\student\Desktop\L6\EmployeeWebApplication\EmployeeWebApplication\bin\Debug\EmployeeWebApplication.pdb
+C:\Users\student\Desktop\L6\EmployeeWebApplication\EmployeeWebApplication\obj\Debug\EmployeeWebApplication.csprojResolveAssemblyReference.cache
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L6-Servicii Web\P1\EmployeeWebApplication\EmployeeWebApplication\bin\Debug\EmployeeWebApplication.exe.config
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L6-Servicii Web\P1\EmployeeWebApplication\EmployeeWebApplication\obj\Debug\EmployeeWebApplication.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L6-Servicii Web\P1\EmployeeWebApplication\EmployeeWebApplication\obj\Debug\EmployeeWebApplication.pdb

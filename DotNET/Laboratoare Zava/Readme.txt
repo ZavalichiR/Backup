@@ -1,0 +1,1 @@
+Laboratoarele de aici care sunt și în folderul Examen_Zava sunt rezolvate mult mai ok acolo.

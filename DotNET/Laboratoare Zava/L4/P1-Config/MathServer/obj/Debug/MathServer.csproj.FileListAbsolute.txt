@@ -1,0 +1,22 @@
+D:\1309a\lab4\MathLibrary\MathServer\bin\Debug\MathServer.exe
+D:\1309a\lab4\MathLibrary\MathServer\bin\Debug\MathServer.pdb
+D:\1309a\lab4\MathLibrary\MathServer\bin\Debug\MathLibrary.dll
+D:\1309a\lab4\MathLibrary\MathServer\bin\Debug\MathLibrary.pdb
+D:\1309a\lab4\MathLibrary\MathServer\obj\Debug\MathServer.csprojResolveAssemblyReference.cache
+D:\1309a\lab4\MathLibrary\MathServer\obj\Debug\MathServer.exe
+D:\1309a\lab4\MathLibrary\MathServer\obj\Debug\MathServer.pdb
+D:\1309a\lab4\MathLibrary\MathServer\bin\Debug\MathServer.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathServer\bin\Debug\MathServer.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathServer\obj\Debug\MathServer.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathServer\obj\Debug\MathServer.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathServer\bin\Debug\MathServer.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathServer\bin\Debug\MathServer.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathServer\bin\Debug\MathLibrary.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathServer\bin\Debug\MathLibrary.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathServer\obj\Debug\MathServer.csprojResolveAssemblyReference.cache
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\P1\MathServer\bin\Debug\MathServer.exe.config
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\P1\MathServer\obj\Debug\MathServer.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\P1\MathServer\obj\Debug\MathServer.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L4\P1-Config\MathServer\bin\Debug\MathServer.exe.config
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L4\P1-Config\MathServer\obj\Debug\MathServer.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L4\P1-Config\MathServer\obj\Debug\MathServer.pdb

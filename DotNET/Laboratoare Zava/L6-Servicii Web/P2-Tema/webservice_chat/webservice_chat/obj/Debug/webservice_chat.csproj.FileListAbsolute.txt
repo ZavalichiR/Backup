@@ -1,0 +1,16 @@
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\webservice_chat\bin\webservice_chat.dll.config
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\webservice_chat\bin\webservice_chat.dll
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\webservice_chat\bin\webservice_chat.pdb
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\webservice_chat\bin\ChatManager.dll
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\webservice_chat\bin\ChatManager.pdb
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\webservice_chat\obj\Debug\webservice_chat.csprojResolveAssemblyReference.cache
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\webservice_chat\obj\Debug\webservice_chat.dll
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\webservice_chat\obj\Debug\webservice_chat.pdb
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\webservice_chat\bin\webservice_chat.dll.config
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\webservice_chat\bin\webservice_chat.dll
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\webservice_chat\bin\webservice_chat.pdb
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\webservice_chat\bin\ChatManager.dll
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\webservice_chat\bin\ChatManager.pdb
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\webservice_chat\obj\Debug\webservice_chat.csprojResolveAssemblyReference.cache
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\webservice_chat\obj\Debug\webservice_chat.dll
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\webservice_chat\obj\Debug\webservice_chat.pdb

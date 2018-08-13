@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncClient", "AsyncClient\AsyncClient.csproj", "{6FB23B66-CC8E-4CDB-B4A0-97A28A95D581}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF77DA73-EF59-409A-9BF3-8E26451D2593} = {CF77DA73-EF59-409A-9BF3-8E26451D2593}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncServer", "AsyncServer\AsyncServer.csproj", "{CF77DA73-EF59-409A-9BF3-8E26451D2593}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{6FB23B66-CC8E-4CDB-B4A0-97A28A95D581}.Debug.ActiveCfg = Debug|.NET
+		{6FB23B66-CC8E-4CDB-B4A0-97A28A95D581}.Debug.Build.0 = Debug|.NET
+		{6FB23B66-CC8E-4CDB-B4A0-97A28A95D581}.Release.ActiveCfg = Release|.NET
+		{6FB23B66-CC8E-4CDB-B4A0-97A28A95D581}.Release.Build.0 = Release|.NET
+		{CF77DA73-EF59-409A-9BF3-8E26451D2593}.Debug.ActiveCfg = Debug|.NET
+		{CF77DA73-EF59-409A-9BF3-8E26451D2593}.Debug.Build.0 = Debug|.NET
+		{CF77DA73-EF59-409A-9BF3-8E26451D2593}.Release.ActiveCfg = Release|.NET
+		{CF77DA73-EF59-409A-9BF3-8E26451D2593}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

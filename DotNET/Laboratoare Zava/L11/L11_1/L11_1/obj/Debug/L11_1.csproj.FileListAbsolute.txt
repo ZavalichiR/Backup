@@ -1,0 +1,54 @@
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\bin\Debug\L11_1.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\bin\Debug\L11_1.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\bin\Debug\L11_1.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\bin\Debug\en\L11_1.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\bin\Debug\ro\L11_1.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\L11_1.Form1.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\L11_1.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\L11_1.resurse.en.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\L11_1.resurse.ro.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\L11_1.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\en\L11_1.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\ro\L11_1.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\L11_1.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\L11_1.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\bin\Debug\es-ES\L11_1.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\bin\Debug\zh-CN\L11_1.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\L11_1.resurse.es-ES.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\L11_1.resurse.zh-CN.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\es-ES\L11_1.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\zh-CN\L11_1.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\bin\Debug\ja-JP\L11_1.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\L11_1.resurse.ja-JP.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\ja-JP\L11_1.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\bin\Debug\fr\L11_1.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\L11_1.resurse.fr.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\fr\L11_1.resources.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L11\L11_1\L11_1\obj\Debug\L11_1.csprojResolveAssemblyReference.cache
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\bin\Debug\L11_1.exe.config
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\L11_1.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\L11_1.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\bin\Debug\L11_1.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\bin\Debug\L11_1.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\bin\Debug\es-ES\L11_1.resources.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\bin\Debug\zh-CN\L11_1.resources.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\bin\Debug\ja-JP\L11_1.resources.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\bin\Debug\fr\L11_1.resources.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\bin\Debug\en\L11_1.resources.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\bin\Debug\ro\L11_1.resources.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\L11_1.csprojResolveAssemblyReference.cache
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\L11_1.Form1.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\L11_1.Properties.Resources.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\L11_1.resurse.es-ES.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\L11_1.resurse.zh-CN.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\L11_1.resurse.ja-JP.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\L11_1.resurse.fr.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\L11_1.resurse.en.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\L11_1.resurse.ro.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\L11_1.csproj.GenerateResource.Cache
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\es-ES\L11_1.resources.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\zh-CN\L11_1.resources.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\ja-JP\L11_1.resources.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\fr\L11_1.resources.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\en\L11_1.resources.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L11\L11_1\L11_1\obj\Debug\ro\L11_1.resources.dll

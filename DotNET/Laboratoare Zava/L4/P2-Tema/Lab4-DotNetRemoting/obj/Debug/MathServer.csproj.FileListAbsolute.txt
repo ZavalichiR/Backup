@@ -1,0 +1,43 @@
+F:\SD-Lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.exe.config
+F:\SD-Lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.exe
+F:\SD-Lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.pdb
+F:\SD-Lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\MathLibrary.dll
+F:\SD-Lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\MathLibrary.pdb
+F:\SD-Lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\obj\Debug\Lab4-DotNetRemoting.exe
+F:\SD-Lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\obj\Debug\Lab4-DotNetRemoting.pdb
+F:\SD-Lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\obj\Debug\MathServer.csprojResolveAssemblyReference.cache
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.exe.config
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\obj\Debug\Lab4-DotNetRemoting.exe
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\obj\Debug\Lab4-DotNetRemoting.pdb
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.exe
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.pdb
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\MathLibrary.dll
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\MathLibrary.pdb
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\obj\Debug\MathServer.csprojResolveAssemblyReference.cache
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.exe.config
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\obj\Debug\Lab4-DotNetRemoting.exe
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\obj\Debug\Lab4-DotNetRemoting.pdb
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.exe
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.pdb
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\MathLibrary.dll
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\MathLibrary.pdb
+e:\Materiale Facultate\An III\Semestrul II V4\SD\SD\Laborator4\lab4 -tema\Lab4-DotNetRemoting\Lab4-DotNetRemoting\obj\Debug\MathServer.csprojResolveAssemblyReference.cache
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.exe.config
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\obj\Debug\Lab4-DotNetRemoting.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\obj\Debug\Lab4-DotNetRemoting.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\MathLibrary.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\bin\Debug\MathLibrary.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\Lab4-DotNetRemoting\Lab4-DotNetRemoting\obj\Debug\MathServer.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2\Lab4-DotNetRemoting\obj\Debug\Lab4-DotNetRemoting.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2\Lab4-DotNetRemoting\obj\Debug\Lab4-DotNetRemoting.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2\Lab4-DotNetRemoting\bin\Debug\MathLibrary.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2\Lab4-DotNetRemoting\bin\Debug\MathLibrary.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2\Lab4-DotNetRemoting\obj\Debug\MathServer.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2-Tema\Lab4-DotNetRemoting\bin\Debug\Lab4-DotNetRemoting.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2-Tema\Lab4-DotNetRemoting\obj\Debug\Lab4-DotNetRemoting.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P2-Tema\Lab4-DotNetRemoting\obj\Debug\Lab4-DotNetRemoting.pdb

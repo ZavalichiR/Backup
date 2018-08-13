@@ -1,0 +1,18 @@
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSortThread\VectorSortThread\bin\Debug\VectorSortThread.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSortThread\VectorSortThread\obj\Debug\VectorSortThread.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSortThread\VectorSortThread\obj\Debug\VectorSortThread.SortVect.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSortThread\VectorSortThread\obj\Debug\VectorSortThread.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSortThread\VectorSortThread\obj\Debug\VectorSortThread.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSortThread\VectorSortThread\bin\Debug\VectorSortThread.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSortThread\VectorSortThread\bin\Debug\VectorSortThread.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSortThread\VectorSortThread\obj\Debug\VectorSortThread.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSortThread\VectorSortThread\obj\Debug\VectorSortThread.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSortThread\VectorSortThread\bin\Debug\VectorSortThread.exe.config
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSortThread\VectorSortThread\obj\Debug\VectorSortThread.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSortThread\VectorSortThread\obj\Debug\VectorSortThread.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSortThread\VectorSortThread\bin\Debug\VectorSortThread.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSortThread\VectorSortThread\bin\Debug\VectorSortThread.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSortThread\VectorSortThread\obj\Debug\VectorSortThread.csprojResolveAssemblyReference.cache
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSortThread\VectorSortThread\obj\Debug\VectorSortThread.SortVect.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSortThread\VectorSortThread\obj\Debug\VectorSortThread.Properties.Resources.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSortThread\VectorSortThread\obj\Debug\VectorSortThread.csproj.GenerateResource.Cache

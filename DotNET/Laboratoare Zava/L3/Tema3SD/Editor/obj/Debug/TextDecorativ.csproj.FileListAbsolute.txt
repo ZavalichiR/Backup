@@ -1,0 +1,6 @@
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\obj\Debug\TextDecorativ.csprojResolveAssemblyReference.cache
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\obj\Debug\Editor.Editor.resources
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\obj\Debug\Editor.Properties.Resources.resources
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\obj\Debug\TextDecorativ.csproj.GenerateResource.Cache
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\obj\Debug\Editor.exe
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\obj\Debug\TextDecorativ.Editor.resources

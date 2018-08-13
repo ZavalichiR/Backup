@@ -1,0 +1,10 @@
+D:\1309a\lab4\MathLibrary\MathLibrary\bin\Debug\MathLibrary.dll
+D:\1309a\lab4\MathLibrary\MathLibrary\bin\Debug\MathLibrary.pdb
+D:\1309a\lab4\MathLibrary\MathLibrary\obj\Debug\MathLibrary.dll
+D:\1309a\lab4\MathLibrary\MathLibrary\obj\Debug\MathLibrary.pdb
+D:\1309A\lab4\MathLibrary\MathLibrary\obj\Debug\MathLibrary.csprojResolveAssemblyReference.cache
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathLibrary\bin\Debug\MathLibrary.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathLibrary\bin\Debug\MathLibrary.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathLibrary\obj\Debug\MathLibrary.csprojResolveAssemblyReference.cache
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathLibrary\obj\Debug\MathLibrary.dll
+c:\Users\zzava\Desktop\Semestrul II\SD\lab4\MathLibrary\MathLibrary\obj\Debug\MathLibrary.pdb

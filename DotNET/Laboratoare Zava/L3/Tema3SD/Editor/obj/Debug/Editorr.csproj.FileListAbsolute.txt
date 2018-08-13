@@ -1,0 +1,4 @@
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\bin\Debug\Editorr.exe.config
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\bin\Debug\Editor.exe.config
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\obj\Debug\Editor.exe
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Editor\obj\Debug\Editor.pdb

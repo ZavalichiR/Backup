@@ -1,0 +1,43 @@
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\ChatClient\obj\Debug\ChatClient.csprojResolveAssemblyReference.cache
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\ChatClient\obj\Debug\ChatClient.FormChat.resources
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\ChatClient\obj\Debug\ChatClient.Properties.Resources.resources
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\ChatClient\obj\Debug\ChatClient.csproj.GenerateResource.Cache
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\ChatClient\bin\Debug\ChatClient.exe.config
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\ChatClient\obj\Debug\ChatClient.LoginForm.resources
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\ChatClient\bin\Debug\ChatClient.exe
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\ChatClient\bin\Debug\ChatClient.pdb
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\ChatClient\obj\Debug\ChatClient.exe
+D:\Victor\Documents\AN 3 SEM 2\SD\LAB6\webservice_chat\ChatClient\obj\Debug\ChatClient.pdb
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatClient\bin\Debug\ChatClient.exe.config
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatClient\obj\Debug\ChatClient.exe
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatClient\obj\Debug\ChatClient.pdb
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatClient\bin\Debug\ChatClient.exe
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatClient\bin\Debug\ChatClient.pdb
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatClient\obj\Debug\ChatClient.csprojResolveAssemblyReference.cache
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatClient\obj\Debug\ChatClient.FormChat.resources
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatClient\obj\Debug\ChatClient.LoginForm.resources
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatClient\obj\Debug\ChatClient.Properties.Resources.resources
+E:\an3\marean\materiale an III sem II\laboratoare\laborator 6\TemaAcasa\webservice_chat\ChatClient\obj\Debug\ChatClient.csproj.GenerateResource.Cache
+C:\Users\Cordea\Desktop\TemaAcasa\webservice_chat\ChatClient\bin\Debug\ChatClient.exe.config
+C:\Users\Cordea\Desktop\TemaAcasa\webservice_chat\ChatClient\obj\Debug\ChatClient.exe
+C:\Users\Cordea\Desktop\TemaAcasa\webservice_chat\ChatClient\obj\Debug\ChatClient.pdb
+C:\Users\Cordea\Desktop\TemaAcasa\webservice_chat\ChatClient\bin\Debug\ChatClient.exe
+C:\Users\Cordea\Desktop\TemaAcasa\webservice_chat\ChatClient\bin\Debug\ChatClient.pdb
+C:\Users\Cordea\Desktop\TemaAcasa\webservice_chat\ChatClient\obj\Debug\ChatClient.csprojResolveAssemblyReference.cache
+C:\Users\Cordea\Desktop\TemaAcasa\webservice_chat\ChatClient\obj\Debug\ChatClient.FormChat.resources
+C:\Users\Cordea\Desktop\TemaAcasa\webservice_chat\ChatClient\obj\Debug\ChatClient.LoginForm.resources
+C:\Users\Cordea\Desktop\TemaAcasa\webservice_chat\ChatClient\obj\Debug\ChatClient.Properties.Resources.resources
+C:\Users\Cordea\Desktop\TemaAcasa\webservice_chat\ChatClient\obj\Debug\ChatClient.csproj.GenerateResource.Cache
+C:\Users\student\Desktop\TemaL6\webservice_chat\ChatClient\bin\Debug\ChatClient.exe.config
+C:\Users\student\Desktop\TemaL6\webservice_chat\ChatClient\obj\Debug\ChatClient.exe
+C:\Users\student\Desktop\TemaL6\webservice_chat\ChatClient\obj\Debug\ChatClient.pdb
+C:\Users\student\Desktop\TemaL6\webservice_chat\ChatClient\bin\Debug\ChatClient.exe
+C:\Users\student\Desktop\TemaL6\webservice_chat\ChatClient\bin\Debug\ChatClient.pdb
+C:\Users\student\Desktop\TemaL6\webservice_chat\ChatClient\obj\Debug\ChatClient.csprojResolveAssemblyReference.cache
+C:\Users\student\Desktop\TemaL6\webservice_chat\ChatClient\obj\Debug\ChatClient.FormChat.resources
+C:\Users\student\Desktop\TemaL6\webservice_chat\ChatClient\obj\Debug\ChatClient.LoginForm.resources
+C:\Users\student\Desktop\TemaL6\webservice_chat\ChatClient\obj\Debug\ChatClient.Properties.Resources.resources
+C:\Users\student\Desktop\TemaL6\webservice_chat\ChatClient\obj\Debug\ChatClient.csproj.GenerateResource.Cache
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L6-Servicii Web\P2-Tema\webservice_chat\ChatClient\bin\Debug\ChatClient.exe.config
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L6-Servicii Web\P2-Tema\webservice_chat\ChatClient\obj\Debug\ChatClient.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L6-Servicii Web\P2-Tema\webservice_chat\ChatClient\obj\Debug\ChatClient.pdb

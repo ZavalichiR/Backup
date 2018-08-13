@@ -1,0 +1,16 @@
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathClient\bin\Debug\MathClient.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathClient\bin\Debug\MathClient.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathClient\bin\Debug\MathClient.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathClient\obj\Debug\MathClient.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathClient\obj\Debug\MathClient.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathClient\obj\Debug\MathClient.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathClient\bin\Debug\P1L4.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1L4\MathClient\bin\Debug\P1L4.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathClient\bin\Debug\MathClient.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathClient\bin\Debug\MathClient.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathClient\bin\Debug\MathClient.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathClient\bin\Debug\P1L4.dll
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathClient\bin\Debug\P1L4.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathClient\obj\Debug\MathClient.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathClient\obj\Debug\MathClient.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L4\P1-Singleton\MathClient\obj\Debug\MathClient.pdb

@@ -1,0 +1,20 @@
+\\vmware-host\Shared Folders\SD Folder\laboratoare\laborator 10\TemaLab\TemaLab\bin\Debug\TemaLab.exe.config
+\\vmware-host\Shared Folders\SD Folder\laboratoare\laborator 10\TemaLab\TemaLab\obj\Debug\TemaLab.exe
+\\vmware-host\Shared Folders\SD Folder\laboratoare\laborator 10\TemaLab\TemaLab\obj\Debug\TemaLab.pdb
+\\vmware-host\Shared Folders\SD Folder\laboratoare\laborator 10\TemaLab\TemaLab\bin\Debug\TemaLab.exe
+\\vmware-host\Shared Folders\SD Folder\laboratoare\laborator 10\TemaLab\TemaLab\bin\Debug\TemaLab.pdb
+\\vmware-host\Shared Folders\SD Folder\laboratoare\laborator 10\TemaLab\TemaLab\obj\Debug\TreeView XML.csprojResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\SD Folder\laboratoare\laborator 10\TemaLab\TemaLab\obj\Debug\TemaLab.Form1.resources
+\\vmware-host\Shared Folders\SD Folder\laboratoare\laborator 10\TemaLab\TemaLab\obj\Debug\TemaLab.Properties.Resources.resources
+\\vmware-host\Shared Folders\SD Folder\laboratoare\laborator 10\TemaLab\TemaLab\obj\Debug\TreeView XML.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\SD\laboratoare_SD\laborator 10\TemaLab\TemaLab\bin\Debug\TemaLab.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\laboratoare_SD\laborator 10\TemaLab\TemaLab\obj\Debug\TemaLab.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\laboratoare_SD\laborator 10\TemaLab\TemaLab\obj\Debug\TemaLab.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\laboratoare_SD\laborator 10\TemaLab\TemaLab\bin\Debug\TemaLab.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\laboratoare_SD\laborator 10\TemaLab\TemaLab\bin\Debug\TemaLab.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\laboratoare_SD\laborator 10\TemaLab\TemaLab\obj\Debug\TemaLab.Form1.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\laboratoare_SD\laborator 10\TemaLab\TemaLab\obj\Debug\TemaLab.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\laboratoare_SD\laborator 10\TemaLab\TemaLab\obj\Debug\TreeView XML.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L12\TemaLab\TemaLab\bin\Debug\TemaLab.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L12\TemaLab\TemaLab\obj\Debug\TemaLab.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L12\TemaLab\TemaLab\obj\Debug\TemaLab.pdb

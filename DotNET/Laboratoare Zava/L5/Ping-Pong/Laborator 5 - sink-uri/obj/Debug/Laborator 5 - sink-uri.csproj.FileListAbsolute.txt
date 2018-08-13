@@ -1,0 +1,8 @@
+E:\MihaiBabaWorkspace\Sisteme Distribuite\Laborator 5 - tema(ping-pong)\Ping-pong game\Laborator 5 - sink-uri\bin\Debug\Laborator 5 - sink-uri.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Laborator 5 - sink-uri\bin\Debug\Laborator 5 - sink-uri.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Laborator 5 - sink-uri\bin\Debug\Laborator 5 - sink-uri.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Laborator 5 - sink-uri\bin\Debug\Laborator 5 - sink-uri.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Laborator 5 - sink-uri\obj\Debug\Laborator_5___sink_uri.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Laborator 5 - sink-uri\obj\Debug\Laborator 5 - sink-uri.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Laborator 5 - sink-uri\obj\Debug\Laborator 5 - sink-uri.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L5\Ping-Pong\Laborator 5 - sink-uri\obj\Debug\Laborator 5 - sink-uri.pdb

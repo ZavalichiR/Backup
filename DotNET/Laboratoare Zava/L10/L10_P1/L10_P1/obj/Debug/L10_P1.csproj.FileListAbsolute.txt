@@ -1,0 +1,20 @@
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_P1\L10_P1\bin\Debug\L10_P1.exe.config
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_P1\L10_P1\obj\Debug\L10_P1.csprojResolveAssemblyReference.cache
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_P1\L10_P1\obj\Debug\L10_P1.Form1.resources
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_P1\L10_P1\obj\Debug\L10_P1.Properties.Resources.resources
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_P1\L10_P1\obj\Debug\L10_P1.csproj.GenerateResource.Cache
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_P1\L10_P1\bin\Debug\L10_P1.exe
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_P1\L10_P1\bin\Debug\L10_P1.pdb
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_P1\L10_P1\obj\Debug\L10_P1.exe
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_P1\L10_P1\obj\Debug\L10_P1.pdb
+C:\Users\uidn1609\Documents\Visual Studio 2012\Projects\L10_P1\L10_P1\bin\Debug\Filme.xml
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_P1\L10_P1\bin\Debug\L10_P1.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_P1\L10_P1\obj\Debug\L10_P1.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_P1\L10_P1\obj\Debug\L10_P1.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_P1\L10_P1\bin\Debug\Filme.xml
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_P1\L10_P1\bin\Debug\L10_P1.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_P1\L10_P1\bin\Debug\L10_P1.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_P1\L10_P1\obj\Debug\L10_P1.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_P1\L10_P1\obj\Debug\L10_P1.Form1.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_P1\L10_P1\obj\Debug\L10_P1.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L10\L10_P1\L10_P1\obj\Debug\L10_P1.csproj.GenerateResource.Cache

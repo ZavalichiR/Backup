@@ -1,0 +1,18 @@
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSumThread\VectorSumThread\bin\Debug\VectorSumThread.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSumThread\VectorSumThread\obj\Debug\VectorSumThread.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSumThread\VectorSumThread\obj\Debug\VectorSumThread.Properties.Resources.resources
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSumThread\VectorSumThread\obj\Debug\VectorSumThread.csproj.GenerateResource.Cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSumThread\VectorSumThread\bin\Debug\VectorSumThread.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSumThread\VectorSumThread\bin\Debug\VectorSumThread.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSumThread\VectorSumThread\obj\Debug\VectorSumThread.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSumThread\VectorSumThread\obj\Debug\VectorSumThread.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L7\VectorSumThread\VectorSumThread\obj\Debug\VectorSumThread.SumVect.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSumThread\VectorSumThread\bin\Debug\VectorSumThread.exe.config
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSumThread\VectorSumThread\obj\Debug\VectorSumThread.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSumThread\VectorSumThread\obj\Debug\VectorSumThread.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSumThread\VectorSumThread\bin\Debug\VectorSumThread.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSumThread\VectorSumThread\bin\Debug\VectorSumThread.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSumThread\VectorSumThread\obj\Debug\VectorSumThread.csprojResolveAssemblyReference.cache
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSumThread\VectorSumThread\obj\Debug\VectorSumThread.Properties.Resources.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSumThread\VectorSumThread\obj\Debug\VectorSumThread.SumVect.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\Laboratoare Zava\L7\VectorSumThread\VectorSumThread\obj\Debug\VectorSumThread.csproj.GenerateResource.Cache

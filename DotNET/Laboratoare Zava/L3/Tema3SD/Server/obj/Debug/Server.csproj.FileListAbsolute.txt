@@ -1,0 +1,35 @@
+C:\Users\costel\Desktop\diana\Laborator 3\Tema3SD\Server\bin\Debug\Server.exe.config
+C:\Users\costel\Desktop\diana\Laborator 3\Tema3SD\Server\bin\Debug\Server.exe
+C:\Users\costel\Desktop\diana\Laborator 3\Tema3SD\Server\bin\Debug\Server.pdb
+C:\Users\costel\Desktop\diana\Laborator 3\Tema3SD\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\costel\Desktop\diana\Laborator 3\Tema3SD\Server\obj\Debug\Server.exe
+C:\Users\costel\Desktop\diana\Laborator 3\Tema3SD\Server\obj\Debug\Server.pdb
+D:\Anul 3 sem 2 ciprian andriu\Sisteme distribuite\diana\Laborator 3\Tema3SD\Server\bin\Debug\Server.exe.config
+D:\Anul 3 sem 2 ciprian andriu\Sisteme distribuite\diana\Laborator 3\Tema3SD\Server\obj\Debug\Server.exe
+D:\Anul 3 sem 2 ciprian andriu\Sisteme distribuite\diana\Laborator 3\Tema3SD\Server\obj\Debug\Server.pdb
+D:\Anul 3 sem 2 ciprian andriu\Sisteme distribuite\diana\Laborator 3\Tema3SD\Server\bin\Debug\Server.exe
+D:\Anul 3 sem 2 ciprian andriu\Sisteme distribuite\diana\Laborator 3\Tema3SD\Server\bin\Debug\Server.pdb
+D:\Anul 3 sem 2 ciprian andriu\Sisteme distribuite\diana\Laborator 3\Tema3SD\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Mada\Documents\SD\Laborator 3\Tema3SD\Server\bin\Debug\Server.exe.config
+C:\Users\Mada\Documents\SD\Laborator 3\Tema3SD\Server\obj\Debug\Server.exe
+C:\Users\Mada\Documents\SD\Laborator 3\Tema3SD\Server\obj\Debug\Server.pdb
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator3\de la colegi\Tema3SD\Server\bin\Debug\Server.exe.config
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator3\de la colegi\Tema3SD\Server\obj\Debug\Server.exe
+C:\Users\ANA\Desktop\SEMESTRUL2\Sisteme Distribuite\Laborator3\de la colegi\Tema3SD\Server\obj\Debug\Server.pdb
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Server\bin\Debug\Server.exe
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Server\bin\Debug\Server.exe.config
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Server\bin\Debug\Server.pdb
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Server\obj\Debug\Server.exe
+C:\Users\catalin\Desktop\materiale  facultate anul 3\SD\Laborator3\de la colegi\Tema3SD\Server\obj\Debug\Server.pdb
+D:\SD\Tema3SD\Server\bin\Debug\Server.exe.config
+D:\SD\Tema3SD\Server\obj\Debug\Server.exe
+D:\SD\Tema3SD\Server\obj\Debug\Server.pdb
+D:\SD\Tema3SD\Server\bin\Debug\Server.exe
+D:\SD\Tema3SD\Server\bin\Debug\Server.pdb
+D:\SD\Tema3SD\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L3\Tema3SD\Server\bin\Debug\Server.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L3\Tema3SD\Server\bin\Debug\Server.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L3\Tema3SD\Server\bin\Debug\Server.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L3\Tema3SD\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\zzava\Desktop\Semestrul II\SD\L3\Tema3SD\Server\obj\Debug\Server.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L3\Tema3SD\Server\obj\Debug\Server.pdb

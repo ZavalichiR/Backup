@@ -1,0 +1,13 @@
+C:\Users\zzava\Desktop\Semestrul II\SD\L2\Lab_SD_2\Asyncron\AsyncClient\bin\Debug\AsyncClient.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L2\Lab_SD_2\Asyncron\AsyncClient\obj\Debug\AsyncClient.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L2\Lab_SD_2\Asyncron\AsyncClient\obj\Debug\AsyncClient.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\L2\Asyncron\AsyncClient\bin\Debug\AsyncClient.exe.config
+c:\Users\zzava\Desktop\Semestrul II\SD\L2\Asyncron\AsyncClient\obj\Debug\AsyncClient.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\L2\Asyncron\AsyncClient\obj\Debug\AsyncClient.pdb
+C:\Users\zzava\Desktop\Semestrul II\SD\L2\Asyncron - Temă\AsyncClient\bin\Debug\AsyncClient.exe.config
+C:\Users\zzava\Desktop\Semestrul II\SD\L2\Asyncron - Temă\AsyncClient\obj\Debug\AsyncClient.exe
+C:\Users\zzava\Desktop\Semestrul II\SD\L2\Asyncron - Temă\AsyncClient\obj\Debug\AsyncClient.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\L2\Asyncron - Temă\AsyncClient\bin\Debug\AsyncClient.exe
+c:\Users\zzava\Desktop\Semestrul II\SD\L2\Asyncron - Temă\AsyncClient\bin\Debug\AsyncClient.pdb
+c:\Users\zzava\Desktop\Semestrul II\SD\L2\Asyncron - Temă\AsyncClient\obj\Debug\AsyncClient.Form1.resources
+c:\Users\zzava\Desktop\Semestrul II\SD\L2\Asyncron - Temă\AsyncClient\obj\Debug\AsyncClient.csproj.GenerateResource.Cache
