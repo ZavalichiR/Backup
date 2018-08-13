@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Arbore>
+
+	<NOD>
+		<DATA>5</DATA> 
+		<FII> 
+
+		<NOD>
+			<DATA>4</DATA> 
+			<FII> 
+
+			<NOD>
+				<DATA>3</DATA> 
+				<FII> 
+
+				<NOD>
+					<DATA>2</DATA> 
+					<FII> 
+
+					<NOD>
+						<DATA>1</DATA> 
+					</NOD>
+					</FII> 
+				</NOD>
+				</FII> 
+			</NOD>
+			</FII> 
+		</NOD>
+		<NOD>
+			<DATA>9</DATA> 
+			<FII> 
+
+			<NOD>
+				<DATA>8</DATA> 
+				<FII> 
+
+				<NOD>
+					<DATA>7</DATA> 
+					<FII> 
+
+					<NOD>
+						<DATA>6</DATA> 
+					</NOD>
+					</FII> 
+				</NOD>
+				</FII> 
+			</NOD>
+			</FII> 
+		</NOD>
+		</FII> 
+	</NOD>
+</Arbore>

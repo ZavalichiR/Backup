@@ -1,0 +1,27 @@
+22. Se citeste de la intrare un sir de valori numerice intregi, pe o linie,
+separate de spatii, sir care se incheie cu o valoare 0. Sa se memoreze
+aceste valori intr-un vector.
+     Considerind ca vectorul dat este reprezentarea implicita a unui arbore
+binar:
+     a) Sa se afiseze in inordine continutul arborelui.
+     b) Sa se afiseze in postordine elementele subarborelui sting al
+     radacinii. 
+     c) Sa se determine daca arborele are proprietatea care defineste un
+     arbore binar de cautare.
+
+EXEMPLU:
+     Arborele:                    5 
+                                 / \
+                               3     8
+                              / \   / \
+                             1   4 6   9
+     Intrare: 
+           5 3 8 1 4 6 9 0
+     Iesire:
+           Inordine: 1 3 4 5 6 8 9
+           ESTE ARBORE BINAR DE CAUTARE
+
+
+=====================================================
+
+

@@ -1,0 +1,8 @@
+﻿  main.cpp
+  functii.cpp
+c:\users\zava\documents\visual studio 2015\projects\sd\tema-stiva\exercitiul 3\stiva3\functii.cpp(53): warning C4018: '<': signed/unsigned mismatch
+c:\users\zava\documents\visual studio 2015\projects\sd\tema-stiva\exercitiul 3\stiva3\functii.cpp(61): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+c:\users\zava\documents\visual studio 2015\projects\sd\tema-stiva\exercitiul 3\stiva3\functii.cpp(45): warning C4715: 'Stiva::pop': not all control paths return a value
+  Stiva3.vcxproj -> C:\Users\Zava\Documents\Visual Studio 2015\Projects\SD\Tema-Stiva\Exercitiul 3\Debug\Stiva3.exe
+  Stiva3.vcxproj -> C:\Users\Zava\Documents\Visual Studio 2015\Projects\SD\Tema-Stiva\Exercitiul 3\Debug\Stiva3.pdb (Full PDB)

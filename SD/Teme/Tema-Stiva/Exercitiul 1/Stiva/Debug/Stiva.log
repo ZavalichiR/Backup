@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\zava\documents\visual studio 2015\projects\sd\tema-stiva\stiva\stiva\main.cpp(4): warning C4101: 'S': unreferenced local variable
+  Stiva.vcxproj -> C:\Users\Zava\Documents\Visual Studio 2015\Projects\SD\Tema-Stiva\Stiva\Debug\Stiva.exe
+  Stiva.vcxproj -> C:\Users\Zava\Documents\Visual Studio 2015\Projects\SD\Tema-Stiva\Stiva\Debug\Stiva.pdb (Full PDB)

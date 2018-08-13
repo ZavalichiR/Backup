@@ -1,0 +1,15 @@
+
+20.  Se citeste de la intrare un sir de valori numerice intregi, pe
+o linie, separate de spatii, sir care se incheie cu o valoare 0.
+     a) Sa se introduca valorile citite intr-un arbore binar de
+     cautare (exclusiv valoarea 0 care incheie sirul).
+     b) Sa se afiseze continutul arborelui in inordine.
+     c) Se citeste un numar. Sa se determine daca acesta se
+     afla in arbore.
+     d) Sa se stearga nodul etichetat cu cheia cea mai mare si sa se
+     afiseze, cu aceeasi procedura de afisare, in inordine, 
+     arborele rezultat.
+
+
+
+=====================================================

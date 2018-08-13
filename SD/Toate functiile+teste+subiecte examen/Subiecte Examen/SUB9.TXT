@@ -1,0 +1,68 @@
+9. Fisierul GLISTA.H (interfata moduluilui GLISTA.CPP) contine:
+
+/****************************************************************
+                      Fisierul GLISTA.H
+*****************************************************************/
+     typedef char Atom;
+     enum { ATOM, LISTA};
+     struct GElement;            // declaratie simpla
+     typedef GElement* GLista;   // o lista generalizata este un
+                                 // pointer la primul element 
+
+     struct GElement{
+            char tag;            // eticheta
+            union {              // data poate fi
+                Atom A;          //      Atom
+                GLista L;        //  sau GLista
+                } data;
+	   GElement* link;        // legatura
+           };                               
+
+GLista creareGLista();
+
+Functia creareGLista() creeaza o lista generalizata si intoarce un 
+pointer la aceasta. Lista generaliozata este creata pornind de la o 
+descriere cu paranteze introdusa de la tastatura, de forma indicata 
+de urmatoarele diagrame de sintaxa:
+
+                     ÚÄÄÄÄÄÄÄÄÄÄÄÄÄ¯ÄÄÄÄÄÄÄÄÄÄÄ¿  
+                     ³                         ³  
+   Lista     ÉÍÍÍ»   ³       ÚÄÄÄÄÄÄÄÄÄ¿       ³   ÉÍÍÍ»  
+   ÄÄÄÄÄÄÄÄ¯Ä¶ ( ÇÄÄÄÁÄÄÄÂÄ¯Ä´ Element ÃÄÄÄÂÄ¯ÄÁÄÄÄ¶ ) ÇÄÄ¯ÄÄÄ
+             ÈÍÍÍ¼       ³   ÀÄÄÄÄÄÄÄÄÄÙ   ³       ÈÍÍÍ¼  
+                         ³      ÉÍÍÍ»      ³              
+                         ÀÄÄÄ®ÄÄ¶ , ÇÄÄÄ®ÄÄÙ         
+                                ÈÍÍÍ¼ 
+                    ÚÄÄÄÄÄÄÄÄÄÄ¿         
+              ÚÄÄ¯ÄÄ´   Atom   ÃÄÄÄÄ¿    
+   Element    ³     ÀÄÄÄÄÄÄÄÄÄÄÙ    ³   
+   ÄÄÄÄÄÄÄÄ¯ÄÄ´                     ÃÄÄÄÄ¯ÄÄÄÄ
+              ³     ÚÄÄÄÄÄÄÄÄÄÄ¿    ³   
+              ÀÄÄ¯ÄÄ´   Lista  ÃÄÄÄÄÙ            
+                    ÀÄÄÄÄÄÄÄÄÄÄÙ                 
+Exemple: (A,(B,C),(D))   - O lista formata dintr-un atom A, o
+                         lista cu doua elemente (B,C) si o lista
+                         cu un element (D) ;
+         ((A,B,C),(),B)  - O lista formata dintr-o lista cu trei
+                         elemente (A,B,C), o lista vida () si un
+                         atom B .
+Spatiile inserate in sirul de caractere introdus de la tastatura
+sint ignorate. 
+
+Se cere se creeze o lista generalizata apelind functia 
+creareGLista() si apoi:   
+     a) Sa se afiseze toti atomii din lista.
+     b) Sa se afiseze lista citita in formatul folosit la intrare
+     (cu paranteze).
+     c) Sa se stearga toate sublistele vide si sa se afiseze lista
+     rezultata apelind procedura de la punctul b.
+
+EXEMPLU DE RULARE:
+     Introduceti lista: (F,(T,(C)),(),(D,E,()))
+     Atomii: F T C D E
+     Lista citita: (F,(T,(C)),(),(D,E,()))
+     Lista prelucrata: (F,(T,C),(D,E))
+
+
+=====================================================
+

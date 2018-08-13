@@ -1,0 +1,37 @@
+
+4. Se citeste de la intrare o colectie (agenda) de numere telefon,
+fiecare element fiind dat pe doua linii:
+      -prima linie numele persoanei   (25 caractere)
+      -a doua linie numarul de telefon (8 caractere)
+Sfirsitul colectiei este marcat printr-o linie cu caracterul '.' in
+prima coloana.
+      a) Sa se introduca aceste informatii intr-o lista inlantuita
+      ale carei elemente sint pastrate in ordinea alfabetica a
+      cimpului nume. 
+      b) Sa se afiseze continutul listei
+      c) Se citeste de la intrare nume. Sa se caute acel nume in
+      lista si sa se afiseze numarul de telefon.
+
+Observatie: Punctul a) va fi punctat cu un sfert din punctaj daca
+lista inlantuita nu are elementele in ordine alfabetica.
+ 
+EXEMPLU DE RULARE:
+Introduceti agenda:
+Georgescu Ion
+98834567
+Vasilescu George
+95412211
+Ionescu Vasile
+98487766
+.
+Continutul agendei:
+Georgescu Ion 98834567
+Ionescu Vasile 98487766
+Vasilescu George 95412211
+
+Numele cautat:Ionescu Vasile
+Numarul de telefon: 98487766
+
+
+
+=====================================================

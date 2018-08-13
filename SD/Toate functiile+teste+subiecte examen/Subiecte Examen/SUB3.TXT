@@ -1,0 +1,22 @@
+
+3. Se citeste de la intrare un sir de valori numerice intregi, pe
+o linie, separate de spatii, sir care se incheie cu o valoare 0.
+     a) Sa se depuna elementele citite intr-o lista inlantuita
+     neordonata (prin inserari repetate in fata).
+     b) Sa se afiseze continutul listei.
+     c) Se citeste o valoare intreaga si sa se determine daca
+     aceasta se gaseste in lista.
+     d) Se citeste un numar intreg N. Sa se stearga elementul al
+     N-lea din lista si sa se afiseze din nou lista.
+
+EXEMPLU DE RULARE:
+     Introduceti elementele listei: 5 3 7 10 4 9 1 0
+     Am citit: 1 9 4 10 7 3 5
+     Introduceti valoarea cautata: 9
+     Valoarea 9 este in lista!
+     Introduceti pozitia elementului de sters: 3
+     Lista actualizata: 1 9 10 7 3 5
+
+
+
+=====================================================

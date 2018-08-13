@@ -1,0 +1,60 @@
+14. Fisierul ARBOREB.H (interfata moduluilui ARBOREB.CPP) contine:
+
+/****************************************************************
+                      Fisierul ARBOREB.H
+*****************************************************************/
+
+struct Nod{
+	   char data;
+	   Nod* stg, *drt;
+	   };
+
+Nod* creareArbore();
+
+
+Functia creareArbore() creeaza o un arbore binar si intoarce un 
+pointer la aceasta. Arborele este creat pornind de la o descriere 
+cu paranteze introdusa de la tastatura, de forma indicata 
+de urmatoarele diagrame de sintaxa:
+
+                                 ÉÍÍÍ» 
+       ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶ - ÇÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+       ³                         ÈÍÍÍ¼                         ³
+ Arbore³ ÚÄÄÄÄÄÄ¿                                              ³
+  ÄÄÄ¯ÄÁÄ´ Nume ÃÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¯ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÁ¯Ä
+         ÀÄÄÄÄÄÄÙ ³                                           ³
+                  ³ ÉÍÍÍ» ÚÄÄÄÄÄÄÄÄ¿                    ÉÍÍÍ» ³
+                  À¯¶ ( ÇÄ´ Arbore ÃÂÄÄÄÄÄÄÄÄ¯ÄÄÄÄÄÄÄÄÂÄ¶ ) Ç¯Ù
+                    ÈÍÍÍ¼ ÀÄÄÄÄÄÄÄÄÙ³ ÉÍÍÍ» ÚÄÄÄÄÄÄÄÄ¿³ ÈÍÍÍ¼
+                                    À¯¶ , ÇÄ´ Arbore ÃÙ   
+                                      ÈÍÍÍ¼ ÀÄÄÄÄÄÄÄÄÙ
+
+Arborele vid este reprezentat prin caracterul -. 
+De exemplu:
+Arborele:       A      va fi dat sub forma:
+               / \
+              B   C         A(B,C)
+
+Arborele:        A          va fi dat sub forma:      
+                / \               
+              B    C        A(B(D),C(-,E))
+             /       \      sau
+            D         E     A(B(D,-),C(-,E))
+
+Spatiile inserate in sirul de caractere introdus de la tastatura
+sint ignorate. Se cere:
+     a) Sa se afiseze in postordine nodurile arborelui obtinut 
+     printr-un apel la functia creareArbore();
+     b) Sa se afiseze adincimea arborelui;
+     c) Sa se determine daca arborele dat este arbore de cautare
+     (relativ la ordinea lexicala a literelor).
+
+EXEMPLU DE RULARE:
+      Introduceti arborele:  C(B(A),D(-,E))
+      Arborele parcurs in postordine: A B E D C  
+      Adincimea este: 3
+      Este arbore de cautare: TRUE
+
+
+=====================================================
+

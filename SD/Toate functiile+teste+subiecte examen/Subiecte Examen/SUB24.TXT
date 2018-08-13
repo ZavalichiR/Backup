@@ -1,0 +1,58 @@
+24. Se da un graf prin urmatoarele informatii:
+
+      n   m         - Nr. de noduri si nr. de arce
+      i1  j1        Ä¿
+      i2  j2         ³
+      i3  j3         ³
+        .            ³ Arcele
+        .            ³
+        .            ³
+      im  jm        ÄÙ
+
+      a) Sa se construiasca reprezentarea prin liste de adiacenta
+      directa a grafului dat. La aceast punct puteti folosi modulul
+      LISTAINT.H / LISTAINT.CPP care contine tipurile:
+
+           struct Element{
+                     int data;
+                     Element* link;
+                     };
+           typedef Element* Lista;
+
+      si functia:
+
+      void insert(Lista& li, int nr);
+
+      care insereaza intregul "nr" intr-o lista inlantuita cu
+      elementele pastrate in ordine crescatoare.
+
+      b) Se citesc doua noduri i si j. Consultind reprezentarea
+      construita, sa se se determine daca exista un arc de la i la
+      j.
+
+      c) Se citeste un nod k. Pornind de la nodul k, sa se
+      traverseze in adincime graful (DFS), afisind nodurile
+      vizitate.
+
+EXEMPLU DE RULARE:
+      Introduceti numarul de noduri n: 7
+      Introduceti numarul de arce m: 10  
+      Introduceti arcele:   
+      1 2
+      1 3
+      2 4
+      2 5
+      3 5
+      5 1
+      5 6
+      5 7
+      6 7
+      7 5
+      Introduceti doua noduri: 3 5
+      Exista arc de la 3 la 5!
+      Introduceti nodul de la care incepe traversarea: 1
+      Secventa DFS pornind de la nodul: 1 2 4 5 6 7 3
+
+
+=====================================================
+

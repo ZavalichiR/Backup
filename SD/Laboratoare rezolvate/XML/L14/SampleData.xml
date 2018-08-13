@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Studenti>
+  <Student Grupa="1101">
+    <Prenume>Andrei</Prenume>
+    <Nume>POPESCU</Nume>
+    <Nota>10</Nota>
+  </Student>
+  <Student Grupa="1101B">
+    <Prenume>Mihai</Prenume>
+    <Nume>IONESCU</Nume>
+    <Nota>9</Nota>
+  </Student>
+</Studenti>

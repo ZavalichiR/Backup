@@ -1,0 +1,31 @@
+21. Se citeste de la intrare un sir de valori numerice intregi, pe
+o linie, separate de spatii, sir care se incheie cu o valoare 0. Sa
+se memoreze aceste valori intr-un vector.
+      Considerind ca vectorul dat este reprezentarea implicita a
+unui arbore binar:
+      a) Sa se afiseze in postordine continutul arborelui.
+      b) Sa se afiseze in inordine continutul subarborelui drept al
+radacinii.
+      c) Sa se transforme arborele dat prin reprezentarea lui
+      implicita intr-un heap si sa se afiseze vectorul rezultat.
+
+EXEMPLU:
+      Arborele:
+
+                                  6   
+                                 / \
+                               1     3
+                              / \   / \
+                             4   7 5   2
+
+      Intrare: 
+            6 1 3 4 7 5 2 0
+      Iesire:
+            Postordine: 4 7 1 5 2 3 6
+            Inordine: 4 1 7 6 5 3 2
+            Heap     : 7 6 5 1 4 3 2  (daca realizati heap-ul de sus in jos)
+                  sau: 7 6 5 4 1 3 2  (daca realizati heap-ul de jos in sus)
+
+
+=====================================================
+

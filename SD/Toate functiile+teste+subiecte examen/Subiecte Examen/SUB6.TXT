@@ -1,0 +1,34 @@
+
+6.   a) Sa se scrie tipurile de date, procedurile si functiile care
+     implementeaza in C (sau C++) stive inlantuite cu elemennte
+     numere intregi (operatiile init, isEmpty, top, push si pop). 
+     b) Completati setul operatiilor definite cu operatia copy:
+
+     Stiva copy(Stiva s);
+
+     care realizeaza o copie a stivei primite ca parametru si
+     intoarce aceasta copie. Copia stivei trebuie sa contina
+     aceleasi elemente, in aceeasi ordine, cu stiva initiala. 
+     c) Sa se scrie o functie care sterge o stiva (ii goleste
+     continutul). 
+     d) Sa se scrie un program care citeste de la intrare un sir de
+     10 numere intregi.  Pe masura ce sint citite, numerele
+     negative sint introduse intr-o stiva S1. La aparitia (citirea)
+     unui numar pozitiv sint scoase din stiva S1 si afisate un numar
+     de elemente egal cu valoarea acestuia. 
+     La aparitia unei valori 0 continutul stivei este salvat prin
+     copiere intr-o stiva auxiliara S2 (continutul anterior al acestei 
+     trebuie sters). 
+     In final se cere sa se afiseze continutul stivei S1 si continutul
+     stivei auxiliare S2. Afisarea stivelor se face in ordinea in care
+     valorile sint scoase din stiva.
+
+EXEMPLU DE RULARE:
+     Introduceti numerele: -1 -2 -3 -3 -3 2 -4 0 -5 -6
+     Continutul stivei: -6 -5 -4 -3 -2 -1
+     Continutul stivei auxiliare: -4 -3 -2 -1
+
+
+
+=====================================================
+

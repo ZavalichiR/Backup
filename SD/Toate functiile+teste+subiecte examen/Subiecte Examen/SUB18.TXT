@@ -1,0 +1,33 @@
+18. Se citeste de la intrare un sir de valori numerice intregi, pe
+o linie, separate de spatii, sir care se incheie cu o valoare 0.
+     a) Sa se introduca valorile citite intr-un arbore binar de
+     cautare (exclusiv valoarea 0 care incheie sirul).
+     b) Sa se afiseze in inordine continutul arborelui.
+     c) Sa se afiseze adincimea arborelui.
+     d) Se citeste un numar pozitiv K. Sa se determine daca exista
+     un nod pentru care modulul diferentei dintre numarul de noduri
+     din subarborele sting si numarul de noduri din subarborele
+     drept este mai mare sau egal cu K.
+
+EXEMPLU:
+     Intrare: 5 3 7 10 4 9 1 11 0
+     Diferenta K: 3
+
+     Arborele binar de cautare:
+
+                              5
+                             / \
+                           3     7
+                          / \      \
+                         1   4      10
+                                   /  \
+                                  9    11
+     Iesire: 
+         Arborele: 1 3 4 5 7 9 10 11 
+         Adincimea: 4
+         Exista nod cu proprietatea ceruta la puncul (d)! (nodul 7)
+
+
+=====================================================
+
+

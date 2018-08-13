@@ -1,0 +1,31 @@
+17. Se citeste de la intrare un sir de valori numerice intregi, pe
+o linie, separate de spatii, sir care se incheie cu o valoare 0.
+      a) Sa se introduca valorile citite intr-un arbore binar de
+      cautare (exclusiv valoarea 0 care incheie sirul).
+      b) Sa se afiseze in inordine continutul arborelui.
+      c) Sa se afiseze numarul de frunze.
+      d) Sa se afiseze numarul de virfuri situate pe un nivel N
+      citit de la intrare.
+
+EXEMPLU:
+      Intrare: 5 3 7 10 4 9 1 0
+      Nivelul: 3
+
+      Arborele binar de cautare:
+
+                              5
+                             / \
+                           3     7
+                          / \      \
+                         1   4      10
+                                   /
+                                 9
+      Iesire: 
+            Arborele: 1 3 4 5 7 9 10 
+            Numarul de frunze: 3
+            Numarul de noduri de pe nivelul 3: 3
+
+
+=====================================================
+
+

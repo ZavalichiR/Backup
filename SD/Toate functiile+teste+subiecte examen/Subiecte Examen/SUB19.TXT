@@ -1,0 +1,29 @@
+19. Se citeste de la intrare un sir de valori numerice intregi, pe
+o linie, separate de spatii, sir care se incheie cu o valoare 0.
+     a) Sa se introduca valorile citite intr-un arbore binar de
+     cautare (exclusiv valoarea 0 care incheie sirul).
+     b) Sa se afiseze continutul arborelui in preordine
+     c) Sa se afiseze numarul nodurilor pozitive din arbore.
+     d) Se creeze reprezentarea implicita a arborelui, completind
+     cu valori 0 nodurile care lipsesc. Sa se afiseze vectorul
+     rezultat.
+
+EXEMPLU:
+     Intrare: 5 7 3 9 0
+
+     Arborele binar de cautare:
+
+                              5
+                             / \
+                            3   7
+                                 \
+                                  9
+
+
+     Iesire: 
+           Arborele in preordine: 5 3 7 9
+           Adincimea: 3
+           Reprezentare implicita: 5 3 7 0 0 0 9
+
+
+=====================================================

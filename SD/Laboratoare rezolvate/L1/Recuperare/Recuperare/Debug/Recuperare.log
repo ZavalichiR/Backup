@@ -1,0 +1,10 @@
+﻿  functii.cpp
+  Generating Code...
+  Compiling...
+  main.cpp
+c:\users\zava\documents\visual studio 2015\projects\sd\l1\recuperare\recuperare\main.cpp(36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\zava\documents\visual studio 2015\projects\sd\l1\recuperare\recuperare\main.cpp(20): warning C4101: 'x1': unreferenced local variable
+c:\users\zava\documents\visual studio 2015\projects\sd\l1\recuperare\recuperare\main.cpp(20): warning C4101: 'x2': unreferenced local variable
+  Generating Code...
+  Recuperare.vcxproj -> C:\Users\Zava\Documents\Visual Studio 2015\Projects\SD\L1\Recuperare\Debug\Recuperare.exe
+  Recuperare.vcxproj -> C:\Users\Zava\Documents\Visual Studio 2015\Projects\SD\L1\Recuperare\Debug\Recuperare.pdb (Full PDB)

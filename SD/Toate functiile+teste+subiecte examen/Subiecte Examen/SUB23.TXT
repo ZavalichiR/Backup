@@ -1,0 +1,24 @@
+23. Se citeste de la intrare un sir de valori numerice intregi, pe o linie,
+separate de spatii, sir care se incheie cu o valoare 0. Sa se memoreze
+aceste valori intr-un vector.
+     Considerind ca vectorul dat este reprezentarea implicita a unui arbore
+binar:
+     a) Sa se afiseze in preordine continutul arborelui.
+     b) Sa se determine daca arborele este heap.
+     c) Daca arborele introdus este heap, sa se afiseze elementele in
+     ordine descrescatoare prin extrageri succesive din heap.
+
+EXEMPLU:
+     Arborele:                    9
+                                 / \
+                               8     5
+                              / \   / \
+                             1   7 2   3
+     Intrare: 
+           9 8 5 1 7 2 3 0
+     Iesire:
+           Preordine: 9 8 1 7 5 2 3
+           ESTE HEAP
+           Sirul ordonat: 9 8 7 5 3 2 1 
+
+=====================================================

@@ -1,0 +1,5 @@
+﻿  obst.cpp
+d:\projects\labobst13\labobst13\obst.cpp(174): warning C4101: 'j': unreferenced local variable
+d:\projects\labobst13\labobst13\obst.cpp(174): warning C4101: 'i': unreferenced local variable
+  labOBST13.vcxproj -> D:\projects\labOBST13\Debug\labOBST13.exe
+  labOBST13.vcxproj -> D:\projects\labOBST13\Debug\labOBST13.pdb (Full PDB)

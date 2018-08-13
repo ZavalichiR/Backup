@@ -1,0 +1,31 @@
+16. Se citeste de la intrare un sir de valori numerice intregi, pe
+o linie, separate de spatii, sir care se incheie cu o valoare 0.
+      a) Sa se introduca valorile citite intr-un arbore binar de
+      cautare (exclusiv valoarea 0 care incheie sirul).
+      b) Sa se afiseze in inordine continutul arborelui
+      c) Se citeste o valoare pentru care sa se raspunda daca este
+      sau nu continuta in arbore.
+      d) Sa se determine daca arborele binar de cautare creat este
+      echilibrat.
+
+EXEMPLU:
+      Pentru arborele binar de cautare:
+
+                                5
+                               / \
+                             3     7
+                                  /  
+                                 6
+
+      Exemplu de rulare:
+
+            Introduceti valorile:5 3 7 6 0
+            Arborele: 3 5 6 7 
+            Valoarea cautata:7
+            ESTE
+            Este echilibrat!       
+
+
+=====================================================
+
+
