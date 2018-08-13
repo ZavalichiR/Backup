@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\zava\documents\visual studio 2015\projects\poo\l3\p1\p1\main.cpp(52): warning C4101: 's': unreferenced local variable
+c:\users\zava\documents\visual studio 2015\projects\poo\l3\p1\p1\main.cpp(53): warning C4101: 'g': unreferenced local variable
+  P1.vcxproj -> C:\Users\Zava\Documents\Visual Studio 2015\Projects\POO\L3\P1\Debug\P1.exe
+  P1.vcxproj -> C:\Users\Zava\Documents\Visual Studio 2015\Projects\POO\L3\P1\Debug\P1.pdb (Full PDB)

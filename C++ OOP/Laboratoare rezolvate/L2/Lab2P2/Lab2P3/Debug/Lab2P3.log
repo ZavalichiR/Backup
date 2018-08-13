@@ -1,0 +1,11 @@
+﻿Build started 08.10.2016 11:53:59.
+     1>Project "D:\1207A\Lab2P2\Lab2P3\Lab2P3.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>d:\1207a\lab2p2\lab2p3\main.cpp(31): error C3867: '_catalog::dealocareVSiruri': function call missing argument list; use '&_catalog::dealocareVSiruri' to create a pointer to member
+     1>Done Building Project "D:\1207A\Lab2P2\Lab2P3\Lab2P3.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.48
